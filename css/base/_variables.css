@@ -1,0 +1,47 @@
+:root {
+    /*** colors ***/
+    --biloba-flower: #d1a9f0;
+    --heliotrope: #c283f3;
+    --amethyst: #9d5cd0;
+    --royal-purple: #7943A4;
+    --white: #fff;
+	--black: #000;
+    --mine-shaft: #333;
+    --dove-gray: #666;
+    --dusty-gray: #999;
+    --silver: #cacaca;
+    --gallery: #ececec;
+
+	--accent-color-light: var(--heliotrope);
+	--accent-color-main: var(--amethyst);
+	--accent-color-dark: var(--royal-purple);
+	--active-btn-border-color: var(--biloba-flower);
+	--text-color-main: var(--mine-shaft);
+	--text-color-light: var(--dusty-gray);
+	--border-color: var(--silver);
+
+    /*** font-size ***/
+    --font-size-title-huge: 72px;
+    --font-size-title-big: 48px;
+    --font-size-title-medium: 32px;
+    --font-size-title-small: 28px;
+    --font-size-title-tiny: 24px;
+
+    --line-height-title: 1.3;
+    --line-height-main: 2;
+
+    --font-size-big: 18px;
+    --font-size-madium: 16px;
+    --font-size-small: 14px;
+    --font-size-tiny: 12px;
+
+    /*** border ***/
+    --border-white: 1px solid var(--white);
+    --border-gray: 1px solid var(--silver);
+
+    --border-radius: 6px;
+    --border-radius-circle: 100px;
+
+    /*** z-index ***/
+
+}
