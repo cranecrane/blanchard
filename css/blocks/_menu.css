@@ -1,0 +1,136 @@
+@media (min-width: 1920px) {
+    .menu {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+    }
+}
+
+@media (min-width: 1920px) {
+    .menu__burger {
+        display: none;
+    }
+}
+
+.menu__nav {
+    display: none;
+}
+
+@media (min-width: 1920px) {
+    .menu__nav {
+        display: block;
+    }
+
+    .menu__nav-list {
+        display: flex;
+        align-items: center;
+    }
+}
+
+.menu__nav-item {
+    font-size: var(--font-size-medium);
+    font-weight: var(--font-weight-medium);
+
+    transition: var(--transition-all);
+}
+
+.menu__nav-item:not(:last-child) {
+    margin-bottom: 14px;
+}
+
+@media (min-width: 768px) {
+    .menu__nav-item {
+        font-size: var(--font-size-title-tiny);
+    }
+
+    .menu__nav-item:not(:last-child) {
+        margin-bottom: 37px;
+    }
+}
+
+@media (min-width: 1024px) {
+    .menu__nav-item:hover {
+        color: var(--accent-color-light);
+        transition: var(--transition-all);
+    }
+}
+
+@media (min-width: 1920px) {
+    .menu__nav-item {
+        font-size: var(--font-size-big);
+    }
+
+    .menu__nav-item:not(:last-child) {
+        margin-bottom: 0;
+        margin-right: 63px;
+    }
+}
+
+.menu__nav-item:active {
+    color: var(--accent-color-dark);
+    transition: var(--transition-all);
+}
+
+.menu__nav-link:focus-visible {
+    outline: var(--outline);
+    outline-offset: var(--outline-offset);
+}
+
+.menu__sign-in {
+    display: none;
+}
+
+@media (min-width: 1920px) {
+    .menu__sign-in {
+        display: flex;
+        padding: 0;
+    }
+}
+
+/*** .menu.open ***/
+
+.menu.open {
+    position: fixed;
+    z-index: var(--z-index-menu-open);
+    top: 0;
+    right: 0;
+    left: 0;
+
+    padding: var(--padding-lr-container);
+    padding-bottom: 27px;
+
+    background-color: rgba(0, 0, 0, .9);
+}
+
+@media (min-width: 768px) {
+    .menu.open {
+        padding: var(--padding-lr-container-tablet);
+        padding-top: 37px;
+    }
+}
+
+.menu.open .menu__burger {
+    margin-bottom: 25px;
+}
+
+@media (min-width: 768px) {
+    .menu.open .menu__burger {
+        margin-bottom: 53px;
+    }
+}
+
+.menu.open .menu__nav {
+    display: block;
+    margin-bottom: 25px;
+}
+
+@media (min-width: 768px) {
+    .menu.open .menu__nav {   
+        margin-bottom: 131px;
+    }
+}
+
+.menu.open .menu__sign-in {
+    display: block;
+}

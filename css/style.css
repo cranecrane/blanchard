@@ -5,3 +5,17 @@
 @import "base/_overall.css";
 
 /*** blocks ***/
+@import "blocks/_btn.css";
+@import "blocks/_sign-in.css";
+@import "blocks/_search-btn.css";
+@import "blocks/_logo.css";
+@import "blocks/_burger.css";
+
+@import "blocks/_search-form.css";
+@import "blocks/_menu.css";
+@import "blocks/_art-direction-menu.css";
+@import "blocks/_choices.css";
+@import "blocks/_simplebar.css";
+
+@import "blocks/_header.css";
+@import "blocks/_hero.css";
