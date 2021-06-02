@@ -1,0 +1,18 @@
+.logo {
+    width: 96.8px;
+    height: 21.67px;
+}
+
+@media (min-width: 768px) {
+    .logo {
+        width: 187.6px;
+        height: 42px;
+    }
+}
+
+@media (min-width: 1920px) {
+    .logo {
+        width: 173px;
+        height: 39.9px;
+    }
+}

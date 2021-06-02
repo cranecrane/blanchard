@@ -1,0 +1,30 @@
+.sign-in { 
+    transition: var(--transition-all);
+}
+
+.sign-in:focus-visible {
+    outline: 2px solid var(--accent-color-dark);
+    outline-offset: 3px;
+}
+
+@media (min-width: 1024px) {
+    .sign-in:hover {
+        color: var(--accent-color-light);
+        transition: var(--transition-all);
+    }
+}
+
+@media (min-width: 1920px) {
+    .sign-in {
+        border: none;
+        border-radius: 0;
+
+        font-size: var(--font-size-big);
+        font-weight: var(--font-weight-normal);
+    }
+}
+
+.sign-in:active {
+    color: var(--accent-color-main);
+    transition: var(--transition-all);
+}

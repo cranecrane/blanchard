@@ -17,6 +17,7 @@
 	--accent-color-dark: var(--royal-purple);
 	--active-btn-border-color: var(--biloba-flower);
 	--text-color-main: var(--mine-shaft);
+    --text-color-inverse: var(--white);
 	--text-color-light: var(--dusty-gray);
 	--border-color: var(--silver);
 
@@ -31,9 +32,14 @@
     --line-height-main: 2;
 
     --font-size-big: 18px;
-    --font-size-madium: 16px;
+    --font-size-medium: 16px;
     --font-size-small: 14px;
     --font-size-tiny: 12px;
+
+    /*** font-weight ***/
+    --font-weight-normal: 400;
+    --font-weight-medium: 600;
+    --font-weight-bold: 700;
 
     /*** border ***/
     --border-white: 1px solid var(--white);
@@ -42,6 +48,20 @@
     --border-radius: 6px;
     --border-radius-circle: 100px;
 
-    /*** z-index ***/
+    /*** outline ***/
+    --outline: 2px solid var(--accent-color-dark);
+    --outline-offset: 3px;
 
+    /*** transitions ***/
+    --transition-all: all .3s ease-in-out;
+
+    /*** z-index ***/
+    --z-index-menu-open: 100;
+    --z-index-search-btn-open: 90;
+    --z-index-header-lower-block: 80;
+
+    /*** sizes ***/
+    --padding-general: 34px;
+    --padding-lr-container: 15px;
+    --padding-lr-container-tablet: 50px;
 }

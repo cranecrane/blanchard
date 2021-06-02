@@ -1,0 +1,111 @@
+.burger {
+    --burger-width: 20px;
+    --burger-width-tablet: 36px;
+
+    display: block;
+
+    width: var(--burger-width);
+    
+    font-size: 0;
+    text-align: left;
+}
+
+@media (min-width: 768px) {
+    .burger {
+        width: var(--burger-width-tablet);
+    }
+}
+
+.burger__line {
+    --burger-line-height: 1.96px;
+    --burger-line-height-tablet: 3.65px;
+
+    display: inline-block;
+
+    width: 100%;
+    height: var(--burger-line-height);
+
+    background-color: var(--white);
+    transform-origin: left center;
+    transition: var(--transition-all);
+}
+
+@media (min-width: 768px) {
+    .burger__line {
+        height: var(--burger-line-height-tablet);
+    }
+}
+
+.burger__line:not(:last-child) {
+    --burger-line-margin: 4.57px;
+    --burger-line-margin-tablet: 8.52px;
+
+    margin-bottom: var(--burger-line-margin);
+}
+
+@media (min-width: 768px) {
+    .burger__line:not(:last-child) {
+        margin-bottom: var(--burger-line-margin-tablet);
+    }
+}
+
+.burger__line:nth-child(2) {
+    width: 78.5%;
+}
+
+.burger__line:nth-child(3) {
+    width: 66%;
+}
+
+.burger.open {
+    transform: translate(-2px, 4px);
+}
+
+@media (min-width: 768px) {
+    .burger.open {
+        transform: translate(-3px, 6px);
+    }
+}
+
+.burger.open:focus {
+    outline: var(--outline);
+    outline-offset: var(--outline-offset);
+}
+
+.burger.open .burger__line {
+    width: 100%;
+}
+
+@media (min-width: 1024px) {
+    .burger.open:hover .burger__line {
+        background-color: var(--accent-color-light);
+        transition: var(--transition-all);
+    }
+}
+
+.burger.open:active .burger__line {
+    background-color: var(--accent-color-light);
+    transition: var(--transition-all);
+}
+
+.burger.open .burger__line:nth-child(1) {
+    transform: rotate(45deg) translateY(-5px);
+}
+
+.burger.open .burger__line:nth-child(2) {
+    transform: rotate(-45deg) translateY(5px);
+}
+
+.burger.open .burger__line:nth-child(3) {
+    display: none;
+}
+
+@media (min-width: 768px) {
+    .burger.open .burger__line:nth-child(1) {
+        transform: rotate(45deg) translateY(-9.5px);
+    }
+    
+    .burger.open .burger__line:nth-child(2) {
+        transform: rotate(-45deg) translateY(9.5px);
+    }
+}

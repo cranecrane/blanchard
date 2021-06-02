@@ -1,0 +1,219 @@
+.choices {
+    font-size: var(--font-size-big);
+    transition: var(--transition-all);
+}
+
+.choices.is-focused {
+    outline: var(--outline);
+    outline-offset: var(--outline-offset);
+}
+
+.choices:hover  {
+    color: var(--accent-color-main);
+    transition: var(--transition-all);
+}
+
+.choices.is-open {
+    color: var(--accent-color-dark);
+    transition: var(--transition-all);
+}
+
+.choices[role = "listbox"]::after {
+    display: inline-block;
+
+    position: absolute;
+    right: 4px;
+
+    border: none;
+    margin-top: 0;
+    width: 12px;
+    height: 100%;
+
+    background-image: url('/icons/arrow-down.svg');
+    background-repeat: no-repeat;
+    background-position: center;
+    transform: translateY(-50%);
+    transition: var(--transition-all);
+}
+
+.choices[data-type*="select-one"].is-open::after {
+    margin-top: 0;
+    transform: translateY(-50%);
+}
+
+.choices[role = "listbox"]:hover::after  {
+    background-image: url('/icons/arrow-down--hover.svg');
+    transition: var(--transition-all);
+}
+
+.choices[role = "listbox"].is-open::after  {
+    background-image: url('/icons/arrow-down--active.svg');
+    transition: var(--transition-all);
+}
+
+.choices__inner {
+    border: none;
+    padding: 0 !important;
+    min-height: auto;
+
+    font-size: var(--font-size-big);
+
+    background-color: transparent;
+}
+
+.choices__placeholder {
+    margin-right: 4px;
+    opacity: 1;
+}
+
+.choices__list {
+    padding-right: 20px;
+}
+
+.is-active .choices__list {
+    padding-right: 0;
+}
+
+.choices__list[role="listbox"] .choices__placeholder {
+    display: none;
+}
+
+.choices__list--single .choices__item--selectable {
+    background: none !important;
+}
+
+.choices__list--dropdown .choices__list {
+    max-height: none;
+    overflow: visible;
+}
+
+.choices__list--dropdown {
+    top: 50px;
+
+    border: none;
+    border-radius: 0;
+    padding: 40px;
+    width: 300px;
+    height: 300px;
+
+    font-size: var(--font-size-small);
+    font-weight: var(--font-weight-medium);
+    color: var(--text-color-inverse);
+
+    background-color: rgba(0, 0, 0, .6);
+    overflow: auto;
+}
+
+.choices__list--dropdown .choices__item {
+    --select-item-height: 40px;
+
+    padding: 12px 14px 10px 14px;
+    width: 100%;
+    height: var(--select-item-height);
+
+    line-height: 1;
+
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.choices__list[role="listbox"] .choices__item:not(:last-child) {
+    margin-bottom: 20px;
+}
+
+.choices__list--dropdown .choices__item--selectable::after {
+    display: none;
+}
+
+.choices__list--dropdown .choices__item--selectable.is-highlighted {
+    border: 2px solid var(--accent-color-main);
+    background-color: transparent;
+}
+
+.choices__list--dropdown .choices__item--selectable:active {
+    border: 2px solid var(--active-btn-border-color);
+
+    background-color: rgba(194, 131, 243, .4);
+    background-blend-mode: screen;
+}
+
+.choices__item[data-value="Tintoretto"] {
+    background-image: url(/img/select-Tintoretto.jpg);
+}
+
+.choices__item[data-value="Friedrich"] {
+    background-image: url(/img/select-Friedrich.jpg);
+}
+
+.choices__item[data-value="Leonardo"] {
+    background-image: url(/img/select-Leonardo.jpg);
+}
+
+.choices__item[data-value="Verrocchio"] {
+    background-image: url(/img/select-Verrocchio.jpg);
+}
+
+.choices__item[data-value="Monet"] {
+    background-image: url(/img/select-Monet.jpg);
+}
+
+.choices__item[data-value="Sisley"] {
+    background-image: url(/img/select-Sisley.jpg);
+}
+
+.choices__item[data-value="Manet"] {
+    background-image: url(/img/select-Manet.jpg);
+}
+
+.choices__item[data-value="Renoir"] {
+    background-image: url(/img/select-Renoir.jpg);
+}
+
+.choices__item[data-value="van-Gogh"] {
+    background-image: url(/img/select-van-Gogh.jpg);
+}
+
+.choices__item[data-value="Cezanne"] {
+    background-image: url(/img/select-Cezanne.jpg);
+}
+
+.choices__item[data-value="Gauguin"] {
+    background-image: url(/img/select-Gauguin.jpg);
+}
+
+.choices__item[data-value="Seurat"] {
+    background-image: url(/img/select-Seurat.jpg);
+}
+
+.choices__item[data-value="Kandinsky"] {
+    background-image: url(/img/select-Kandinsky.jpg);
+}
+
+.choices__item[data-value="Marinetti"] {
+    background-image: url(/img/select-Marinetti.jpg);
+}
+
+.choices__item[data-value="Malevich"] {
+    background-image: url(/img/select-Malevich.jpg);
+}
+
+.choices__item[data-value="Picasso"] {
+    background-image: url(/img/select-Picasso.jpg);
+}
+
+.choices__item[data-value="Carra"] {
+    background-image: url(/img/select-Carra.jpg);
+}
+
+.choices__item[data-value="Pratella"] {
+    background-image: url(/img/select-Pratella.jpg);
+}
+
+.choices__item[data-value="Severini"] {
+    background-image: url(/img/select-Severini.jpg);
+}
+
+.choices__item[data-value="Balla"] {
+    background-image: url(/img/select-Balla.jpg);
+}
