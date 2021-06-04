@@ -2,6 +2,8 @@
     --btn-padding-tb: 12px;
     --btn-padding-lr: 35px;
 
+    display: inline-block;
+
     border: 2px solid var(--accent-color-main);
     border-radius: var(--border-radius-circle);
     padding: var(--btn-padding-tb) var(--btn-padding-lr);

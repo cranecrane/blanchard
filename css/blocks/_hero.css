@@ -1,4 +1,111 @@
 .hero {
+    --hero-height: 310.4;
+    --hero-height-tablet: 668px;
+    --hero-height-desktop: 700px;
+
+    padding-top: 34px;
+    padding-bottom: 45px;
     width: 100%;
-    height: 1000px;
+    height: var(--hero-height);
+
+    background-image: url('/img/hero-1_320-767.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+@media (min-width: 768px) {
+    .hero {
+        padding-top: 113px;
+        height: var(--hero-height-tablet);
+        background-image: url('/img/hero-1-desktop.jpg');
+    }
+}
+
+@media (min-width: 1920px) {
+    .hero {
+        padding-top: 141px;
+        height: var(--hero-height-desktop);
+    }
+}
+
+.hero__container {
+    --hero-content-width: 320px;
+    --hero-content-width-tablet: var(--max-width-container);
+
+    max-width: var(--hero-content-width);
+
+    text-align: center;
+    color: var(--text-color-inverse);
+}
+
+@media (min-width: 768px) {
+    .hero__container {
+        max-width: var(--hero-content-width-tablet);
+        text-align: left;
+    }
+}
+
+.hero__title {
+    margin-bottom: 15px;
+}
+
+@media (min-width: 768px) {
+    .hero__title {
+        margin-left: -5px;
+        max-width: 600px;
+
+        font-size: var(--font-size-title-huge);
+    }
+}
+
+@media (min-width: 1920px) {
+    .hero__title {
+        margin-left: -3px;
+        margin-bottom: 22px;
+        max-width: 600px;
+
+        font-size: var(--font-size-title-huge);
+    }
+}
+
+.hero__descr {
+    margin-bottom: 44px;
+    padding-right: 10px;
+    padding-left: 10px;
+
+    font-size: var(--font-size-tiny);
+    line-height: var(--line-height-title);
+}
+
+@media (min-width: 768px) {
+    .hero__descr {
+        margin-bottom: 135px;
+        padding-left: 0;
+        padding-right: 0;
+        max-width: 670px;
+
+        font-size: var(--font-size-big);
+        font-weight: var(--font-weight-bold);
+        line-height: 1.6;
+    }
+}
+
+@media (min-width: 1920px) {
+    .hero__descr {
+        margin-bottom: 91px;
+        padding-left: 0;
+        padding-right: 0;
+        max-width: 600px;
+
+        font-size: var(--font-size-big);
+        font-weight: var(--font-weight-bold);
+        line-height: 1.7;
+    }
+}
+
+@media (min-width: 768px) {
+    .hero__subscribe-link {
+        padding: 24px 33px;
+    }
 }
