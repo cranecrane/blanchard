@@ -61,6 +61,8 @@
     --z-index-header-lower-block: 80;
 
     /*** sizes ***/
+    --max-width-container: 1703px;
+
     --padding-general: 34px;
     --padding-lr-container: 15px;
     --padding-lr-container-tablet: 50px;
