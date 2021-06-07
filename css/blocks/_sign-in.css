@@ -2,11 +2,6 @@
     transition: var(--transition-all);
 }
 
-.sign-in:focus-visible {
-    outline: 2px solid var(--accent-color-dark);
-    outline-offset: 3px;
-}
-
 @media (min-width: 1024px) {
     .sign-in:hover {
         color: var(--accent-color-light);
@@ -21,6 +16,11 @@
 
         font-size: var(--font-size-big);
         font-weight: var(--font-weight-normal);
+    }
+
+    .sign-in:focus-visible::after {
+        border: 2px solid var(--accent-color-dark);
+        border-radius: 0;
     }
 }
 
