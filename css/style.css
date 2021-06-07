@@ -16,6 +16,8 @@
 @import "blocks/_art-direction-menu.css";
 @import "blocks/_choices.css";
 @import "blocks/_simplebar.css";
+@import "blocks/_section.css";
 
 @import "blocks/_header.css";
 @import "blocks/_hero.css";
+@import "blocks/_about.css";
