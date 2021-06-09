@@ -1,26 +1,14 @@
-[data-simplebar] {
-    position: absolute;
-}
-
-.simplebar-content-wrapper {
-    overflow: auto;
-}
-
 .simplebar-track {
     background-color: var(--black);
 }
 
 .simplebar-track.simplebar-vertical {
-    top: 40px;
+    top: var(--dropdown-list-content-padding);
     right: 19px;
-    bottom: 40px;
+    bottom: var(--dropdown-list-content-padding);
 
     width: 2px;
     background-color: var(--black);
-}
-
-.simplebar-track.simplebar-horizontal {
-    visibility: hidden !important;
 }
 
 .simplebar-scrollbar::before {

@@ -1,0 +1,7 @@
+.dropdown-menu__list {
+    display: flex;
+}
+
+.dropdown-menu__item:not(:last-child) {
+    margin-right: 97px;
+}

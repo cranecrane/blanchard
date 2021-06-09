@@ -1,5 +1,5 @@
 .btn {
-    --btn-padding-tb: 12px;
+    --btn-padding-tb: 11px;
     --btn-padding-lr: 35px;
 
     display: inline-block;
@@ -21,13 +21,47 @@
     }
 }
 
-.btn--fill {
-    --btn-fill-padding-lr: 18px;
+.btn:focus-visible {
+    position: relative;
+    outline: none;
+}
 
+.btn:focus-visible::after {
+    --btn-outline-offset: -9px;
+
+    content: '';
+
+    position: absolute;
+    top: var(--btn-outline-offset);
+    left: var(--btn-outline-offset);
+    bottom: var(--btn-outline-offset);
+    right: var(--btn-outline-offset);
+    
+    border: 2px solid var(--accent-color-light);
+    border-radius: var(--border-radius-circle);
+    transition: var(--transition-all);
+}
+
+.btn--fill {
+    --btn-fill-padding-lr: 16px;
+
+    border-width: 3px;
     padding-left: var(--btn-fill-padding-lr);
     padding-right: var(--btn-fill-padding-lr);
 
     background-color: var(--accent-color-main);
+    transition: var(--transition-all);
+}
+
+@media(min-width: 1024px) {
+    .btn--fill:hover {
+        border: 3px solid var(--active-btn-border-color);
+        transition: var(--transition-all);
+    }
+}
+
+.btn--fill:active {
+    background-color: var(--accent-color-dark);
 }
 
 .btn--inverse {

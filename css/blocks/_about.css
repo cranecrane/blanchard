@@ -1,0 +1,31 @@
+.about__title {
+    margin-bottom: 17px;
+}
+
+@media (min-width: 768px) {
+    .about__title {
+        margin-bottom: 25px;
+    }
+}
+
+@media (min-width: 1024px) {
+    .about__title {
+        margin-left: -3px;
+    }
+}
+
+@media (min-width: 1024px) {
+    .about__title {
+        margin-left: -2px;
+    }
+}
+
+.about__descr {  
+    max-width: 1082px;
+}
+
+@media (max-width: 767px) {
+    .about__descr {
+        font-size: var(--font-size-small);
+    }
+}
