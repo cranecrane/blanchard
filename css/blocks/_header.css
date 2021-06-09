@@ -5,6 +5,10 @@
     position: relative;
 }
 
+.header:focus-visible {
+    outline: none;
+}
+
 .header__upper-block-container,
 .header__lower-block-container {
     display: flex;
@@ -127,6 +131,7 @@
     .header__lower-block {
         display: flex;
         top: var(--upper-block-height-tablet);
+        height: 70px;
     }
 }
 
@@ -159,12 +164,12 @@
     }
 }
 
-.header__art-direction-menu {
+.header__dropdown-menu {
     display: none;
 }
 
 @media (min-width: 1920px) {
-    .header__art-direction-menu {
-        display: flex;
+    .header__dropdown-menu {
+        display: block;
     }
 }

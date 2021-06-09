@@ -16,3 +16,23 @@
         height: 39.9px;
     }
 }
+
+.logo:focus-visible {
+    position: relative;
+    outline: none;
+}
+
+.logo:focus-visible::after {
+    --btn-outline-offset: -9px;
+
+    content: '';
+
+    position: absolute;
+    top: var(--btn-outline-offset);
+    left: var(--btn-outline-offset);
+    bottom: var(--btn-outline-offset);
+    right: var(--btn-outline-offset);
+    
+    border: 2px solid var(--accent-color-dark);
+    transition: var(--transition-all);
+}

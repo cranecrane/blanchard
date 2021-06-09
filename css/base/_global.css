@@ -43,3 +43,7 @@ img {
 figure {
 	margin: 0;
 }
+
+.simplebar-content-wrapper {
+	overflow: auto;
+}

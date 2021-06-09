@@ -13,7 +13,8 @@
 
 @import "blocks/_search-form.css";
 @import "blocks/_menu.css";
-@import "blocks/_art-direction-menu.css";
+@import "blocks/_dropdown-menu.css";
+@import "blocks/_dropdown-list.css";
 @import "blocks/_simplebar.css";
 @import "blocks/_section.css";
 @import "blocks/_select-filter.css";
