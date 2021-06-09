@@ -59,54 +59,86 @@
 			</div>
 			<div class="header__lower-block">
 				<div class="header__lower-block-container container">
-					<ul class="header__art-direction-menu art-direction-menu">
-						<li class="art-direction-menu__item">
-							<select name="realism" class="art-direction-menu__select art-direction-select" aria-label="Реализм, выбрать художника">
-								<option value="">Реализм</option>
-								<option value="Tintoretto">Тинторетто</option>
-								<option value="Friedrich">Фридрих</option>
-								<option value="Leonardo">Леонардо</option>
-								<option value="Verrocchio">Верроккьо</option>
-								<option value="Verrocchio">Верроккьо</option>
-							</select>
-						</li>
-						<li class="art-direction-menu__item">
-							<select name="impessionism" class="art-direction-menu__select art-direction-select" aria-label="Импрессионизм, выбрать художника">
-								<option value="">Импрессионизм</option>
-								<option value="Monet">Моне</option>
-								<option value="Sisley">Сислей</option>
-								<option value="Manet">Мане</option>
-								<option value="Renoir">Ренуар</option>
-							</select>
-						</li>
-						<li class="art-direction-menu__item">
-							<select name="postimpressionism" class="art-direction-menu__select art-direction-select" aria-label="Постимпрессионизм, выбрать художника">
-								<option value="">Постимпрессионизм</option>
-								<option value="van-Gogh">Ван Гог</option>
-								<option value="Cezanne">Сезанн</option>
-								<option value="Gauguin">Гоген</option>
-								<option value="Seurat">Сера</option>
-							</select>
-						</li>
-						<li class="art-direction-menu__item">
-							<select name="avangard" class="art-direction-menu__select art-direction-select" aria-label="Авангард, выбрать художника">
-								<option value="">Авангард</option>
-								<option value="Kandinsky">Кандиский</option>
-								<option value="Marinetti">Маринетти</option>
-								<option value="Malevich">Малевич</option>
-								<option value="Picasso">Пикассо</option>
-							</select>
-						</li>
-						<li class="art-direction-menu__item">
-							<select name="futurism" class="art-direction-menu__select art-direction-select" aria-label="Футуризм, выбрать художника">
-								<option value="">Футуризм</option>
-								<option value="Carra">Карра</option>
-								<option value="Pratella">Прателла</option>
-								<option value="Severini">Северини</option>
-								<option value="Balla">Балла</option>
-							</select>
-						</li>
-					</ul>
+					<nav class="header__dropdown-menu dropdown-menu">
+						<ul class="header__dropdown-menu-list dropdown-menu__list">
+							<li class="dropdown-menu__item dropdown-list">
+								<header class="dropdown-list__header">
+									<button class="dropdown-list__btn btn-reset"  tabindex="0" aria-label="Выбрать художника, Реализм">Реализм
+										<svg class="dropdown-list__header-arrow" width="12" height="11" viewbox="0 0 12 11" fill="none" xmlns="http://www.w3.org/2000/svg">
+											<path d="M11 5L6 10L0.999998 5" stroke="currentColor"/>
+										</svg>
+									</button>
+								</header>
+								<ul class="dropdown-list__content" data-simplebar>
+									<li class="dropdown-list__item tintoretto" tabindex="0">Тинторетто</li>
+									<li class="dropdown-list__item friedrich" tabindex="0">Фридрих</li>
+									<li class="dropdown-list__item leonardo" tabindex="0">Леонардо</li>
+									<li class="dropdown-list__item verrocchio" tabindex="0">Верроккьо</li>
+									<li class="dropdown-list__item verrocchio" tabindex="0">Верроккьо</li>
+								</ul>
+							</li>
+							<li class="dropdown-menu__item dropdown-list">
+								<header class="dropdown-list__header">
+									<button class="dropdown-list__btn btn-reset"  tabindex="0" aria-label="Выбрать художника, Импрессионизм">Импрессионизм
+										<svg class="dropdown-list__header-arrow" width="12" height="11" viewbox="0 0 12 11" fill="none" xmlns="http://www.w3.org/2000/svg">
+											<path d="M11 5L6 10L0.999998 5" stroke="currentColor"/>
+										</svg>
+									</button>
+								</header>
+								<ul class="dropdown-list__content" data-simplebar>
+									<li class="dropdown-list__item monet" tabindex="0">Моне</li>
+									<li class="dropdown-list__item sisley" tabindex="0">Сислей</li>
+									<li class="dropdown-list__item manet" tabindex="0">Мане</li>
+									<li class="dropdown-list__item renoir" tabindex="0">Ренуар</li>
+								</ul>
+							</li>
+							<li class="dropdown-menu__item dropdown-list">
+								<header class="dropdown-list__header">
+									<button class="dropdown-list__btn btn-reset"  tabindex="0" aria-label="Выбрать художника, Постимпрессионизм">Постимпрессионизм
+										<svg class="dropdown-list__header-arrow" width="12" height="11" viewbox="0 0 12 11" fill="none" xmlns="http://www.w3.org/2000/svg">
+											<path d="M11 5L6 10L0.999998 5" stroke="currentColor"/>
+										</svg>
+									</button>
+								</header>
+								<ul class="dropdown-list__content" data-simplebar>
+									<li class="dropdown-list__item van-gogh" tabindex="0">Ван гог</li>
+									<li class="dropdown-list__item cezanne" tabindex="0">Сезанн</li>
+									<li class="dropdown-list__item gauguin" tabindex="0">Гоген</li>
+									<li class="dropdown-list__item seurat" tabindex="0">Сера</li>
+								</ul>
+							</li>
+							<li class="dropdown-menu__item dropdown-list">
+								<header class="dropdown-list__header">
+									<button class="dropdown-list__btn btn-reset"  tabindex="0" aria-label="Выбрать художника, Авангард">Авангард
+										<svg class="dropdown-list__header-arrow" width="12" height="11" viewbox="0 0 12 11" fill="none" xmlns="http://www.w3.org/2000/svg">
+											<path d="M11 5L6 10L0.999998 5" stroke="currentColor"/>
+										</svg>
+									</button>
+								</header>
+								<ul class="dropdown-list__content" data-simplebar>
+									<li class="dropdown-list__item kandinsky" tabindex="0">Кандинский</li>
+									<li class="dropdown-list__item marinetti" tabindex="0">Маринетти</li>
+									<li class="dropdown-list__item malevich" tabindex="0">Малевич</li>
+									<li class="dropdown-list__item picasso" tabindex="0">Пикассо</li>
+								</ul>
+							</li>
+							<li class="dropdown-menu__item dropdown-list">
+								<header class="dropdown-list__header">
+									<button class="dropdown-list__btn btn-reset"  tabindex="0" aria-label="Выбрать художника, Футуризм">Футуризм
+										<svg class="dropdown-list__header-arrow" width="12" height="11" viewbox="0 0 12 11" fill="none" xmlns="http://www.w3.org/2000/svg">
+											<path d="M11 5L6 10L0.999998 5" stroke="currentColor"/>
+										</svg>
+									</button>
+								</header>
+								<ul class="dropdown-list__content" data-simplebar>
+									<li class="dropdown-list__item carra" tabindex="0">Карра</li>
+									<li class="dropdown-list__item pratella" tabindex="0">Прателла</li>
+									<li class="dropdown-list__item severini" tabindex="0">Северини</li>
+									<li class="dropdown-list__item balla" tabindex="0">Балла</li>
+								</ul>
+							</li>
+						</ul>
+					</nav>
 					<form action="#" method="POST" class="header__search-form search-form">
 						<button type="submit" class="search-form__submit-btn btn-reset" aria-label="Найти на сайте">
 							<svg class="search-form__submit-icon" viewbox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -230,6 +262,7 @@
 	<script src="js/plugins/swiper-bundle.min.js"></script>
 
 	<script src="js/menu.js"></script>
+	<script src="js/dropdown-list.js"></script>
 	<script src="js/search-form.js"></script>
 	<script src="js/select-filter.js"></script>
 	<script src="js/gallery-slider.js"></script>
