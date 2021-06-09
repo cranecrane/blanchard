@@ -5,6 +5,10 @@
     position: relative;
 }
 
+.header:focus-visible {
+    outline: none;
+}
+
 .header__upper-block-container,
 .header__lower-block-container {
     display: flex;
