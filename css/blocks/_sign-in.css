@@ -9,7 +9,7 @@
     }
 }
 
-@media (min-width: 1920px) {
+@media (min-width: 1280px) {
     .sign-in {
         border: none;
         border-radius: 0;
@@ -18,9 +18,15 @@
         font-weight: var(--font-weight-normal);
     }
 
+    .sign-in:focus-visible {
+        outline: none;
+        background-color: var(--accent-color-dark);
+        box-shadow: var(--focus-shadow);
+        transition: var(--transition-all);
+    }
+
     .sign-in:focus-visible::after {
-        border: 2px solid var(--accent-color-dark);
-        border-radius: 0;
+        display: none;
     }
 }
 

@@ -6,6 +6,7 @@ window.addEventListener('DOMContentLoaded', function() {
         loop: true,
         slidesPerColumnFill: 'row',
         updateOnWindowResize: true,
+        speed: 400,
         
         pagination: {
           el: '.swiper-pagination',
@@ -24,18 +25,16 @@ window.addEventListener('DOMContentLoaded', function() {
             slidesPerGroup: 2,
             slidesPerColumn: 2,
             spaceBetween: 34,
+            speed: 600,
           },
-          1920: {
+          1440: {
             loop: false,
             slidesPerView: 3,
             slidesPerGroup: 3,
             slidesPerColumn: 2,
             spaceBetween: 50,
+            speed: 1000,
           },
         }
     });
-      
-    window.onresize = function() {
-        location.reload();
-    }
 })
