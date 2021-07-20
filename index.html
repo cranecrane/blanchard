@@ -6,21 +6,29 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Blanchard - художественная галерея</title>
 
-    <link rel="stylesheet" href="/css/plugins/choices.min.css">
-	<link rel="stylesheet" href="/css/plugins/simplebar.css">
-	<link rel="stylesheet" href="/css/plugins/swiper-bundle.min.css">
-    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="css/plugins/choices.min.css">
+	<link rel="stylesheet" href="css/plugins/simplebar.css">
+	<link rel="stylesheet" href="css/plugins/swiper-bundle.min.css">
+    <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
     <div class="site-container">
-        <header class="header" tabindex="0">
+        <header class="header">
             <div class="header__upper-block">
 				<div class="header__upper-block-container container">
 					<div class="header__menu menu">
-						<button class="menu__burger burger btn-reset" aria-label="Открыть меню">
-							<span class="burger__line"></span>
-							<span class="burger__line"></span>
-							<span class="burger__line"></span>
+						<button class="menu__open-close-btn btn-reset" aria-label="Открыть меню" tabindex="0">
+							<div class="menu__icon--burger burger">
+								<span class="burger__line"></span>
+								<span class="burger__line"></span>
+								<span class="burger__line"></span>
+							</div>
+							<svg class="menu__icon--close" viewbox="0 0 29 29" fill="none" xmlns="http://www.w3.org/2000/svg">
+								<g>
+								<rect width="37.2801" height="3.72801" transform="matrix(0.707093 0.707121 -0.707093 0.707121 2.63867 7.62939e-06)" fill="currentColor"/>
+								<rect width="37.2801" height="3.72801" transform="matrix(0.707093 -0.707121 0.707093 0.707121 -0.000976562 26.3615)" fill="currentColor"/>
+								</g>
+							</svg>
 						</button>
 						<nav class="menu__nav">
 							<ul class="menu__nav-list">
@@ -34,14 +42,14 @@
 							</ul>
 						</nav>
 						<a href="#" class="menu__sign-in sign-in btn btn--inverse btn--icon" aria-label="Войти в систему">
-							<svg class="btn__icon sign-in__icon" width="13" height="13" viewbox="0 0 13 13" fill="none" xmlns="http://www.w3.org/2000/svg">
-								<path d="M5.12056 9.09278L6.13889 10.1111L9.75 6.5L6.13889 2.88889L5.12056 3.90722L6.98389 5.77778H0V7.22222H6.98389L5.12056 9.09278ZM11.5556 0H1.44444C0.642778 0 0 0.65 0 1.44444V4.33333H1.44444V1.44444H11.5556V11.5556H1.44444V8.66667H0V11.5556C0 12.35 0.642778 13 1.44444 13H11.5556C12.35 13 13 12.35 13 11.5556V1.44444C13 0.65 12.35 0 11.5556 0Z" fill="currentColor"/>
+							<svg class="btn__icon sign-in__icon" viewbox="0 0 9 9" fill="none" xmlns="http://www.w3.org/2000/svg">
+								<path d="M3.545 6.295L4.25 7L6.75 4.5L4.25 2L3.545 2.705L4.835 4H0V5H4.835L3.545 6.295ZM8 0H1C0.445 0 0 0.45 0 1V3H1V1H8V8H1V6H0V8C0 8.55 0.445 9 1 9H8C8.55 9 9 8.55 9 8V1C9 0.45 8.55 0 8 0Z" fill="currentColor"/>
 							</svg>
 							<span>Войти</span>
 						</a>
 					</div>
 					<a href="#" class="header__logo logo" aria-label="Blanchard">
-						<img src="/icons/logo_blanchard.svg" alt="Blanchard" class="logo__img">
+						<img src="icons/logo_blanchard.svg" alt="Blanchard" class="logo__img">
 					</a>
 					<button type="button" class="header__search-btn search-btn btn-reset" aria-label="Открыть строку поиска">
 							<svg class="search-btn__icon--open search-btn__icon" viewbox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -62,13 +70,14 @@
 					<nav class="header__dropdown-menu dropdown-menu">
 						<ul class="header__dropdown-menu-list dropdown-menu__list">
 							<li class="dropdown-menu__item dropdown-list">
-								<header class="dropdown-list__header">
-									<button class="dropdown-list__btn btn-reset"  tabindex="0" aria-label="Выбрать художника, Реализм">Реализм
+								<div class="dropdown-list__header">
+									<button class="dropdown-list__btn btn-reset"  tabindex="0" aria-label="Выбрать художника, Реализм">
+										<span class="dropdown-list__header-text">Реализм</span>
 										<svg class="dropdown-list__header-arrow" width="12" height="11" viewbox="0 0 12 11" fill="none" xmlns="http://www.w3.org/2000/svg">
 											<path d="M11 5L6 10L0.999998 5" stroke="currentColor"/>
 										</svg>
 									</button>
-								</header>
+								</div>
 								<ul class="dropdown-list__content" data-simplebar>
 									<li class="dropdown-list__item tintoretto" tabindex="0">Тинторетто</li>
 									<li class="dropdown-list__item friedrich" tabindex="0">Фридрих</li>
@@ -78,13 +87,14 @@
 								</ul>
 							</li>
 							<li class="dropdown-menu__item dropdown-list">
-								<header class="dropdown-list__header">
-									<button class="dropdown-list__btn btn-reset"  tabindex="0" aria-label="Выбрать художника, Импрессионизм">Импрессионизм
+								<div class="dropdown-list__header">
+									<button class="dropdown-list__btn btn-reset"  tabindex="0" aria-label="Выбрать художника, Импрессионизм">
+										<span class="dropdown-list__header-text">Импрессионизм</span>
 										<svg class="dropdown-list__header-arrow" width="12" height="11" viewbox="0 0 12 11" fill="none" xmlns="http://www.w3.org/2000/svg">
 											<path d="M11 5L6 10L0.999998 5" stroke="currentColor"/>
 										</svg>
 									</button>
-								</header>
+								</div>
 								<ul class="dropdown-list__content" data-simplebar>
 									<li class="dropdown-list__item monet" tabindex="0">Моне</li>
 									<li class="dropdown-list__item sisley" tabindex="0">Сислей</li>
@@ -93,13 +103,14 @@
 								</ul>
 							</li>
 							<li class="dropdown-menu__item dropdown-list">
-								<header class="dropdown-list__header">
-									<button class="dropdown-list__btn btn-reset"  tabindex="0" aria-label="Выбрать художника, Постимпрессионизм">Постимпрессионизм
+								<div class="dropdown-list__header">
+									<button class="dropdown-list__btn btn-reset"  tabindex="0" aria-label="Выбрать художника, Постимпрессионизм">
+										<span class="dropdown-list__header-text">Постимпрессионизм</span>
 										<svg class="dropdown-list__header-arrow" width="12" height="11" viewbox="0 0 12 11" fill="none" xmlns="http://www.w3.org/2000/svg">
 											<path d="M11 5L6 10L0.999998 5" stroke="currentColor"/>
 										</svg>
 									</button>
-								</header>
+								</div>
 								<ul class="dropdown-list__content" data-simplebar>
 									<li class="dropdown-list__item van-gogh" tabindex="0">Ван гог</li>
 									<li class="dropdown-list__item cezanne" tabindex="0">Сезанн</li>
@@ -108,13 +119,14 @@
 								</ul>
 							</li>
 							<li class="dropdown-menu__item dropdown-list">
-								<header class="dropdown-list__header">
-									<button class="dropdown-list__btn btn-reset"  tabindex="0" aria-label="Выбрать художника, Авангард">Авангард
+								<div class="dropdown-list__header">
+									<button class="dropdown-list__btn btn-reset"  tabindex="0" aria-label="Выбрать художника, Авангард">
+										<span class="dropdown-list__header-text">Авангард</span>
 										<svg class="dropdown-list__header-arrow" width="12" height="11" viewbox="0 0 12 11" fill="none" xmlns="http://www.w3.org/2000/svg">
 											<path d="M11 5L6 10L0.999998 5" stroke="currentColor"/>
 										</svg>
 									</button>
-								</header>
+								</div>
 								<ul class="dropdown-list__content" data-simplebar>
 									<li class="dropdown-list__item kandinsky" tabindex="0">Кандинский</li>
 									<li class="dropdown-list__item marinetti" tabindex="0">Маринетти</li>
@@ -123,13 +135,14 @@
 								</ul>
 							</li>
 							<li class="dropdown-menu__item dropdown-list">
-								<header class="dropdown-list__header">
-									<button class="dropdown-list__btn btn-reset"  tabindex="0" aria-label="Выбрать художника, Футуризм">Футуризм
+								<div class="dropdown-list__header">
+									<button class="dropdown-list__btn btn-reset"  tabindex="0" aria-label="Выбрать художника, Футуризм">
+										<span class="dropdown-list__header-text">Футуризм</span>
 										<svg class="dropdown-list__header-arrow" width="12" height="11" viewbox="0 0 12 11" fill="none" xmlns="http://www.w3.org/2000/svg">
 											<path d="M11 5L6 10L0.999998 5" stroke="currentColor"/>
 										</svg>
 									</button>
-								</header>
+								</div>
 								<ul class="dropdown-list__content" data-simplebar>
 									<li class="dropdown-list__item carra" tabindex="0">Карра</li>
 									<li class="dropdown-list__item pratella" tabindex="0">Прателла</li>
@@ -153,12 +166,15 @@
         </header>
 
 		<main>
-			<section class="hero" tabindex="0" aria-label="Главная секция">
+			<h1 class="visually-hidden">
+				Художественная галерея Blanchard
+			</h1>
+			<section class="hero" aria-label="Главная секция">
 				<div class="hero__container container">
-					<h1 class="hero__title">
+					<h2 class="hero__title" tabindex="0">
 						Прикоснитесь к&nbsp;прекрасному
-					</h1>
-					<p class="hero__descr">
+					</h2>
+					<p class="hero__descr" tabindex="0">
 						Мы вынуждены отталкиваться от того, что реализация намеченных плановых заданий создаёт предпосылки для новых предложений. 
 					</p>
 					<a href="#" class="hero__subscribe-link btn btn--fill btn--inverse" aria-label="Подписаться на рассылку">
@@ -166,83 +182,100 @@
 					</a>
 				</div>
 			</section>
-			<section class="about section" tabindex="0" aria-label="О нас">
+			<section class="about section" aria-label="О нас">
 				<div class="about__container container">
-					<h2 class="about__title section__title"> О нас</h2>
-					<p class="about__descr section__descr">Ясность нашей позиции очевидна: семантический разбор внешних противодействий однозначно определяет каждого участника как способного принимать собственные решения касаемо распределения внутренних резервов и ресурсов. Не следует, однако, забывать, что высококачественный прототип будущего проекта влечет за собой процесс внедрения и модернизации модели развития. Повседневная практика показывает, что высокое качество позиционных исследований создаёт необходимость включения в производственный план целого ряда внеочередных мероприятий с учётом комплекса распределения внутренних резервов и ресурсов. В рамках спецификации современных стандартов, действия представителей оппозиции набирают популярность среди определенных слоев населения, а значит, должны быть разоблачены.</p>
+					<h2 class="about__title section__title" tabindex="0"> О нас</h2>
+					<p class="about__descr section__descr" tabindex="0">Ясность нашей позиции очевидна: семантический разбор внешних противодействий однозначно определяет каждого участника как способного принимать собственные решения касаемо распределения внутренних резервов и ресурсов. Не следует, однако, забывать, что высококачественный прототип будущего проекта влечет за собой процесс внедрения и модернизации модели развития. Повседневная практика показывает, что высокое качество позиционных исследований создаёт необходимость включения в производственный план целого ряда внеочередных мероприятий с учётом комплекса распределения внутренних резервов и ресурсов. В рамках спецификации современных стандартов, действия представителей оппозиции набирают популярность среди определенных слоев населения, а значит, должны быть разоблачены.</p>
 				</div>
 			</section>
-			<section class="gallery section" tabindex="0" aria-label="Галерея">
+			<section class="gallery section" aria-label="Галерея">
 				<div class="gallery__container container">
 					<div class="gallery__filter-content">
 						<h2 class="gallery__title section__title section__title--inverse" tabindex="0">Галерея</h2>
-						<form action="" class="gallery__filter-form">
+						<form action="#" class="gallery__filter-form">
 							<label class="gallery__filter-label select-filter__label" for="gallery__filter">
-								Фильтровать по:
+								Фильтр:
 							</label>
-							<select name="gallery__filter" id="gallery__filter" class="gallery__filter select-filter" aria-label="Фильтровать по">
+							<select name="gallery__filter" id="gallery__filter" class="gallery__filter select-filter" aria-label="Фильтр">
 								<option value="author">Автор</option>
 								<option value="direction">Направление</option>
 								<option value="technique">Техника</option>
 							</select>
 						</form>
 					</div>
-					<div class="gallery__slider gallery-slider" tabindex="0">
+					<div class="gallery__slider gallery-slider">
 						<div class="swiper-container">
 							<div class="swiper-wrapper">
-								<div class="swiper-slide">
-									<img src="/img/gallery-mobile-1.jpg" alt="Изображение">
+								<div class="swiper-slide" tabindex="0" aria-label="Казимир Малевич - Торс, 1928">
+									<img class="swiper-slide__img" src="img/gallery-mobile-3.jpg" alt="Казимир Малевич - Торс, 1928">
 								</div>
-								<div class="swiper-slide">
-									<img src="/img/gallery-mobile-2.jpg" alt="Изображение">
+								<div class="swiper-slide" tabindex="0" aria-label="Казимир Малевич - Женщина с граблями, 1930">
+									<img class="swiper-slide__img" src="img/gallery-mobile-2.jpg" alt="Казимир Малевич - Женщина с граблями, 1930">
 								</div>
-								<div class="swiper-slide">
-									<img src="/img/gallery-mobile-3.jpg" alt="Изображение">
+								<div class="swiper-slide" tabindex="0" aria-label="Казимир Малевич - Два крестьянина на фоне полей, 1930">
+									<img class="swiper-slide__img" src="img/gallery-mobile-9.jpg" alt="Казимир Малевич - Два крестьянина на фоне полей, 1930">
 								</div>
-								<div class="swiper-slide">
-									<img src="/img/gallery-mobile-4.jpg" alt="Изображение">
+								<div class="swiper-slide" tabindex="0" aria-label="Казимир Малевич - Девушки в поле, 1928">
+									<img class="swiper-slide__img" src="img/gallery-mobile-12.jpg" alt="Казимир Малевич - Девушки в поле, 1928">
 								</div>
-								<div class="swiper-slide">
-									<img src="/img/gallery-mobile-5.jpg" alt="Изображение">
+								<div class="swiper-slide" tabindex="0" aria-label="Казимир Малевич - Крестьянин в поле, 1928">
+									<img class="swiper-slide__img" src="img/gallery-mobile-8.jpg" alt="Казимир Малевич - Крестьянин в поле, 1928">
 								</div>
-								<div class="swiper-slide">
-									<img src="/img/gallery-mobile-6.jpg" alt="Изображение">
+								<div class="swiper-slide"  tabindex="0" aria-label="Казимир Малевич - Плотник, 1928">
+									<img class="swiper-slide__img" src="img/gallery-mobile-6.jpg" alt="Казимир Малевич - Плотник, 1928">
 								</div>
-								<div class="swiper-slide">
-									<img src="/img/gallery-mobile-7.jpg" alt="Изображение">
+								<div class="swiper-slide" tabindex="0" aria-label="Казимир Малевич - Крестьянка с ведрами и ребенком, 1912">
+									<img class="swiper-slide__img" src="img/gallery-mobile-4.jpg" alt="Казимир Малевич - Крестьянка с ведрами и ребенком, 1912">
 								</div>
-								<div class="swiper-slide">
-									<img src="/img/gallery-mobile-8.jpg" alt="Изображение">
+								<div class="swiper-slide" tabindex="0" aria-label="Казимир Малевич - Уборка ржи, 1912">
+									<img class="swiper-slide__img" src="img/gallery-mobile-5.jpg" alt="Казимир Малевич - Уборка ржи, 1912">
 								</div>
-								<div class="swiper-slide">
-									<img src="/img/gallery-mobile-9.jpg" alt="Изображение">
+								<div class="swiper-slide" tabindex="0" aria-label="Казимир Малевич - Супрематизм, 1915">
+									<img class="swiper-slide__img" src="img/gallery-mobile-7.jpg" alt="Казимир Малевич - Супрематизм, 1915">
 								</div>
-								<div class="swiper-slide">
-									<img src="/img/gallery-mobile-10.jpg" alt="Изображение">
+								<div class="swiper-slide" tabindex="0" aria-label="Казимир Малевич - Супрематизм, 1916">
+									<img class="swiper-slide__img" src="img/gallery-mobile-10.jpg" alt="Казимир Малевич - Супрематизм, 1917">
 								</div>
-								<div class="swiper-slide">
-									<img src="/img/gallery-mobile-11.jpg" alt="Изображение">
+								<div class="swiper-slide" tabindex="0" aria-label="Супрематизм 58, 1916">
+									<img class="swiper-slide__img" src="img/gallery-mobile-11.jpg" alt="Супрематизм, 1916">
 								</div>
-								<div class="swiper-slide">
-									<img src="/img/gallery-mobile-12.jpg" alt="Изображение">
+								<div class="swiper-slide" tabindex="0" aria-label="Иван Клюн - Супрематизм, 1915">
+									<img class="swiper-slide__img" src="img/gallery-mobile-1.jpg" alt="Иван Клюн - Супрематизм, 1915">
 								</div>
 							</div>
-							<div class="gallery-slider__nav">
-								<div class="swiper-button-prev">
-									<svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+							<!-- <div class="gallery-slider__nav">
+								<div class="swiper-button-prev" tabindex="0">
+									<svg width="30" height="30" viewbox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
 										<path d="M15 30C6.71573 30 8.89561e-07 23.2843 1.25168e-06 15C1.61379e-06 6.71573 6.71573 -1.01779e-06 15 -6.55671e-07C23.2843 -2.93554e-07 30 6.71573 30 15C30 23.2843 23.2843 30 15 30Z" fill="currentColor"/>
 										<path d="M15 30C6.71573 30 8.89561e-07 23.2843 1.25168e-06 15C1.61379e-06 6.71573 6.71573 -1.01779e-06 15 -6.55671e-07C23.2843 -2.93554e-07 30 6.71573 30 15C30 23.2843 23.2843 30 15 30Z" stroke="currentColor"/>
 										<path d="M16 20L11 15L16 10" stroke="white"/>
 									</svg>
 								</div>
 								<div class="swiper-pagination"></div>
-								<div class="swiper-button-next">
-									<svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+								<div class="swiper-button-next" tabindex="0">
+									<svg width="30" height="30" viewbox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
 										<path d="M15 30C23.2843 30 30 23.2843 30 15C30 6.71573 23.2843 -1.01779e-06 15 -6.55671e-07C6.71573 -2.93554e-07 2.93554e-07 6.71573 6.55671e-07 15C1.01779e-06 23.2843 6.71573 30 15 30Z" fill="currentColor"/>
 										<path d="M15 30C23.2843 30 30 23.2843 30 15C30 6.71573 23.2843 -1.01779e-06 15 -6.55671e-07C6.71573 -2.93554e-07 2.93554e-07 6.71573 6.55671e-07 15C1.01779e-06 23.2843 6.71573 30 15 30Z" stroke="currentColor"/>
 										<path d="M14 20L19 15L14 10" stroke="white"/>
 									</svg>
-								</div>
+								</div> -->
+							</div>
+						</div>
+						<div class="gallery__slider-nav gallery-slider__nav">
+							<div class="swiper-button-prev" tabindex="0">
+								<svg width="30" height="30" viewbox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+									<path d="M15 30C6.71573 30 8.89561e-07 23.2843 1.25168e-06 15C1.61379e-06 6.71573 6.71573 -1.01779e-06 15 -6.55671e-07C23.2843 -2.93554e-07 30 6.71573 30 15C30 23.2843 23.2843 30 15 30Z" fill="currentColor"/>
+									<path d="M15 30C6.71573 30 8.89561e-07 23.2843 1.25168e-06 15C1.61379e-06 6.71573 6.71573 -1.01779e-06 15 -6.55671e-07C23.2843 -2.93554e-07 30 6.71573 30 15C30 23.2843 23.2843 30 15 30Z" stroke="currentColor"/>
+									<path d="M16 20L11 15L16 10" stroke="white"/>
+								</svg>
+							</div>
+							<div class="swiper-pagination"></div>
+							<div class="swiper-button-next" tabindex="0">
+								<svg width="30" height="30" viewbox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+									<path d="M15 30C23.2843 30 30 23.2843 30 15C30 6.71573 23.2843 -1.01779e-06 15 -6.55671e-07C6.71573 -2.93554e-07 2.93554e-07 6.71573 6.55671e-07 15C1.01779e-06 23.2843 6.71573 30 15 30Z" fill="currentColor"/>
+									<path d="M15 30C23.2843 30 30 23.2843 30 15C30 6.71573 23.2843 -1.01779e-06 15 -6.55671e-07C6.71573 -2.93554e-07 2.93554e-07 6.71573 6.55671e-07 15C1.01779e-06 23.2843 6.71573 30 15 30Z" stroke="currentColor"/>
+									<path d="M14 20L19 15L14 10" stroke="white"/>
+								</svg>
 							</div>
 						</div>
 					</div>

@@ -28,7 +28,6 @@
     --font-size-title-small: 28px;
     --font-size-title-tiny: 24px;
 
-    --line-height-title: 1.3;
     --line-height-main: 2;
 
     --font-size-big: 18px;
@@ -43,14 +42,15 @@
 
     /*** border ***/
     --border-white: 1px solid var(--white);
-    --border-gray: 1px solid var(--silver);
+    --border-outline: 2px solid var(--accent-color-dark);
 
     --border-radius: 6px;
-    --border-radius-circle: 100px;
 
-    /*** outline ***/
-    --outline: 2px solid var(--accent-color-dark);
-    --outline-offset: 3px;
+    /*** box-shadows ***/
+    --focus-shadow: 6px 6px 0 var(--accent-color-dark), 
+    -6px -6px 0 var(--accent-color-dark),
+    -6px 6px 0 var(--accent-color-dark),
+    6px -6px 0 var(--accent-color-dark);
 
     /*** transitions ***/
     --transition-all: all .3s ease-in-out;
@@ -59,13 +59,15 @@
     --z-index-menu-open: 100;
     --z-index-search-btn-open: 90;
     --z-index-header-lower-block: 80;
+    --z-index-hero-background: 70;
+    --z-index-select-filter: 30;
 
     /*** sizes ***/
     --max-width-container: 1703px;
 
     --padding-general: 34px;
     --padding-lr-container: 15px;
-    --padding-lr-container-tablet: 50px;
+    --padding-lr-container-tablet-sm: 50px;
 
     --dropdown-list-content-padding: 40px;
 }
