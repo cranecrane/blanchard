@@ -8,33 +8,33 @@
     justify-content: center;
 }
 
-.open .search-form {
+.search-form--open .search-form {
     display: flex;
+    padding-top: 28px;
     padding-bottom: 19px;
 }
 
 @media (min-width: 768px) {
-    .open .search-form {
+    .search-form--open .search-form {
         justify-content: start;
 
-        padding: 34px 52px 34px var(--padding-lr-container-tablet);
+        padding: 36px 52px 30px var(--padding-lr-container-tablet-sm);
         width: 100%;
-        height: var(--upper-block-height-tablet);
+        max-height: ;
     }
 }
 
-@media (min-width: 1024px) {
-    .open .search-form {
-        --open-search-form-height-tablet-big: 36px;
-
-        padding: 0;
-        height: var(--open-search-form-height-tablet-big);
+@media (min-width: 896px) {
+    .search-form--open .search-form {
+        padding: 1px 0 4px 2px;
+        margin-top: 35px;
+        margin-bottom: auto;
 
         background-color: #18171b;
     }
 }
 
-@media (min-width: 1920px) {
+@media (min-width: 1280px) {
     .search-form {
         display: flex;
     }
@@ -46,36 +46,55 @@
 
     color: var(--text-color-inverse);
     transition: var(--transition-all);
-    transform: translateY(4px);
-}
-
-.search-form__submit-btn:focus-visible {
-    outline: 2px solid var(--accent-color-dark);
-    outline-offset: 3px;
+    transform: translateY(6px);
 }
 
 @media (min-width: 768px) {
-    .search-form__submit-btn {
+    .search-form__submit-btn {   
+        margin-right: 0;
         height: var(--search-btn-size-tablet);
-        transform: none;
+        transform: translateY(0px);
     }
 }
 
-@media (min-width: 1024px) {
-    .search-form:hover .search-form__submit-btn {
+.search-form__submit-btn:focus-visible {
+    position: relative;
+    outline: none;
+}
+
+.search-form__submit-btn:focus-visible::after {
+    --outline-offset: -5px;
+
+    content: '';
+
+    position: absolute;
+    top: var(--outline-offset);
+    left: var(--outline-offset);
+    bottom: var(--outline-offset);
+    right: var(--outline-offset);
+    
+    border: var(--border-outline);
+    transition: var(--transition-all);
+}
+
+@media (min-width: 896px) {
+    .search-form__submit-btn:hover {
         color: var(--accent-color-light);
         transition: var(--transition-all);
     }
 }
 
-@media (min-width: 1920px) {
+@media (min-width: 1280px) {
     .search-form__submit-btn {
+        margin-right: 2px;
         height: var(--search-btn-size-desktop);
+
+        transform: translateY(3px);
     }
 }
 
 .search-form:active .search-form__submit-btn {
-    color: var(--accent-color-light);
+    color: var(--accent-color-dark);
     transition: var(--transition-all);
 }
 
@@ -91,7 +110,7 @@
     }
 }
 
-@media(min-width: 1920px) {
+@media(min-width: 1280px) {
     .search-form__submit-icon {
         width: var(--search-btn-size-desktop);
         height: var(--search-btn-size-desktop);
@@ -106,13 +125,19 @@
     border-left: none;
     border-right: none;
     border-bottom: 1px solid #c4c4c4;
-    padding-bottom: 3px;
+    border-radius: 0;
+    padding-left: 0;
+    padding-right: 0;
+    padding-bottom: 2px;
     width: var(--search-area-width);
 
     font-size: var(--font-size-big);
+    line-height: 1;
     color: var(--accent-color-light);
+
     background-color: transparent;
     transition: var(--transition-all);
+	caret-color: var(--accent-color-light);
 }
 
 .search-form__area[type="search"]::placeholder {
@@ -121,8 +146,8 @@
 }
 
 .search-form__area:focus-visible {
-    outline: var(--outline);
-    outline-offset: var(--outline-offset);
+    border-color: var(--accent-color-light);
+    transition: var(--transition-all);
 }
  
 @media (min-width: 768px) {
@@ -131,22 +156,23 @@
         border-color: rgba(255, 255, 255, .85);
     }
 
-    .open .search-form__area { 
+    .search-form--open .search-form__area { 
         margin-right: 0;
         width: 100%;
     }
 }
 
-@media (min-width: 1024px) {
+@media (min-width: 896px) {
     .search-form:hover .search-form__area {
         border-color: var(--accent-color-light);
         transition: var(--transition-all);
     }
 } 
 
-@media (min-width: 1920px) {
+@media (min-width: 1280px) {
     .search-form__area {
         width: var(--search-area-width-desktop);
+        transform: translateX(-2px);
     }
 }
 

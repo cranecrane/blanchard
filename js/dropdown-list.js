@@ -12,11 +12,13 @@ window.addEventListener('DOMContentLoaded', function () {
                 }
             }
             el.parentElement.nextElementSibling.classList.toggle(openClass);
+            el.classList.toggle(openClass);
         });
 
         window.addEventListener('resize', function() {
             if (window.outerWidth < 1920) {
                 el.parentElement.nextElementSibling.classList.remove('open');
+                el.classList.remove('open');
             }
         });
     });

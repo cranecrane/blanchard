@@ -8,15 +8,9 @@
     }
 }
 
-@media (min-width: 1024px) {
+@media (min-width: 1280px) {
     .about__title {
-        margin-left: -3px;
-    }
-}
-
-@media (min-width: 1024px) {
-    .about__title {
-        margin-left: -2px;
+        margin-bottom: 23px;
     }
 }
 

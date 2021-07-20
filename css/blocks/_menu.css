@@ -1,4 +1,11 @@
-@media (min-width: 1920px) {
+.menu {
+    --menu-icon-close-size: 15px;
+    --menu-icon-close-size-tablet: 29px;
+
+    font-size: 0;
+}
+
+@media (min-width: 1280px) {
     .menu {
         display: flex;
         justify-content: space-between;
@@ -7,90 +14,7 @@
     }
 }
 
-@media (min-width: 1920px) {
-    .menu__burger {
-        display: none;
-    }
-}
-
-.menu__nav {
-    display: none;
-}
-
-@media (min-width: 1920px) {
-    .menu__nav {
-        display: block;
-    }
-
-    .menu__nav-list {
-        display: flex;
-        align-items: center;
-    }
-}
-
-.menu__nav-item {
-    font-size: var(--font-size-medium);
-    font-weight: var(--font-weight-medium);
-
-    transition: var(--transition-all);
-}
-
-.menu__nav-item:not(:last-child) {
-    margin-bottom: 14px;
-}
-
-@media (min-width: 768px) {
-    .menu__nav-item {
-        font-size: var(--font-size-title-tiny);
-    }
-
-    .menu__nav-item:not(:last-child) {
-        margin-bottom: 37px;
-    }
-}
-
-@media (min-width: 1024px) {
-    .menu__nav-item:hover {
-        color: var(--accent-color-light);
-        transition: var(--transition-all);
-    }
-}
-
-@media (min-width: 1920px) {
-    .menu__nav-item {
-        font-size: var(--font-size-big);
-    }
-
-    .menu__nav-item:not(:last-child) {
-        margin-bottom: 0;
-        margin-right: 63px;
-    }
-}
-
-.menu__nav-item:active {
-    color: var(--accent-color-dark);
-    transition: var(--transition-all);
-}
-
-.menu__nav-link:focus-visible {
-    outline: var(--outline);
-    outline-offset: var(--outline-offset);
-}
-
-.menu__sign-in {
-    display: none;
-}
-
-@media (min-width: 1920px) {
-    .menu__sign-in {
-        display: flex;
-        padding: 0;
-    }
-}
-
-/*** .menu.open ***/
-
-.menu.open {
+.menu.menu--open {
     position: fixed;
     z-index: var(--z-index-menu-open);
     top: 0;
@@ -104,33 +28,196 @@
 }
 
 @media (min-width: 768px) {
-    .menu.open {
-        padding: var(--padding-lr-container-tablet);
+    .menu.menu--open {
+        padding: var(--padding-lr-container-tablet-sm);
         padding-top: 37px;
+        min-height: 768px;
     }
 }
 
-.menu.open .menu__burger {
-    margin-bottom: 25px;
+.menu.menu--open.menu--overflow {
+    --menu-open-scroll-height: calc(var(--vh, 1vh) * 100);
+
+    overflow: scroll;
+    min-height: var(--menu-open-scroll-height);
+    height: 100vh;
+    height: var(--menu-open-scroll-height);
+}
+
+.menu__open-close-btn:focus-visible {
+    position: relative;
+    outline: none;
+}
+
+.menu__open-close-btn:focus-visible::after {
+    --outline-offset: -9px;
+    content: '';
+
+    position: absolute;
+    top: var(--outline-offset);
+    left: var(--outline-offset);
+    bottom: var(--outline-offset);
+    right: var(--outline-offset);
+    
+    border: var(--border-outline);
+    transition: var(--transition-all);
+}
+
+@media (min-width: 1280px) {
+    .menu__open-close-btn {
+        display: none;
+    }
+}
+
+.menu--open .menu__open-close-btn {
+    margin-bottom: 24px;
+    transform: translateX(1px);
 }
 
 @media (min-width: 768px) {
-    .menu.open .menu__burger {
-        margin-bottom: 53px;
+    .menu.menu--open .menu__open-close-btn {
+        margin-bottom: 49px;
     }
 }
 
-.menu.open .menu__nav {
-    display: block;
-    margin-bottom: 25px;
+.menu__icon--close {
+    display: none;
+
+    width: var(--menu-icon-close-size);
+    height: var(--menu-icon-close-size);
+
+    color: var(--text-color-inverse);
+    transition: var(--transition-all);
+}
+
+.menu__icon--close:hover {
+    color: var(--accent-color-light);
+    transition: var(--transition-all);
+}
+
+.menu__icon--close:active {
+    color: var(--accent-color-dark);
+    transition: var(--transition-all);
 }
 
 @media (min-width: 768px) {
-    .menu.open .menu__nav {   
-        margin-bottom: 131px;
+    .menu__icon--close{
+        width: var(--menu-icon-close-size-tablet);
+        height: var(--menu-icon-close-size-tablet);
     }
 }
 
-.menu.open .menu__sign-in {
+.menu--open .menu__icon--close {
     display: block;
+}
+
+.menu--open .menu__icon--burger {
+    display: none;
+}
+
+.menu__nav {
+    display: none;
+}
+
+@media (min-width: 1280px) {
+    .menu__nav {
+        display: block;
+
+        margin-right: 100px;
+        min-width: 700px;
+        max-width: 896px;
+        width: 100%;
+    }
+
+    .menu__nav-list {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+}
+
+.menu--open .menu__nav {
+    display: block;
+    margin-bottom: 26px;
+}
+
+@media (min-width: 768px) {
+    .menu--open .menu__nav {   
+        margin-bottom: 133px;
+        transform: translateX(-1px);
+    }
+}
+
+.menu__nav-item {
+    font-size: var(--font-size-medium);
+    font-weight: var(--font-weight-medium);
+    line-height: 1;
+
+    transition: var(--transition-all);
+}
+
+.menu__nav-item:not(:last-child) {
+    margin-bottom: 16px;
+}
+
+@media (min-width: 768px) {
+    .menu__nav-item {
+        font-size: var(--font-size-title-tiny);
+    }
+
+    .menu__nav-item:not(:last-child) {
+        margin-bottom: 40px;
+    }
+}
+
+@media (min-width: 1024px) {
+    .menu__nav-item:hover {
+        color: var(--accent-color-light);
+        transition: var(--transition-all);
+    }
+}
+
+@media (min-width: 1280px) {
+    .menu__nav-item {
+        font-size: var(--font-size-big);
+    }
+
+    .menu__nav-item:not(:last-child) {
+        margin-bottom: 0;
+    }
+}
+
+.menu__nav-item:active {
+    color: var(--accent-color-dark);
+    transition: var(--transition-all);
+}
+
+.menu__nav-link:focus-visible {
+    outline: none;
+    background-color: var(--accent-color-dark);
+    box-shadow: var(--focus-shadow);
+    transition: var(--transition-all);
+}
+
+.menu__sign-in {
+    display: none;
+}
+
+@media (min-width: 1280px) {
+    .menu__sign-in {
+        display: flex;
+        padding: 0;
+
+        transform: translate(-.6px, 0.5px);
+    }
+}
+
+.menu--open .menu__sign-in {
+    display: block;
+}
+
+@media (min-width: 768px) {
+    .menu--open .menu__sign-in {
+        transform: translateX(1px);
+    }
 }

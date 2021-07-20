@@ -10,7 +10,7 @@
     }
 }
 
-@media (min-width: 1920px) {
+@media (min-width: 1280px) {
     .logo {
         width: 173px;
         height: 39.9px;
@@ -23,16 +23,16 @@
 }
 
 .logo:focus-visible::after {
-    --btn-outline-offset: -9px;
+    --outline-offset: -9px;
 
     content: '';
 
     position: absolute;
-    top: var(--btn-outline-offset);
-    left: var(--btn-outline-offset);
-    bottom: var(--btn-outline-offset);
-    right: var(--btn-outline-offset);
+    top: var(--outline-offset);
+    left: var(--outline-offset);
+    bottom: var(--outline-offset);
+    right: var(--outline-offset);
     
-    border: 2px solid var(--accent-color-dark);
+    border: var(--border-outline);
     transition: var(--transition-all);
 }
