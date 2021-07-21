@@ -29,9 +29,7 @@
     }
 }
 
-.search-btn:focus,
 .search-btn:focus-visible {
-    position: relative;
     outline: none;
 }
 .search-btn:focus-visible::before {
@@ -54,9 +52,11 @@
     transition: var(--transition-all);
 }
 
-.search-btn__icon:hover {
-    color: var(--accent-color-light);
-    transition: var(--transition-all);
+@media (min-width: 1280px) {
+    .search-btn__icon:hover {
+        color: var(--accent-color-light);
+        transition: var(--transition-all);
+    }
 }
 
 .search-btn__icon:active {

@@ -25,7 +25,13 @@
     bottom: 0;
 }
 
-.simplebar-scrollbar.simplebar-hover::before,
+@media (min-width: 1280px) {
+    .simplebar-scrollbar.simplebar-hover::before {
+        opacity: 1;
+        transition: var(--transition-all);
+    }
+}
+ 
 .simplebar-scrollbar.simplebar-visible::before {
     opacity: 1;
     transition: var(--transition-all);

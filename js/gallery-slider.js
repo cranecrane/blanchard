@@ -6,7 +6,6 @@ window.addEventListener('DOMContentLoaded', function() {
         loop: true,
         slidesPerColumnFill: 'row',
         updateOnWindowResize: true,
-        speed: 400,
         
         pagination: {
           el: '.swiper-pagination',
@@ -25,7 +24,6 @@ window.addEventListener('DOMContentLoaded', function() {
             slidesPerGroup: 2,
             slidesPerColumn: 2,
             spaceBetween: 34,
-            speed: 600,
           },
           1440: {
             loop: false,
@@ -33,7 +31,7 @@ window.addEventListener('DOMContentLoaded', function() {
             slidesPerGroup: 3,
             slidesPerColumn: 2,
             spaceBetween: 50,
-            speed: 1000,
+            speed: 600,
           },
         }
     });
