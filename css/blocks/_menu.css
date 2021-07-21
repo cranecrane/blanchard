@@ -90,9 +90,11 @@
     transition: var(--transition-all);
 }
 
-.menu__icon--close:hover {
-    color: var(--accent-color-light);
-    transition: var(--transition-all);
+@media (min-width: 1280px) {
+    .menu__icon--close:hover {
+        color: var(--accent-color-light);
+        transition: var(--transition-all);
+    }
 }
 
 .menu__icon--close:active {
@@ -170,7 +172,7 @@
     }
 }
 
-@media (min-width: 1024px) {
+@media (min-width: 1280px) {
     .menu__nav-item:hover {
         color: var(--accent-color-light);
         transition: var(--transition-all);

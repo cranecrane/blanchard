@@ -70,7 +70,13 @@
     transition: var(--transition-all);
 }
 
-.choices__inner:hover,
+@media (min-width: 1280px) {
+    .choices__inner:hover {
+        background-color: rgba(255, 255, 255, .2);
+        transition: var(--transition-all);
+    }
+}
+
 .choices:focus-visible {
     background-color: rgba(255, 255, 255, .2);
     transition: var(--transition-all);
