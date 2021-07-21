@@ -26,6 +26,10 @@ window.addEventListener('DOMContentLoaded', function () {
     pageContent.addEventListener('click', function() {
         dropdownContent.forEach(function(el) {
             el.classList.remove(openClass);
+        });
+
+        dropdownBtn.forEach(function(el) {
+            el.classList.remove(openClass);
         })
     })
 })

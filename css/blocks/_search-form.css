@@ -20,7 +20,6 @@
 
         padding: 36px 52px 30px var(--padding-lr-container-tablet-sm);
         width: 100%;
-        max-height: ;
     }
 }
 
@@ -162,7 +161,7 @@
     }
 }
 
-@media (min-width: 896px) {
+@media (min-width: 1280px) {
     .search-form:hover .search-form__area {
         border-color: var(--accent-color-light);
         transition: var(--transition-all);

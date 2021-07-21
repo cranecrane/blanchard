@@ -1,5 +1,4 @@
 .gallery {
-    --gallery-padding-bottom: 80px;
     --filter-form-height: 70px;
     --filter-form-height-tablet: 75px;
     --filter-form-width: 100%;
@@ -13,10 +12,16 @@
     background-position: center;
 }
 
+@media (min-width: 768px) {
+    .gallery {
+        padding-bottom: 71px;
+    }
+}
+
 @media (min-width: 896px) {
     .gallery {
         position: relative;
-        padding-bottom: var(--gallery-padding-bottom);
+        padding-bottom: 80px;
     }
 }
 
@@ -72,20 +77,14 @@
     }
 }
 
-.gallery__slider:focus-visible {
-    outline: none;
-}
-
 @media (min-width: 768px) {
     .gallery__slider {
-        order: 1;
-        margin-bottom: 14px;
+        margin-bottom: 30px;
     }
 }
 
 @media (min-width: 896px) {
     .gallery__slider {
-        padding-top: 76px;
         margin-bottom: 0;
         width: calc(100% - var(--filter-form-width-tablet) - var(--filter-form-margin-left-tablet-big));
     }
@@ -97,37 +96,8 @@
     }
 }
 
-.gallery__slider-nav {
-    margin-bottom: 20px;
-}
-
-@media (min-width: 768px) {
-    .gallery__slider-nav {
-        margin-bottom: 30px;
-    }
-}
-
-@media (min-width: 896px) {
-    .gallery__slider-nav {
-        position: absolute;
-        top: 0;
-        left: calc(var(--filter-form-width-tablet) + var(--padding-lr-container-tablet-sm) + var(--filter-form-margin-left-tablet-big));
-    }
-}
-
-@media (min-width: 1280px) {
-    .gallery__slider-nav {
-        position: absolute;
-        top: 0;
-        left: calc(var(--filter-form-width-desktop) + var(--padding-lr-container-tablet-sm) + var(--filter-form-margin-left-tablet-big));
-    }
-}
-
 .gallery__note {
     display: inline-block;
-
-    margin-left: var(--padding-lr-container);
-    margin-right: var(--padding-lr-container);
 
     font-size: var(--font-size-medium);
     font-weight: var(--font-weight-medium);
@@ -139,18 +109,11 @@
     outline: none;
 }
 
-@media (min-width: 768px) {
-    .gallery__note {
-        margin-left: var(--padding-lr-container-tablet-sm);
-        margin-right: var(--padding-lr-container-tablet-sm);
-    }
-}
-
 @media (min-width: 896px) {
     .gallery__note {
         position: absolute;
-        bottom: calc(var(--gallery-padding-bottom) - 10px);
-        left: 0;
+        bottom: -10px;
+        left: var(--padding-lr-container-tablet-sm);
 
         width: var(--filter-form-width-tablet)
     }
@@ -167,8 +130,7 @@
     transition: var(--transition-all);
 }
 
-@media (min-width: 896px) {
-    
+@media (min-width: 1280px) {
     .gallery__sign-in-link:hover {
         color: var(--accent-color-dark);
         transition: var(--transition-all);

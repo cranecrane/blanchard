@@ -65,9 +65,11 @@
     }
 }
 
-.burger:hover .burger__line {
-    background-color: var(--accent-color-light);
-    transition: var(--transition-all);
+@media (min-width: 1280px) {
+    .burger:hover .burger__line {
+        background-color: var(--accent-color-light);
+        transition: var(--transition-all);
+    }
 }
 
 .burger:active .burger__line {
