@@ -7,17 +7,17 @@ window.addEventListener('DOMContentLoaded', function () {
     dropdownBtn.forEach(function(el) {
         el.addEventListener('click', function() {
             for(let elem of dropdownContent) {
-                if ((elem.classList.contains(openClass)) && !(el.parentElement.nextElementSibling.classList.contains(openClass))) {
+                if ((elem.classList.contains(openClass)) && !(el.nextElementSibling.classList.contains(openClass))) {
                     elem.classList.remove(openClass);
                 }
             }
-            el.parentElement.nextElementSibling.classList.toggle(openClass);
+            el.nextElementSibling.classList.toggle(openClass);
             el.classList.toggle(openClass);
         });
 
         window.addEventListener('resize', function() {
             if (window.outerWidth < 1920) {
-                el.parentElement.nextElementSibling.classList.remove('open');
+                el.nextElementSibling.classList.remove('open');
                 el.classList.remove('open');
             }
         });

@@ -54,7 +54,6 @@
 }
 
 .header__menu {
-    order: 1;
     transform: translateY(-.2px);
 }
 
@@ -99,7 +98,7 @@
     }
 }
 
-@media (min-width: 1440px) {
+@media (min-width: 1600px) {
     .header__logo {
         --header-logo-margin-r: 180px;
     }

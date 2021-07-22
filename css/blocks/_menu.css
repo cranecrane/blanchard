@@ -44,29 +44,15 @@
     height: var(--menu-open-scroll-height);
 }
 
-.menu__open-close-btn:focus-visible {
-    position: relative;
-    outline: none;
-}
-
-.menu__open-close-btn:focus-visible::after {
-    --outline-offset: -9px;
-    content: '';
-
-    position: absolute;
-    top: var(--outline-offset);
-    left: var(--outline-offset);
-    bottom: var(--outline-offset);
-    right: var(--outline-offset);
-    
-    border: var(--border-outline);
-    transition: var(--transition-all);
-}
-
 @media (min-width: 1280px) {
     .menu__open-close-btn {
         display: none;
     }
+}
+
+.menu__open-close-btn:focus-visible .burger__line {
+    background-color: var(--accent-color-main);
+    transition: var(--transition-all);
 }
 
 .menu--open .menu__open-close-btn {
@@ -87,6 +73,11 @@
     height: var(--menu-icon-close-size);
 
     color: var(--text-color-inverse);
+    transition: var(--transition-all);
+}
+
+.menu__icon--close {
+    color: var(--accent-color-main);
     transition: var(--transition-all);
 }
 
@@ -126,15 +117,12 @@
         display: block;
 
         margin-right: 100px;
-        min-width: 700px;
-        max-width: 896px;
         width: 100%;
     }
 
     .menu__nav-list {
         display: flex;
         align-items: center;
-        justify-content: space-between;
     }
 }
 
@@ -173,25 +161,34 @@
 }
 
 @media (min-width: 1280px) {
-    .menu__nav-item:hover {
-        color: var(--accent-color-light);
-        transition: var(--transition-all);
-    }
-}
-
-@media (min-width: 1280px) {
     .menu__nav-item {
         font-size: var(--font-size-big);
     }
 
     .menu__nav-item:not(:last-child) {
         margin-bottom: 0;
+        margin-right: 35px;
+    }
+
+    .menu__nav-item:hover {
+        color: var(--accent-color-light);
+        transition: var(--transition-all);
+    }
+}
+
+@media (min-width: 1600px) {
+    .menu__nav-item:not(:last-child) {
+        margin-right: 62.4px;
     }
 }
 
 .menu__nav-item:active {
     color: var(--accent-color-dark);
     transition: var(--transition-all);
+}
+
+.menu__nav-link {
+    display: block;
 }
 
 .menu__nav-link:focus-visible {
