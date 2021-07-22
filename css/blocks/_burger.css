@@ -12,8 +12,6 @@
     
     font-size: 0;
     text-align: left;
-
-    transition: var(--transition-all);
 }
 
 .burger:focus-visible {
