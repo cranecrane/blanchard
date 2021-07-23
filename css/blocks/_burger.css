@@ -12,8 +12,10 @@
     
     font-size: 0;
     text-align: left;
+}
 
-    transition: var(--transition-all);
+.burger:focus-visible {
+    outline: none;
 }
 
 @media (min-width: 768px) {
@@ -63,6 +65,11 @@
     .burger__line:nth-child(3) {
         width: 66.7%;
     }
+}
+
+.burger:focus-visible .burger__line {
+    background-color: var(--accent-color-main);
+    transition: var(--transition-all);
 }
 
 @media (min-width: 1280px) {

@@ -2,13 +2,21 @@
     --content-size: 300px;
     --list-item-size: 40px;
 
+    line-height: 1;
+    transition: var(--transition-all);
+
     position: relative;
     cursor: pointer;
 }
 
-.dropdown-list__header {
-    line-height: 1;
-    transition: var(--transition-all);
+.dropdown-list:not(:last-child) {
+    margin-right: 50px;
+}
+
+@media (min-width: 1600px) {
+    .dropdown-list:not(:last-child) {
+        margin-right: 98.8px;
+    }
 }
 
 .dropdown-list__btn {

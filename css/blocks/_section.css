@@ -13,6 +13,7 @@
 @media (min-width: 1280px) {
     .section {
         padding-bottom: 71px;
+        padding-left: 2px;
     }
 }
 

@@ -29,21 +29,8 @@
     }
 }
 
-.search-btn:focus-visible {
-    outline: none;
-}
-.search-btn:focus-visible::before {
-    --outline-offset: -9px;
-
-    content: '';
-
-    position: absolute;
-    top: var(--outline-offset);
-    left: var(--outline-offset);
-    bottom: var(--outline-offset);
-    right: var(--outline-offset);
-    
-    border: var(--border-outline);
+.search-btn:focus-visible .search-btn__icon{
+    color: var(--accent-color-main);
     transition: var(--transition-all);
 }
 
