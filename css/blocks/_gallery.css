@@ -127,20 +127,4 @@
 
 .gallery__sign-in-link {
     color: var(--accent-color-light);
-    transition: var(--transition-all);
-}
-
-@media (min-width: 1280px) {
-    .gallery__sign-in-link:hover {
-        color: var(--accent-color-dark);
-        transition: var(--transition-all);
-    }
-}
-
-.gallery__sign-in-link:focus-visible,
-.gallery__sign-in-link:active {
-    outline: none;
-    
-    color: var(--accent-color-dark);
-    transition: var(--transition-all);
 }
