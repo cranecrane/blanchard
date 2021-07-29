@@ -1,0 +1,40 @@
+.artist-card__img-wrapper {
+    margin-bottom: 20px;
+}
+
+@media(min-width: 768px) {
+    .artist-card__img-wrapper {
+        margin-bottom: 31px;
+    }
+}
+
+.artist-card__title {
+    margin-bottom: 18px;
+
+    font-size: var(--font-size-title-tiny);
+    font-weight: var(--font-weight-medium);
+}
+
+@media(min-width: 768px) {
+    .artist-card__title {
+        margin-bottom: 13px;
+    }
+}
+
+.artist-card__years {
+    display: block;
+    margin-bottom: 8px;
+
+    color: var(--dusty-gray);
+    font-size: var(--font-size-tiny);
+}
+
+.artist-card__descr {
+    max-width: 99%
+}
+
+@media(min-width: 768px) {
+    .artist-card__descr {
+        max-width: none;
+    }
+}
