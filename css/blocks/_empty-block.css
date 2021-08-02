@@ -3,13 +3,17 @@
     justify-content: space-between;
 }
 
+.empty-block--row.artists__nav-item--active {
+    display: flex;
+}
+
 @media (min-width: 768px) {
     .empty-block--row {
         align-items: center;
     }
 }
 
-.empty-block__img-wrapper {
+.empty-block__img {
     margin-bottom: 20px;
 }
 

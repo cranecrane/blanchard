@@ -150,50 +150,41 @@
 
 .artists__nav {
     padding-top: 28px;
-    padding-bottom: 27px;
+    padding-bottom: 24px;
 }
 
 @media (min-width: 768px) {
     .artists__nav {
-        padding-top: 33.5px;
-        padding-bottom: 17px;
+        padding-top: 33px;
+        padding-bottom: 22px;
     }
 }
 
 .artists__nav .empty-block {
     margin-top: -8px;
-    margin-bottom: 8px;
+    margin-bottom: 1px;
 }
 
 .artists__list {
     display: none;
-    flex-direction: column;
-    flex-wrap: wrap;
-    align-content: flex-start;
+}
+
+@media (min-width: 768px) {
+    .artists__list {
+        columns: 3 200px;
+    }
 }
 
 .artists__nav-item--active {
-    display: flex;
+    display: block;
 }
 
 .artists__item {
-    margin-right: 60px;
     font-size: 0;
 }
 
 .artists__item:not(:last-child) {
-    margin-bottom: 10.9px;
-}
-
-@media (min-width: 896px) {
-    .artists__item {
-        margin-right: 65px;
-    }
-}
-@media (min-width: 1280px) {
-    .artists__item {
-        margin-right: 60px;
-    }
+    margin-bottom: 11px;
 }
 
 .artists__item-btn {

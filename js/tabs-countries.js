@@ -1,29 +1,71 @@
 document.addEventListener('DOMContentLoaded', function() {
-    function tabs(tabBtn, tabActiveClass, contentActiveClass) {
-        document.querySelectorAll(tabBtn).forEach(function(btn) {
-            btn.addEventListener('click', function(event) {
-                const path = event.currentTarget.dataset.path;
-    
-                document.querySelectorAll('.' + tabActiveClass).forEach(function(el) {
-                    if (el.innerHTML != btn.innerHTML || el.dataset.path != path) {
-                        el.classList.remove(tabActiveClass);
-                        console.log(el);
+    let tabs = document.querySelectorAll('.tabs-countries__btn');
+    let activeTabClass = 'tabs-countries__btn--active';
+    let activeListClass = 'artists__nav-item--active';
+    let activeBtnClass = 'artists__item-btn--active';
+    let activeCardClass = 'artists-cards__item--active';
+
+
+    tabs.forEach(function(btn) {
+        btn.addEventListener('click', function(event) {
+            const path = event.currentTarget.dataset.path;
+
+            document.querySelectorAll('.' + activeTabClass).forEach(function(el) {
+                if (el.dataset.path != path) {
+                    el.classList.remove(activeTabClass);
+                }
+            });
+            btn.classList.add(activeTabClass);
+
+            document.querySelectorAll('.' + activeListClass).forEach(function(content) {
+                content.classList.remove(activeListClass);
+            });
+            document.querySelectorAll('.' + activeBtnClass).forEach(function(btn) {
+                btn.classList.remove(activeBtnClass);
+            });
+            document.querySelectorAll('.' + activeCardClass).forEach(function(card) {
+                card.classList.remove(activeCardClass);
+            });
+
+            let content = document.querySelectorAll(`[data-target="${path}"]`);
+            content.forEach(function(list) {
+                list.classList.add(activeListClass);
+                
+                if (content[0] == list) {
+                    let activeBtn = list.querySelector('.artists__item-btn');
+
+                    if (activeBtn == null) {
+                        document.querySelector('.empty-block--column').classList.add(activeCardClass);
+                    } else {
+                        let artistPath = activeBtn.dataset.path;
+                        
+                        activeBtn.classList.add(activeBtnClass);
+                        document.querySelector(`[data-target="${artistPath}"]`).classList.add(activeCardClass);
                     }
-                })
-                btn.classList.add(tabActiveClass);
-    
-                document.querySelectorAll('.' + contentActiveClass).forEach(function(content) {
-                    content.classList.remove(contentActiveClass);
-                })
-    
-                document.querySelectorAll(`[data-target="${path}"]`).forEach(function(content) {
-                    content.classList.add(contentActiveClass);
-                })
+                } 
             })
         })
-    }
+    })
 
-    tabs('.tabs-countries__btn', 'tabs-countries__btn--active', 'artists__nav-item--active');
-    tabs('.artists__item-btn', 'artists__item-btn--active', 'artists-cards__item--active');
+    document.querySelectorAll('.artists__item-btn').forEach(function(btn) {
+        btn.addEventListener('click', function(event) {
+            const path = event.currentTarget.dataset.path;
+
+            document.querySelectorAll('.' + activeBtnClass).forEach(function(el) {
+                if (el.innerHTML != btn.innerHTML) {
+                    el.classList.remove(activeBtnClass);
+                }
+            })
+            btn.classList.add(activeBtnClass);
+
+            document.querySelectorAll('.' + activeCardClass).forEach(function(content) {
+                content.classList.remove(activeCardClass);
+            })
+            document.querySelectorAll(`[data-target="${path}"]`).forEach(function(content) {
+                content.classList.add(activeCardClass);
+            })
+        })
+    })
 })
 
+    
