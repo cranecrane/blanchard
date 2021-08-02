@@ -261,32 +261,30 @@
 						<h2 class="catalog__title section__title">
 							Каталог
 						</h2>
-						<nav class="catalog__tabs-countries tabs-countries">
-							<ul class="tabs-countries__list">
-								<li class="tabs-countries__item">
-									<button class="tabs-countries__btn tabs-countries__btn--france btn-reset" type="button" data-path="france" aria-label="Художники Франции"></button>
-								</li>
-								<li class="tabs-countries__item">
-									<button class="tabs-countries__btn btn-reset  tabs-countries__btn--german" type="button" data-path="german" aria-label="Художники Германии"></button>
-								</li>
-								<li class="tabs-countries__item">
-									<button class="tabs-countries__btn  tabs-countries__btn--active tabs-countries__btn--italy btn-reset" type="button" data-path="italy" aria-label="Художники Италии"></button>
-								</li>
-								<li class="tabs-countries__item">
-									<button class="tabs-countries__btn tabs-countries__btn--russia btn-reset" type="button"  data-path="russia" aria-label="Художники России"></button>
-								</li>
-								<li class="tabs-countries__item ">
-									<button class="tabs-countries__btn tabs-countries__btn--belgie btn-reset" type="button" data-path="belgie" aria-label="Художники Бельгии"></button>
-								</li>
-							</ul>
-						</nav>
+						<ul class="catalog__tabs-countries tabs-countries">
+							<li class="tabs-countries__item">
+								<button class="tabs-countries__btn tabs-countries__btn--france btn-reset" type="button" data-path="france" aria-label="Художники Франции"></button>
+							</li>
+							<li class="tabs-countries__item">
+								<button class="tabs-countries__btn btn-reset  tabs-countries__btn--german" type="button" data-path="german" aria-label="Художники Германии"></button>
+							</li>
+							<li class="tabs-countries__item">
+								<button class="tabs-countries__btn  tabs-countries__btn--active tabs-countries__btn--italy btn-reset" type="button" data-path="italy" aria-label="Художники Италии"></button>
+							</li>
+							<li class="tabs-countries__item">
+								<button class="tabs-countries__btn tabs-countries__btn--russia btn-reset" type="button"  data-path="russia" aria-label="Художники России"></button>
+							</li>
+							<li class="tabs-countries__item ">
+								<button class="tabs-countries__btn tabs-countries__btn--belgie btn-reset" type="button" data-path="belgie" aria-label="Художники Бельгии"></button>
+							</li>
+						</ul>
 					</div>
 					<p class="catalog__descr section__descr">
 						Акционеры крупнейших компаний, которые представляют собой яркий пример континентально-европейского типа политической культуры, будут объявлены нарушающими общечеловеческие нормы этики и морали. Являясь всего лишь частью общей картины, стремящиеся вытеснить традиционное производство, нанотехнологии и по сей день остаются уделом либералов, которые жаждут быть функционально разнесены на независимые элементы. 
 					</p>
 					<div class="catalog__body">
 						<div class="catalog__artists artists" id="accordion">
-							<h3 class="artists__header">
+							<div class="artists__header">
 								<button class="artists__btn btn-reset" type="button" aria-label="Художники 15 века">
 									<svg class="artists__btn-icon" viewbox="0 0 12 11" fill="none" xmlns="http://www.w3.org/2000/svg">
 										<path d="M11 5L6 10L0.999998 5" stroke="currentColor"/>
@@ -295,8 +293,8 @@
 										C 1400 по 1499 гг.
 									</span>
 								</button>
-							</h3>
-							<nav class="artists__nav">
+							</div>
+							<div class="artists__nav">
 								<ul class="artists__nav-item artists__list" data-target="france">
 									<li class="artists__item"><button type="button" data-path="empty-card" class="artists__item-btn btn-reset">Бартелеми д’Эйк</button></li>
 									<li class="artists__item"><button type="button" data-path="empty-card" class="artists__item-btn btn-reset">Домбе, Гийом</button></li>
@@ -348,15 +346,15 @@
 								<div class="artists__nav-item empty-block empty-block--row" data-target="belgie">
 									<div class="empty-block__icon"></div>
 									<div class="empty-block__text">
-										<h3 class="empty-block__title empty-block__title--row">Здесь пока пусто</h3>
+										<div class="empty-block__title empty-block__title--row">Здесь пока пусто</div>
 										<p class="empty-block__descr empty-block__descr--row">
 											А в галерее вы всегда можете найти что-то интересное для себя
 										</p>
 										<a href="#" class="empty-block__link link">В галерею</a>
 									</div>
 								</div>
-							</nav>
-							<h3 class="artists__header">
+							</div>
+							<div class="artists__header">
 								<button class="artists__btn btn-reset" type="button" aria-label="Художники 16 века">
 									<svg class="artists__btn-icon" viewbox="0 0 12 11" fill="none" xmlns="http://www.w3.org/2000/svg">
 										<path d="M11 5L6 10L0.999998 5" stroke="currentColor"/>
@@ -365,12 +363,12 @@
 										C 1500 по 1599 гг.
 									</span>
 								</button>
-							</h3>
-							<nav class="artists__nav">
+							</div>
+							<div class="artists__nav">
 								<div class="artists__nav-item empty-block empty-block--row" data-target="france">
 									<div class="empty-block__icon"></div>
 									<div class="empty-block__text">
-										<h3 class="empty-block__title empty-block__title--row">Здесь пока пусто</h3>
+										<div class="empty-block__title empty-block__title--row">Здесь пока пусто</div>
 										<p class="empty-block__descr empty-block__descr--row">
 											А в галерее вы всегда можете найти что-то интересное для себя
 										</p>
@@ -380,7 +378,7 @@
 								<div class="artists__nav-item empty-block empty-block--row" data-target="german">
 									<div class="empty-block__icon"></div>
 									<div class="empty-block__text">
-										<h3 class="empty-block__title empty-block__title--row">Здесь пока пусто</h3>
+										<div class="empty-block__title empty-block__title--row">Здесь пока пусто</div>
 										<p class="empty-block__descr empty-block__descr--row">
 											А в галерее вы всегда можете найти что-то интересное для себя
 										</p>
@@ -390,7 +388,7 @@
 								<div class="artists__nav-item artists__nav-item--active empty-block empty-block--row" data-target="italy">
 									<div class="empty-block__icon"></div>
 									<div class="empty-block__text">
-										<h3 class="empty-block__title empty-block__title--row">Здесь пока пусто</h3>
+										<div class="empty-block__title empty-block__title--row">Здесь пока пусто</div>
 										<p class="empty-block__descr empty-block__descr--row">
 											А в галерее вы всегда можете найти что-то интересное для себя
 										</p>
@@ -400,7 +398,7 @@
 								<div class="artists__nav-item empty-block empty-block--row" data-target="russia">
 									<div class="empty-block__icon"></div>
 									<div class="empty-block__text">
-										<h3 class="empty-block__title empty-block__title--row">Здесь пока пусто</h3>
+										<div class="empty-block__title empty-block__title--row">Здесь пока пусто</div>
 										<p class="empty-block__descr empty-block__descr--row">
 											А в галерее вы всегда можете найти что-то интересное для себя
 										</p>
@@ -410,15 +408,15 @@
 								<div class="artists__nav-item empty-block empty-block--row" data-target="belgie">
 									<div class="empty-block__icon"></div>
 									<div class="empty-block__text">
-										<h3 class="empty-block__title empty-block__title--row">Здесь пока пусто</h3>
+										<div class="empty-block__title empty-block__title--row">Здесь пока пусто</div>
 										<p class="empty-block__descr empty-block__descr--row">
 											А в галерее вы всегда можете найти что-то интересное для себя
 										</p>
 										<a href="#" class="empty-block__link link">В галерею</a>
 									</div>
 								</div>
-							</nav>
-							<h3 class="artists__header">
+							</div>
+							<div class="artists__header">
 								<button class="artists__btn btn-reset" type="button" aria-label="Художники 17 века">
 									<svg class="artists__btn-icon" viewbox="0 0 12 11" fill="none" xmlns="http://www.w3.org/2000/svg">
 										<path d="M11 5L6 10L0.999998 5" stroke="currentColor"/>
@@ -427,12 +425,12 @@
 										C 1600 по 1699 гг.
 									</span>
 								</button>
-							</h3>
-							<nav class="artists__nav">
+							</div>
+							<div class="artists__nav">
 								<div class="artists__nav-item empty-block empty-block--row" data-target="france">
 									<div class="empty-block__icon"></div>
 									<div class="empty-block__text">
-										<h3 class="empty-block__title empty-block__title--row">Здесь пока пусто</h3>
+										<div class="empty-block__title empty-block__title--row">Здесь пока пусто</div>
 										<p class="empty-block__descr empty-block__descr--row">
 											А в галерее вы всегда можете найти что-то интересное для себя
 										</p>
@@ -442,7 +440,7 @@
 								<div class="artists__nav-item empty-block empty-block--row" data-target="german">
 									<div class="empty-block__icon"></div>
 									<div class="empty-block__text">
-										<h3 class="empty-block__title empty-block__title--row">Здесь пока пусто</h3>
+										<div class="empty-block__title empty-block__title--row">Здесь пока пусто</div>
 										<p class="empty-block__descr empty-block__descr--row">
 											А в галерее вы всегда можете найти что-то интересное для себя
 										</p>
@@ -452,7 +450,7 @@
 								<div class="artists__nav-item artists__nav-item--active empty-block empty-block--row" data-target="italy">
 									<div class="empty-block__icon"></div>
 									<div class="empty-block__text">
-										<h3 class="empty-block__title empty-block__title--row">Здесь пока пусто</h3>
+										<div class="empty-block__title empty-block__title--row">Здесь пока пусто</div>
 										<p class="empty-block__descr empty-block__descr--row">
 											А в галерее вы всегда можете найти что-то интересное для себя
 										</p>
@@ -462,7 +460,7 @@
 								<div class="artists__nav-item empty-block empty-block--row" data-target="russia">
 									<div class="empty-block__icon"></div>
 									<div class="empty-block__text">
-										<h3 class="empty-block__title empty-block__title--row">Здесь пока пусто</h3>
+										<div class="empty-block__title empty-block__title--row">Здесь пока пусто</div>
 										<p class="empty-block__descr empty-block__descr--row">
 											А в галерее вы всегда можете найти что-то интересное для себя
 										</p>
@@ -472,15 +470,15 @@
 								<div class="artists__nav-item empty-block empty-block--row" data-target="belgie">
 									<div class="empty-block__icon"></div>
 									<div class="empty-block__text">
-										<h3 class="empty-block__title empty-block__title--row">Здесь пока пусто</h3>
+										<div class="empty-block__title empty-block__title--row">Здесь пока пусто</div>
 										<p class="empty-block__descr empty-block__descr--row">
 											А в галерее вы всегда можете найти что-то интересное для себя
 										</p>
 										<a href="#" class="empty-block__link link">В галерею</a>
 									</div>
 								</div>
-							</nav>
-							<h3 class="artists__header">
+							</div>
+							<div class="artists__header">
 								<button class="artists__btn btn-reset" type="button" aria-label="Художники 18 века">
 									<svg class="artists__btn-icon" viewbox="0 0 12 11" fill="none" xmlns="http://www.w3.org/2000/svg">
 										<path d="M11 5L6 10L0.999998 5" stroke="currentColor"/>
@@ -489,12 +487,12 @@
 										C 1700 по 1799 гг.
 									</span>
 								</button>
-							</h3>
-							<nav class="artists__nav">
+							</div>
+							<div class="artists__nav">
 								<div class="artists__nav-item empty-block empty-block--row" data-target="france">
 									<div class="empty-block__icon"></div>
 									<div class="empty-block__text">
-										<h3 class="empty-block__title empty-block__title--row">Здесь пока пусто</h3>
+										<div class="empty-block__title empty-block__title--row">Здесь пока пусто</div>
 										<p class="empty-block__descr empty-block__descr--row">
 											А в галерее вы всегда можете найти что-то интересное для себя
 										</p>
@@ -504,7 +502,7 @@
 								<div class="artists__nav-item empty-block empty-block--row" data-target="german">
 									<div class="empty-block__icon"></div>
 									<div class="empty-block__text">
-										<h3 class="empty-block__title empty-block__title--row">Здесь пока пусто</h3>
+										<div class="empty-block__title empty-block__title--row">Здесь пока пусто</div>
 										<p class="empty-block__descr empty-block__descr--row">
 											А в галерее вы всегда можете найти что-то интересное для себя
 										</p>
@@ -514,7 +512,7 @@
 								<div class="artists__nav-item artists__nav-item--active empty-block empty-block--row" data-target="italy">
 									<div class="empty-block__icon"></div>
 									<div class="empty-block__text">
-										<h3 class="empty-block__title empty-block__title--row">Здесь пока пусто</h3>
+										<div class="empty-block__title empty-block__title--row">Здесь пока пусто</div>
 										<p class="empty-block__descr empty-block__descr--row">
 											А в галерее вы всегда можете найти что-то интересное для себя
 										</p>
@@ -524,7 +522,7 @@
 								<div class="artists__nav-item empty-block empty-block--row" data-target="russia">
 									<div class="empty-block__icon"></div>
 									<div class="empty-block__text">
-										<h3 class="empty-block__title empty-block__title--row">Здесь пока пусто</h3>
+										<div class="empty-block__title empty-block__title--row">Здесь пока пусто</div>
 										<p class="empty-block__descr empty-block__descr--row">
 											А в галерее вы всегда можете найти что-то интересное для себя
 										</p>
@@ -534,15 +532,15 @@
 								<div class="artists__nav-item empty-block empty-block--row" data-target="belgie">
 									<div class="empty-block__icon"></div>
 									<div class="empty-block__text">
-										<h3 class="empty-block__title empty-block__title--row">Здесь пока пусто</h3>
+										<div class="empty-block__title empty-block__title--row">Здесь пока пусто</div>
 										<p class="empty-block__descr empty-block__descr--row">
 											А в галерее вы всегда можете найти что-то интересное для себя
 										</p>
 										<a href="#" class="empty-block__link link">В галерею</a>
 									</div>
 								</div>
-							</nav>
-							<h3 class="artists__header">
+							</div>
+							<div class="artists__header">
 								<button class="artists__btn btn-reset" type="button" aria-label="Художники 19 века">
 									<svg class="artists__btn-icon" viewbox="0 0 12 11" fill="none" xmlns="http://www.w3.org/2000/svg">
 										<path d="M11 5L6 10L0.999998 5" stroke="currentColor"/>
@@ -551,12 +549,12 @@
 										C 1800 по 1899 гг.
 									</span>
 								</button>
-							</h3>
-							<nav class="artists__nav">
+							</div>
+							<div class="artists__nav">
 								<div class="artists__nav-item empty-block empty-block--row" data-target="france">
 									<div class="empty-block__icon"></div>
 									<div class="empty-block__text">
-										<h3 class="empty-block__title empty-block__title--row">Здесь пока пусто</h3>
+										<div class="empty-block__title empty-block__title--row">Здесь пока пусто</div>
 										<p class="empty-block__descr empty-block__descr--row">
 											А в галерее вы всегда можете найти что-то интересное для себя
 										</p>
@@ -566,7 +564,7 @@
 								<div class="artists__nav-item empty-block empty-block--row" data-target="german">
 									<div class="empty-block__icon"></div>
 									<div class="empty-block__text">
-										<h3 class="empty-block__title empty-block__title--row">Здесь пока пусто</h3>
+										<div class="empty-block__title empty-block__title--row">Здесь пока пусто</div>
 										<p class="empty-block__descr empty-block__descr--row">
 											А в галерее вы всегда можете найти что-то интересное для себя
 										</p>
@@ -576,7 +574,7 @@
 								<div class="artists__nav-item artists__nav-item--active empty-block empty-block--row" data-target="italy">
 									<div class="empty-block__icon"></div>
 									<div class="empty-block__text">
-										<h3 class="empty-block__title empty-block__title--row">Здесь пока пусто</h3>
+										<div class="empty-block__title empty-block__title--row">Здесь пока пусто</div>
 										<p class="empty-block__descr empty-block__descr--row">
 											А в галерее вы всегда можете найти что-то интересное для себя
 										</p>
@@ -586,7 +584,7 @@
 								<div class="artists__nav-item empty-block empty-block--row" data-target="russia">
 									<div class="empty-block__icon"></div>
 									<div class="empty-block__text">
-										<h3 class="empty-block__title empty-block__title--row">Здесь пока пусто</h3>
+										<div class="empty-block__title empty-block__title--row">Здесь пока пусто</div>
 										<p class="empty-block__descr empty-block__descr--row">
 											А в галерее вы всегда можете найти что-то интересное для себя
 										</p>
@@ -596,15 +594,15 @@
 								<div class="artists__nav-item empty-block empty-block--row" data-target="belgie">
 									<div class="empty-block__icon"></div>
 									<div class="empty-block__text">
-										<h3 class="empty-block__title empty-block__title--row">Здесь пока пусто</h3>
+										<div class="empty-block__title empty-block__title--row">Здесь пока пусто</div>
 										<p class="empty-block__descr empty-block__descr--row">
 											А в галерее вы всегда можете найти что-то интересное для себя
 										</p>
 										<a href="#" class="empty-block__link link">В галерею</a>
 									</div>
 								</div>
-							</nav>
-							<h3 class="artists__header">
+							</div>
+							<div class="artists__header">
 								<button class="artists__btn btn-reset" type="button" aria-label="Художники 20 века">
 									<svg class="artists__btn-icon" viewbox="0 0 12 11" fill="none" xmlns="http://www.w3.org/2000/svg">
 										<path d="M11 5L6 10L0.999998 5" stroke="currentColor"/>
@@ -613,12 +611,12 @@
 										C 1900 по 1999 гг.
 									</span>
 								</button>
-							</h3>
-							<nav class="artists__nav">
+							</div>
+							<div class="artists__nav">
 								<div class="artists__nav-item empty-block empty-block--row" data-target="france">
 									<div class="empty-block__icon"></div>
 									<div class="empty-block__text">
-										<h3 class="empty-block__title empty-block__title--row">Здесь пока пусто</h3>
+										<div class="empty-block__title empty-block__title--row">Здесь пока пусто</div>
 										<p class="empty-block__descr empty-block__descr--row">
 											А в галерее вы всегда можете найти что-то интересное для себя
 										</p>
@@ -628,7 +626,7 @@
 								<div class="artists__nav-item empty-block empty-block--row" data-target="german">
 									<div class="empty-block__icon"></div>
 									<div class="empty-block__text">
-										<h3 class="empty-block__title empty-block__title--row">Здесь пока пусто</h3>
+										<div class="empty-block__title empty-block__title--row">Здесь пока пусто</div>
 										<p class="empty-block__descr empty-block__descr--row">
 											А в галерее вы всегда можете найти что-то интересное для себя
 										</p>
@@ -638,7 +636,7 @@
 								<div class="artists__nav-item artists__nav-item--active empty-block empty-block--row" data-target="italy">
 									<div class="empty-block__icon"></div>
 									<div class="empty-block__text">
-										<h3 class="empty-block__title empty-block__title--row">Здесь пока пусто</h3>
+										<div class="empty-block__title empty-block__title--row">Здесь пока пусто</div>
 										<p class="empty-block__descr empty-block__descr--row">
 											А в галерее вы всегда можете найти что-то интересное для себя
 										</p>
@@ -648,7 +646,7 @@
 								<div class="artists__nav-item empty-block empty-block--row" data-target="russia">
 									<div class="empty-block__icon"></div>
 									<div class="empty-block__text">
-										<h3 class="empty-block__title empty-block__title--row">Здесь пока пусто</h3>
+										<div class="empty-block__title empty-block__title--row">Здесь пока пусто</div>
 										<p class="empty-block__descr empty-block__descr--row">
 											А в галерее вы всегда можете найти что-то интересное для себя
 										</p>
@@ -658,15 +656,15 @@
 								<div class="artists__nav-item empty-block empty-block--row" data-target="belgie">
 									<div class="empty-block__icon"></div>
 									<div class="empty-block__text">
-										<h3 class="empty-block__title empty-block__title--row">Здесь пока пусто</h3>
+										<div class="empty-block__title empty-block__title--row">Здесь пока пусто</div>
 										<p class="empty-block__descr empty-block__descr--row">
 											А в галерее вы всегда можете найти что-то интересное для себя
 										</p>
 										<a href="#" class="empty-block__link link">В галерею</a>
 									</div>
 								</div>
-							</nav>
-							<h3 class="artists__header">
+							</div>
+							<div class="artists__header">
 								<button class="artists__btn btn-reset" type="button" aria-label="Художники 21 века">
 									<svg class="artists__btn-icon" viewbox="0 0 12 11" fill="none" xmlns="http://www.w3.org/2000/svg">
 										<path d="M11 5L6 10L0.999998 5" stroke="currentColor"/>
@@ -675,12 +673,12 @@
 										C 2000 г.
 									</span>
 								</button>
-							</h3>
-							<nav class="artists__nav">
+							</div>
+							<div class="artists__nav">
 								<div class="artists__nav-item empty-block empty-block--row" data-target="france">
 									<div class="empty-block__icon"></div>
 									<div class="empty-block__text">
-										<h3 class="empty-block__title empty-block__title--row">Здесь пока пусто</h3>
+										<div class="empty-block__title empty-block__title--row">Здесь пока пусто</div>
 										<p class="empty-block__descr empty-block__descr--row">
 											А в галерее вы всегда можете найти что-то интересное для себя
 										</p>
@@ -690,7 +688,7 @@
 								<div class="artists__nav-item empty-block empty-block--row" data-target="german">
 									<div class="empty-block__icon"></div>
 									<div class="empty-block__text">
-										<h3 class="empty-block__title empty-block__title--row">Здесь пока пусто</h3>
+										<div class="empty-block__title empty-block__title--row">Здесь пока пусто</div>
 										<p class="empty-block__descr empty-block__descr--row">
 											А в галерее вы всегда можете найти что-то интересное для себя
 										</p>
@@ -700,7 +698,7 @@
 								<div class="artists__nav-item artists__nav-item--active empty-block empty-block--row" data-target="italy">
 									<div class="empty-block__icon"></div>
 									<div class="empty-block__text">
-										<h3 class="empty-block__title empty-block__title--row">Здесь пока пусто</h3>
+										<div class="empty-block__title empty-block__title--row">Здесь пока пусто</div>
 										<p class="empty-block__descr empty-block__descr--row">
 											А в галерее вы всегда можете найти что-то интересное для себя
 										</p>
@@ -710,7 +708,7 @@
 								<div class="artists__nav-item empty-block empty-block--row" data-target="russia">
 									<div class="empty-block__icon"></div>
 									<div class="empty-block__text">
-										<h3 class="empty-block__title empty-block__title--row">Здесь пока пусто</h3>
+										<div class="empty-block__title empty-block__title--row">Здесь пока пусто</div>
 										<p class="empty-block__descr empty-block__descr--row">
 											А в галерее вы всегда можете найти что-то интересное для себя
 										</p>
@@ -720,29 +718,27 @@
 								<div class="artists__nav-item empty-block empty-block--row" data-target="belgie">
 									<div class="empty-block__icon"></div>
 									<div class="empty-block__text">
-										<h3 class="empty-block__title empty-block__title--row">Здесь пока пусто</h3>
+										<div class="empty-block__title empty-block__title--row">Здесь пока пусто</div>
 										<p class="empty-block__descr empty-block__descr--row">
 											А в галерее вы всегда можете найти что-то интересное для себя
 										</p>
 										<a href="#" class="empty-block__link link">В галерею</a>
 									</div>
 								</div>
-							</nav>
+							</div>
 						</div>
 						<ul class="catalog__artists-cards artists-cards">
 							<li class="artists-cards__item artists-cards__item--active artist-card" data-target="ghirlandaio">
-								<figure class="artist-card__img-wrapper">
+								<picture class="artist-card__img-wrapper">
 									<img src="img/ghirlandaio.jpg" alt="Доменико Гирландайо" class="artist-card__img">
-								</figure>
+								</picture>
 								<h3 class="artist-card__title">Доменико Гирландайо</h3>
 								<small class="artist-card__years">2 июня 1448 &mdash; 11 января 1494</small>
 								<p class="artist-card__descr section__descr">Один из ведущих флорентийских художников Кватроченто, основатель художественной династии, которую продолжили его брат Давид и сын Ридольфо. Глава художественной мастерской, где юный Микеланджело в течение года овладевал профессиональными навыками. Автор фресковых циклов, в которых выпукло, со всевозможными подробностями показана домашняя жизнь библейских персонажей (в их роли выступают знатные граждане Флоренции в костюмах того времени).
 								</p>
 							</li>
 							<li class="artists-cards__item empty-block--column" data-target="empty-card">
-								<figure class="empty-block__img-wrapper">
-									<img src="icons/no-photo.svg" alt="Х - Художник" class="empty-block__img">
-								</figure>
+								<img src="icons/no-photo.svg" alt="Х - Художник" class="empty-block__img">
 								<h3 class="empty-block__title empty-block__title empty-block__title--column">Что мы о нем знаем?</h3>
 								<p class="empty-block__descr empty-block__descr empty-block__descr--column">Пока ничего... Зато мы точно знаем, что в галерее есть на что посмотреть!
 								</p>
