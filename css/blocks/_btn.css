@@ -13,6 +13,25 @@
     font-weight: var(--font-weight-bold);
     line-height: 1;
     color: var(--accent-color-main);
+
+    transition: var(--transition-all);
+}
+
+.btn::after {
+    --outline-offset: -9px;
+
+    content: '';
+
+    position: absolute;
+    top: var(--outline-offset);
+    left: var(--outline-offset);
+    bottom: var(--outline-offset);
+    right: var(--outline-offset);
+    
+    border: 2px solid var(--accent-color-light);
+    border-radius: 100px;
+    opacity: 0;
+    transition: var(--transition-all);
 }
 
 @media (min-width: 768px) {
@@ -27,18 +46,20 @@
 }
 
 .btn:focus-visible::after {
-    --outline-offset: -9px;
+    opacity: 1;
+}
 
-    content: '';
+@media(min-width: 1280px) {
+    .btn:hover {
+        color: var(--text-color-inverse);
+        background-color: var(--accent-color-main);
+        transition: var(--transition-all);
+    }
+}
 
-    position: absolute;
-    top: var(--outline-offset);
-    left: var(--outline-offset);
-    bottom: var(--outline-offset);
-    right: var(--outline-offset);
-    
-    border: 2px solid var(--accent-color-light);
-    border-radius: 100px;
+.btn:active {
+    color: var(--text-color-inverse);
+    border-color: var(--active-btn-border-color);
     transition: var(--transition-all);
 }
 

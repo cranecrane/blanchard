@@ -56,6 +56,8 @@
     --z-index-hero-background: 70;
     --z-index-select-filter: 30;
     --z-index-artists-btn: 30;
+    --z-index-price-filter-input: 10;
+    --z-index-filter-checkbox-del-btn: 10;
 
     /*** sizes ***/
     --max-width-container: 1703px;
