@@ -1,6 +1,6 @@
 window.addEventListener('DOMContentLoaded', function() {
 
-    const gallerySlider = new Swiper('.swiper-container', {
+    const gallerySlider = new Swiper('.gallery-slider__container', {
         
         direction: 'horizontal',
         loop: true,
@@ -8,13 +8,13 @@ window.addEventListener('DOMContentLoaded', function() {
         updateOnWindowResize: true,
         
         pagination: {
-          el: '.swiper-pagination',
+          el: '.gallery-slider__pagination',
           type: 'fraction',
         },
       
         navigation: {
-          nextEl: '.swiper-button-next',
-          prevEl: '.swiper-button-prev',
+          nextEl: '.gallery-slider__nav-btn-next',
+          prevEl: '.gallery-slider__nav-btn-prev',
         },
         
         breakpoints: {
