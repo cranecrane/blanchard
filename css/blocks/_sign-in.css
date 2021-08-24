@@ -1,10 +1,12 @@
-.sign-in { 
+.sign-in {
+    position: relative;
     transition: var(--transition-all);
 }
 
 @media (min-width: 1024px) {
     .sign-in:hover {
         color: var(--accent-color-light);
+        background-color: transparent;
         transition: var(--transition-all);
     }
 }
@@ -21,7 +23,10 @@
     .sign-in:focus-visible {
         outline: none;
         background-color: var(--accent-color-dark);
-        box-shadow: var(--focus-shadow);
+        box-shadow: 6px 6px 0 var(--accent-color-dark), 
+        -6px -6px 0 var(--accent-color-dark),
+        -6px 6px 0 var(--accent-color-dark),
+        6px -6px 0 var(--accent-color-dark);    
         transition: var(--transition-all);
     }
 

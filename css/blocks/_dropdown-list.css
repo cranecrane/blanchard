@@ -41,7 +41,10 @@
 .dropdown-list__btn:focus-visible {
     outline: none;
     background-color: var(--accent-color-dark);
-    box-shadow: var(--focus-shadow);
+    box-shadow: 6px 6px 0 var(--accent-color-dark), 
+    -6px -6px 0 var(--accent-color-dark),
+    -6px 6px 0 var(--accent-color-dark),
+    6px -6px 0 var(--accent-color-dark);
     transition: var(--transition-all);
 }
 
