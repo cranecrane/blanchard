@@ -48,14 +48,6 @@
     transform: translateY(6px);
 }
 
-@media (min-width: 768px) {
-    .search-form__submit-btn {   
-        margin-right: 0;
-        height: var(--search-btn-size-tablet);
-        transform: translateY(0px);
-    }
-}
-
 .search-form__submit-btn:focus-visible {
     position: relative;
     outline: none;
@@ -76,6 +68,14 @@
     transition: var(--transition-all);
 }
 
+@media (min-width: 768px) {
+    .search-form__submit-btn {   
+        margin-right: 0;
+        height: var(--search-btn-size-tablet);
+        transform: translateY(0px);
+    }
+}
+
 @media (min-width: 896px) {
     .search-form__submit-btn:hover {
         color: var(--accent-color-light);
@@ -85,7 +85,6 @@
 
 @media (min-width: 1280px) {
     .search-form__submit-btn {
-        margin-right: 2px;
         height: var(--search-btn-size-desktop);
 
         transform: translateY(3px);

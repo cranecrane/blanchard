@@ -27,6 +27,7 @@
 
 @media (min-width: 1280px) {
     .projects__descr {
+        margin-bottom: 22px;
         max-width: 65%;
     }
 }

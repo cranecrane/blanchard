@@ -1,15 +1,5 @@
-.price-filter {
-    margin-bottom: 49px;
-}
-
-@media (min-width: 896px) {
-    .price-filter {
-        margin-bottom: 0;
-    }
-}
-
 .price-filter__title {
-    margin-bottom: 16px;
+    margin-bottom: 15px;
     
     line-height: 1;
     font-size: var(--font-size-medium);

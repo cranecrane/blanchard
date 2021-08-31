@@ -1,6 +1,4 @@
 .slider__nav {
-    --slider-nav-btn-size: 30px;
-
     display: flex;
     justify-content: center;
     align-items: center;
@@ -67,17 +65,18 @@
 }
 
 .slider-nav__pagination {
+    --pagination-margin-lr: 14px;
+
     position: static;
 
-    margin-left: 14px;
-    margin-right: 14px;
+    margin-left: var(--pagination-margin-lr);
+    margin-right: var(--pagination-margin-lr);
     width: max-content;
     color: var(--text-color-inverse);
 }
 
 @media (min-width: 768px) {
     .slider-nav__pagination {
-        margin-left: 18px;
-        margin-right: 18px;
+        --pagination-margin-lr: 18px;
     }
 }

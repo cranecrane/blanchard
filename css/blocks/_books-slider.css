@@ -11,9 +11,11 @@
 
 @media (min-width: 768px) {
     .books-slider__container {
+        --container-offset-lr: 27px; 
+
         overflow: hidden;
-        margin-left: 27px;
-        margin-right: 27px;
+        margin-left: var(--container-offset-lr);
+        margin-right: var(--container-offset-lr);
     }
 }
 

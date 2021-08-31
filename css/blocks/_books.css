@@ -37,9 +37,20 @@
     }
 }
 
+.books__filter-content {
+    margin-bottom: 50px;
+}
+
+@media (min-width: 768px) {
+    .books__filter-content {
+        margin-bottom: 26px;
+    }
+}
+
 @media (min-width: 896px) {
     .books__filter-content {
         margin-right: var(--filter-margin-r-tablet-lg);
+        margin-bottom: 0;
     }
 }
 
@@ -53,9 +64,31 @@
     }
 }
 
+.books__categories {
+    margin-bottom: 26px;
+}
+
+@media (min-width: 768px) {
+    .books__categories {
+        margin-bottom: 32px;
+    }
+}
+
+@media (min-width: 896px) {
+    .books__categories {
+        margin-bottom: 35px;
+    }
+}
+
 .books__slider {
     --books-slider-width-tablet-lg: 629px;
     --books-slider-width-desktop: 1150px;
+}
+
+@media (min-width: 768px) {
+    .books__slider {
+        padding-top: 25px;
+    }
 }
 
 @media (min-width: 896px) {
