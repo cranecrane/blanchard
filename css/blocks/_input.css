@@ -1,0 +1,31 @@
+.input {
+    border-radius: 100px;
+    border: 1px solid var(--text-color-main);
+    padding: 3px 24px;
+    width: 100%;
+
+    font-size: var(--font-size-medium);
+    line-height: 2;
+    cursor: pointer;
+    transition: var(--transition-all);
+}
+
+.input::placeholder {
+    color: var(--text-color-light);
+}
+
+.input:focus-visible {
+    background-color: #eaeaea;
+    transition: var(--transition-all);
+}
+
+@media (min-width: 1280px) {
+    .input:hover {
+        background-color: #eaeaea;
+        transition: var(--transition-all);
+    }
+}
+
+.input__wrapper {
+    position: relative;
+}

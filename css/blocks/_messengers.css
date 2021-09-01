@@ -1,0 +1,78 @@
+.messengers {
+    --icon-size: 50px;
+    --icon-size-tablet: 60px;
+    --icon-size-desktop: 40px;
+}
+
+.messengers__title {
+    margin-bottom: 13px;
+
+    font-weight: var(--font-weight-normal);
+    letter-spacing: -0.4px;
+}
+
+@media (min-width: 768px) {
+    .messengers__title {
+        margin-bottom: 18px;
+    
+        font-size: var(--font-size-title-tiny);
+        letter-spacing: 0;
+    }
+}
+
+.messengers__list {
+    display: flex;
+}
+
+.messengers__item:not(:last-child) {
+    margin-right: 20px;
+}
+
+.messengers__link {
+    display: inline-block;
+
+    border: 1px solid transparent;
+    border-radius: 100px;
+    padding: 0;
+    width: var(--icon-size);
+    height: var(--icon-size);
+
+    transition: var(--transition-all);
+}
+
+.messengers__link:focus-visible {
+    opacity: .5;
+    transition: var(--transition-all);
+}
+
+.messengers__link:active{
+    border-color: var(--accent-color-main);
+    transition: var(--transition-all);
+}
+
+@media (min-width: 768px) {
+    .messengers__item:not(:last-child) {
+        margin-right: 30px;
+    }
+
+    .messengers__link {
+        width: var(--icon-size-tablet);
+        height: var(--icon-size-tablet);
+    }
+}
+
+@media (min-width: 1280px) {
+    .messengers__item:not(:last-child) {
+        margin-right: 20px;
+    }
+
+    .messengers__link {
+        width: var(--icon-size-desktop);
+        height: var(--icon-size-desktop);
+    }
+
+    .messengers__link:hover {
+        opacity: .5;
+        transition: var(--transition-all);
+    }
+}
