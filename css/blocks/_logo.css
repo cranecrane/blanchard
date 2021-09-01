@@ -1,19 +1,26 @@
 .logo {
-    width: 96.8px;
-    height: 21.67px;
+    --logo-width-small: 96.8px;
+    --logo-height-small: 21.67px;
+    --logo-width-medium: 173px;
+    --logo-height-medium: 39.9px;
+    --logo-width-big: 187.6px;
+    --logo-height-big: 42px;
+
+    width: var(--logo-width-small);
+    height: var(--logo-height-small);
 }
 
 @media (min-width: 768px) {
     .logo {
-        width: 187.6px;
-        height: 42px;
+        width: var(--logo-width-big);
+        height: var(--logo-height-big);
     }
 }
 
 @media (min-width: 1280px) {
     .logo {
-        width: 173px;
-        height: 39.9px;
+        width: var(--logo-width-medium);
+        height: var(--logo-height-medium);
     }
 }
 
