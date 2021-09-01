@@ -1,5 +1,4 @@
-window.addEventListener('DOMContentLoaded', function(){
-    
+window.addEventListener('DOMContentLoaded', function() {
     $( function() {
         $( "#accordion" ).accordion({
             active: 0,

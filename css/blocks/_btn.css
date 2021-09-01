@@ -2,6 +2,7 @@
     --btn-padding-tb: 11px;
     --btn-padding-lr: 35px;
 
+    position: relative;
     display: inline-block;
 
     border: 2px solid var(--accent-color-main);
@@ -14,6 +15,7 @@
     line-height: 1;
     color: var(--accent-color-main);
 
+    cursor: pointer;
     transition: var(--transition-all);
 }
 
@@ -41,7 +43,6 @@
 }
 
 .btn:focus-visible {
-    position: relative;
     outline: none;
 }
 
@@ -60,6 +61,7 @@
 .btn:active {
     color: var(--text-color-inverse);
     border-color: var(--active-btn-border-color);
+    background-color: var(--accent-color-dark);
     transition: var(--transition-all);
 }
 

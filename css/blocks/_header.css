@@ -84,7 +84,7 @@
         margin-left: 0;
         margin-right: var(--header-logo-margin-r);
 
-        transform: translateX(1px);
+        transform: none;
     }
 }
 
@@ -174,8 +174,10 @@
 
 @media (min-width: 1280px) {
     .header__lower-block-container {
-        padding-top: 22px;
-        padding-bottom: 20px;
+        --padding-tb: 21px;
+
+        padding-top: var(--padding-tb);
+        padding-bottom: var(--padding-tb);
     }
 }
 
@@ -186,6 +188,6 @@
 @media (min-width: 1280px) {
     .header__dropdown-menu {
         display: block;
-        transform: translateX(-.5px);
+        transform: translateX(-1px);
     }
 }

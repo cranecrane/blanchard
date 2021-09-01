@@ -8,9 +8,7 @@
 
 .artists__btn {
     --artist-header-btn-size: 30px;
-    --artist-header-btn-size-tablet: 50px;
     --artist-btn-padding-tb: 21px;
-    --artist-btn-padding-tb-tablet: 32px;
 
     display: flex;
     justify-content: space-between;
@@ -27,8 +25,8 @@
 
 @media (min-width: 768px) {
     .artists__btn {
-        padding-top: var(--artist-btn-padding-tb-tablet);
-        padding-bottom: var(--artist-btn-padding-tb-tablet);
+        --artist-btn-padding-tb: 32px;
+        --artist-header-btn-size: 50px;
     }
 }
 
@@ -122,8 +120,8 @@
         padding: 13px;
         padding-bottom: 15px;
 
-        width: var(--artist-header-btn-size-tablet);
-        height: var(--artist-header-btn-size-tablet);
+        width: var(--artist-header-btn-size);
+        height: var(--artist-header-btn-size);
     }
 }
 
