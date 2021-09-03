@@ -1,0 +1,33 @@
+.events {
+    padding-top: 16px;
+    padding-bottom: 50px;
+}
+
+@media (min-width: 768px) {
+    .events {
+        padding-top: 10px;
+        padding-bottom: 79px;
+    }
+}
+
+@media (min-width: 896px) {
+    .events {
+        padding-top: 0px;
+    }
+}
+
+@media (min-width: 1280px) {
+    .events {
+        padding-bottom: 80px;
+    }
+}
+
+.events__title {
+    margin-bottom: 17px;
+}
+
+@media (min-width: 768px) {
+    .events__title {
+        margin-bottom: 24px;
+    }
+}

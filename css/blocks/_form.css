@@ -1,0 +1,6 @@
+.js-validate-error-label {
+    position: absolute;
+    top: -16px;
+    left: 24px;
+    font-size: var(--font-size-tiny);
+}

@@ -17,18 +17,11 @@
 }
 
 .gallery-slider__nav {
-    --slider-nav-btn-size: 30px;
-
-    display: flex;
-    justify-content: center;
-    align-items: center;
-
     margin-bottom: 20px;
 }
 
 @media (min-width: 768px) {
     .gallery-slider__nav {
-        justify-content: flex-start;
         margin-bottom: 30px;
         width: 100%;
     }
@@ -51,36 +44,42 @@
     }
 }
 
-.swiper-container {
+.gallery-slider__container {
     order: 1;
     margin-bottom: 20px;
+    width: 100%;
 }
 
 @media (min-width: 768px) {
-    .swiper-container {
+    .gallery-slider__container {
         margin-bottom: 0;
     }
 }
 
 @media (min-width: 896px) {
-    .swiper-wrapper {
+    .gallery-slider__wrapper {
         margin-bottom: 0;
     }
 }
 
-.swiper-slide {
+.gallery-slider__slide {
+    --slide-height-tablet: 280px;
+    --slide-height-desktop: 350px;
+
     position: relative;
     font-size: 0;
     cursor: pointer;
 }
 
-.swiper-slide::after {
+.gallery-slider__slide::after {
+    --slide-zoom-offset: 25px;
+
     content: '';
     position: absolute;
-    top: 25px;
-    right: 25px;
-    bottom: 25px;
-    left: 25px;
+    top: var(--slide-zoom-offset);
+    right: var(--slide-zoom-offset);
+    bottom: var(--slide-zoom-offset);
+    left: var(--slide-zoom-offset);
 
     background-color: rgba(0, 0, 0, 0.5);
     background-image: url(../../icons/zoom.svg);
@@ -91,7 +90,7 @@
     transition: var(--transition-all);
 }
 
-.swiper-slide::before {
+.gallery-slider__slide::before {
     content: '';
     position: absolute;
     top: 0;
@@ -105,20 +104,20 @@
     transition: opacity .01s ease-in-out;
 }
 
-.swiper-slide:active::before,
-.swiper-slide:active::after {
+.gallery-slider__slide:active::before,
+.gallery-slider__slide:active::after {
     opacity: 1;
     transition: var(--transition-all);
 }
 
 @media (min-width: 1280px) {
-    .swiper-slide:hover::after {
+    .gallery-slider__slide:hover::after {
         opacity: 1;
         transition: var(--transition-all);
     }
 }
 
-.swiper-slide:focus-visible:before {
+.gallery-slider__slide:focus-visible:before {
     content: '';
     position: absolute;
     top: 0;
@@ -133,89 +132,19 @@
 }
 
 @media (min-width: 768px) {
-    .swiper-slide {
-        height: 280px;
+    .gallery-slider__slide {
+        height: var(--slide-height-tablet);
         overflow: hidden;
     }
 }
 
 @media (min-width: 1280px) {
-    .swiper-slide {
-        height: 350px;
+    .gallery-slider__slide {
+        height: var(--slide-height-desktop);
     }
 }
 
-.swiper-slide__img {
+.gallery-slider__slide-img {
     height: 100%;
     object-fit: cover;
-}
-
-.swiper-button-next,
-.swiper-button-prev {
-    position: static;
-
-    border-radius: 100%;
-    margin-top: 0;
-    width: var(--slider-nav-btn-size);
-    height: var(--slider-nav-btn-size);
-
-    color: var(--dove-gray);
-    transition: var(--transition-all);
-}
-
-.swiper-button-next::after,
-.swiper-button-prev::after {
-    display: none;
-}
-
-.swiper-button-next.swiper-button-disabled, 
-.swiper-button-prev.swiper-button-disabled {
-    opacity: .5;
-    transition: var(--transition-all);
-}
-
-@media (min-width: 1280px) {
-    .swiper-button-next:hover,
-    .swiper-button-prev:hover {
-        border-color: var(--accent-color-main);
-
-        color: var(--accent-color-main);
-        transition: var(--transition-all);
-    }
-}
-
-.swiper-button-next:focus-visible,
-.swiper-button-prev:focus-visible {
-    border: 2px solid var(--black);
-    transition: var(--transition-all);
-    outline: none;
-}
-
-.swiper-button-next:active,
-.swiper-button-prev:active {
-    border: 2px solid var(--black);
-    color: var(--accent-color-dark);
-    transition: var(--transition-all);
-}
-
-.swiper-button__icon {
-    width: 100%;
-    height: 100%;
-    overflow: visible;
-}
-
-.swiper-pagination {
-    position: static;
-
-    margin-left: 14px;
-    margin-right: 14px;
-    width: max-content;
-    color: var(--text-color-inverse);
-}
-
-@media (min-width: 768px) {
-    .swiper-pagination {
-        margin-left: 18px;
-        margin-right: 18px;
-    }
 }

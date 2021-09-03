@@ -1,3 +1,9 @@
+@media (min-width: 896px) {
+    .catalog {
+        padding-bottom: 40px;
+    }
+}
+ 
 .catalog__head {
     margin-bottom: 20px;
 }
@@ -66,7 +72,7 @@
 }
 
 .catalog__artists {
-    margin-bottom: 50px;
+    margin-bottom: 51px;
 }
 
 @media (min-width: 896px) {
@@ -90,7 +96,6 @@
         width: calc((100% - var(--padding-lr-container-tablet-sm) / 2));
     }
 }
-
 
 @media (min-width: 1600px) {
     .catalog__artists-cards {

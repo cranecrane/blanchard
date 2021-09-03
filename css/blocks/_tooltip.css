@@ -1,0 +1,77 @@
+.tooltip {
+    position: relative;
+
+    border-radius: 100%;
+    border: 1px solid var(--accent-color-main);
+    width: 16px;
+    height: 16px;
+
+    transform: translateY(-4px);
+    transition: var(--transition-all);
+    cursor: pointer;
+}
+
+.tooltip:focus-visible {
+    outline: none;
+    color: var(--text-color-inverse);
+    background-color: var(--accent-color-light);
+    transition: var(--transition-all);
+}
+
+.tooltip:hover {
+    color: var(--text-color-inverse);
+    background-color: var(--accent-color-main);
+    transition: var(--transition-all);
+}
+
+@media (min-width: 1280px) {
+    .tooltip:hover {
+        color: var(--text-color-inverse);
+        background-color: var(--accent-color-light);
+        transition: var(--transition-all);
+    }
+}
+
+.tooltip:active {
+    color: var(--text-color-inverse);
+    background-color: var(--accent-color-main);
+    transition: var(--transition-all);
+}
+
+.tooltip__icon {
+    position: absolute;
+    left: 50%;
+    top: 15%;
+
+    height: 10px;
+    transform: translate(-50%);
+}
+
+.tooltip__content {
+    display: none;
+}
+
+.tippy-box[data-theme~='amethyst'] {
+    border-radius: 0;
+    padding: 8px 11px;
+    font-weight: var(--font-weight-medium);
+    background-color: var(--accent-color-main);
+    color: white;
+    text-align: center;
+}
+
+.tippy-box[data-theme~='amethyst'][data-placement^='top'] > .tippy-arrow::before {
+    border-top-color: var(--accent-color-main);
+}
+
+.tippy-box[data-theme~='amethyst'][data-placement^='bottom'] > .tippy-arrow::before {
+    border-bottom-color: var(--accent-color-main);
+}
+
+.tippy-box[data-theme~='amethyst'][data-placement^='left'] > .tippy-arrow::before {
+border-left-color: var(--accent-color-main);
+}
+
+.tippy-box[data-theme~='amethyst'][data-placement^='right'] > .tippy-arrow::before {
+border-right-color: var(--accent-color-main);
+}

@@ -1,3 +1,7 @@
+.about {
+    --descr-max-width: 1082px;
+}
+
 .about__title {
     margin-bottom: 17px;
 }
@@ -15,7 +19,7 @@
 }
 
 .about__descr {  
-    max-width: 1082px;
+    max-width: var(--descr-max-width);
 }
 
 @media (max-width: 767px) {

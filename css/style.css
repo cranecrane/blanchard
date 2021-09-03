@@ -11,8 +11,13 @@
 @import "blocks/_search-btn.css";
 @import "blocks/_logo.css";
 @import "blocks/_burger.css";
+@import "blocks/_slider-nav.css";
 @import "blocks/_empty-block.css";
 @import "blocks/_artist-card.css";
+@import "blocks/_book-card.css";
+@import "blocks/_tooltip.css";
+@import "blocks/_form.css";
+@import "blocks/_input.css";
 
 @import "blocks/_search-form.css";
 @import "blocks/_menu.css";
@@ -25,9 +30,24 @@
 @import "blocks/_tabs-countries.css";
 @import "blocks/_artists.css";
 @import "blocks/_artists-cards.css";
+@import "blocks/_events-slider.css";
+@import "blocks/_categories.css";
+@import "blocks/_price-filter.css";
+@import "blocks/_books-slider.css";
+@import "blocks/_partners-slider.css";
+@import "blocks/_address.css";
+@import "blocks/_map.css";
+@import "blocks/_back-call-form.css";
+@import "blocks/_messengers.css";
+@import "blocks/_social-list.css";
 
 @import "blocks/_header.css";
 @import "blocks/_hero.css";
 @import "blocks/_about.css";
 @import "blocks/_gallery.css";
 @import "blocks/_catalog.css";
+@import "blocks/_events.css";
+@import "blocks/_books.css";
+@import "blocks/_projects.css";
+@import "blocks/_contacts.css";
+@import "blocks/_footer.css";

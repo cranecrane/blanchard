@@ -5,7 +5,7 @@
 }
 
 .link:focus-visible {
-    color: var(--white);
+    color: var(--text-color-inverse);
 
     outline: none;
     background-color: var(--accent-color-main);

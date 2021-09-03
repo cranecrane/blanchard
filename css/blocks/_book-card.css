@@ -1,0 +1,109 @@
+.book-card__img-wrapper {
+    display: block;
+    margin-bottom: 10px;
+    font-size: 0;
+}
+
+@media (min-width: 768px) {
+    .book-card__img-wrapper {
+        margin-bottom: 17px;
+    }
+}
+
+@media (min-width: 896px) {
+    .book-card__img-wrapper {
+        margin-bottom: 15px;
+    }
+}
+
+@media (min-width: 1280px) {
+    .book-card__img-wrapper {
+        margin-bottom: 25px;
+    }
+}
+
+.book-card__img-caption {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 12px;
+    color: var(--text-color-inverse);
+}
+
+@media (min-width: 768px) {
+    .book-card__img-caption {
+        position: relative;
+        margin-bottom: 13px;
+    }
+}
+
+.book-card__title,
+.book-card__author {
+    margin-bottom: 4px;
+
+    font-size: var(--font-size-tiny);
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    line-height: 1.2;
+}
+
+@media (min-width: 768px) {
+    .book-card__title {
+        max-width: 50%;
+    }
+
+    .book-card__title,
+    .book-card__author {
+        margin-bottom: 3px;
+        font-size: var(--font-size-medium);
+    }
+}
+
+.book-card__price {
+    font-size: var(--font-size-tiny);
+}
+
+@media (min-width: 768px) {
+    .book-card__price {
+        position: absolute;
+        right: 3px;
+        top: 0;
+
+        font-size: var(--font-size-medium);
+        font-style: italic;
+    }
+}
+
+.book-card__order-btn {
+    position: relative;
+
+    padding-bottom: 13px;
+    padding-right: 33px;
+    color: var(--text-color-inverse);
+}
+
+.book-card__order-btn:focus-visible {
+    border-color: var(--accent-color-light);
+}
+
+.book-card__order-btn:active {
+    background-color: var(--accent-color-dark);
+}
+
+.book-card__order-btn:after {
+    --outline-offset: 3px;
+
+    border-color: var(--accent-color-main);
+    transition: var(--transition-all);
+}
+
+@media (min-width: 768px) {
+    .book-card__order-btn {
+        padding-left: 20px;
+        padding-top: 9px;
+        padding-right: 19px;
+        padding-bottom: 11px;
+
+        font-size: var(--font-size-medium);
+    }
+}

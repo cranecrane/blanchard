@@ -50,19 +50,23 @@
     --transition-all: all .3s ease-in-out;
 
     /*** z-index ***/
-    --z-index-menu-open: 100;
+    --z-index-menu-open: 200;
     --z-index-search-btn-open: 90;
     --z-index-header-lower-block: 80;
     --z-index-hero-background: 70;
     --z-index-select-filter: 30;
     --z-index-artists-btn: 30;
+    --z-index-price-filter-input: 10;
+    --z-index-filter-checkbox-del-btn: 10;
 
     /*** sizes ***/
-    --max-width-container: 1703px;
+    --max-width-container: 1700px;
+    --max-width-inner-container: 1600px;
 
     --padding-general: 34px;
     --padding-lr-container: 15px;
     --padding-lr-container-tablet-sm: 50px;
 
     --dropdown-list-content-padding: 40px;
+    --slider-nav-btn-size: 30px;
 }

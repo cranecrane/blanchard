@@ -43,10 +43,6 @@
     transition: var(--transition-all);
 }
 
-.choices[data-type*="select-one"].is-open::after {
-    
-}
-
 .choices__inner {
     position: absolute;
     z-index: 2;

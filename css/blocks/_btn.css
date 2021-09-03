@@ -2,6 +2,7 @@
     --btn-padding-tb: 11px;
     --btn-padding-lr: 35px;
 
+    position: relative;
     display: inline-block;
 
     border: 2px solid var(--accent-color-main);
@@ -13,20 +14,12 @@
     font-weight: var(--font-weight-bold);
     line-height: 1;
     color: var(--accent-color-main);
+
+    cursor: pointer;
+    transition: var(--transition-all);
 }
 
-@media (min-width: 768px) {
-    .btn {
-        font-size: var(--font-size-big);
-    }
-}
-
-.btn:focus-visible {
-    position: relative;
-    outline: none;
-}
-
-.btn:focus-visible::after {
+.btn::after {
     --outline-offset: -9px;
 
     content: '';
@@ -39,6 +32,36 @@
     
     border: 2px solid var(--accent-color-light);
     border-radius: 100px;
+    opacity: 0;
+    transition: var(--transition-all);
+}
+
+@media (min-width: 768px) {
+    .btn {
+        font-size: var(--font-size-big);
+    }
+}
+
+.btn:focus-visible {
+    outline: none;
+}
+
+.btn:focus-visible::after {
+    opacity: 1;
+}
+
+@media(min-width: 1280px) {
+    .btn:hover {
+        color: var(--text-color-inverse);
+        background-color: var(--accent-color-main);
+        transition: var(--transition-all);
+    }
+}
+
+.btn:active {
+    color: var(--text-color-inverse);
+    border-color: var(--active-btn-border-color);
+    background-color: var(--accent-color-dark);
     transition: var(--transition-all);
 }
 
