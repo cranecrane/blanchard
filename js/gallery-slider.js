@@ -1,6 +1,6 @@
 window.addEventListener('DOMContentLoaded', function() {
 
-    const gallerySlider = new Swiper('.gallery-slider__container', {
+  var gallerySlider = new Swiper('.gallery-slider__container', {
         
         direction: 'horizontal',
         loop: true,

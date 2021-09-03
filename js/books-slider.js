@@ -3,7 +3,7 @@ window.addEventListener('DOMContentLoaded', function() {
     const booksSlider = document.querySelector('.books-slider__container');
     let mySwiper;
 
-    function mobileSlider() {
+    function tabletSlider() {
         if (window.innerWidth >= 768 && booksSlider.dataset.tablet == 'false') {
             mySwiper = new Swiper (booksSlider, {
             
@@ -47,9 +47,9 @@ window.addEventListener('DOMContentLoaded', function() {
         }
     }
 
-    mobileSlider();
+    tabletSlider();
 
     window.addEventListener('resize', () => {
-        mobileSlider();
+        tabletSlider();
     });
 })
