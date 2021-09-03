@@ -47,6 +47,7 @@
 .gallery-slider__container {
     order: 1;
     margin-bottom: 20px;
+    width: 100%;
 }
 
 @media (min-width: 768px) {
