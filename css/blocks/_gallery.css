@@ -6,7 +6,7 @@
     --filter-form-width-desktop: 400px;
     --filter-form-margin-left-tablet-big: 50px;
 
-    background-image: url('../../img/gallery-bg.jpg');
+    background-image: url('../../img/bg-gallery-767.jpg');
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
@@ -22,6 +22,7 @@
     .gallery {
         position: relative;
         padding-bottom: 80px;
+        background-image: url('../../img/bg-gallery-1920.jpg');
     }
 }
 
