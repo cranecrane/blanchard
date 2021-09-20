@@ -84,6 +84,11 @@
     color: var(--text-color-inverse);
     line-height: 1;
 
+    background-image: none;
+    background-position: center right;
+    background-repeat: no-repeat;
+    background-size: auto;
+
     transition: var(--transition-all);
     cursor: pointer;
 }
@@ -91,6 +96,7 @@
 .categories__item-checkbox:checked + .categories__item-label {
     display: block;
     color: var(--accent-color-light);
+    background-image: url(../../icons/close-btn.svg);
     transition: var(--transition-all);
 }
 
@@ -98,7 +104,7 @@
     display: block;
 }
 
-.categories__item-label:focus-visible {
+.categories__item-checkbox:focus-visible + .categories__item-label {
     color: var(--accent-color-light);
     transition: var(--transition-all);
 }
@@ -122,6 +128,10 @@
 
         padding-top: 9px;
         padding-bottom: 8px;
+    }
+
+    .categories__item-checkbox:checked + .categories__item-label {
+        background-image: none;
     }
 }
 
@@ -175,12 +185,12 @@
     transition: var(--transition-all);
 }
 
-.categories__item-label:focus-visible::before {
+.categories__item-checkbox:focus-visible + .categories__item-label::before {
     border-color: var(--accent-color-light);
     transition: var(--transition-all);
 }
 
-.categories__item-label:focus-visible::after {
+.categories__item-checkbox:focus-visible + .categories__item-label::after {
     background-color: var(--accent-color-light);
     transition: var(--transition-all);
 }
@@ -206,33 +216,4 @@
     background-color: var(--accent-color-light);
     opacity: 1;
     transition: var(--transition-all);
-} 
-
-.categories__item-checkbox {
-    display: none;
-}
-
-.categories__del-btn {
-    visibility: hidden;
-    position: absolute;
-    z-index: var(--z-index-filter-checkbox-del-btn);
-    right: 0;
-    top: 50%;
-
-    width: var(--checkbox-btn-size);
-    height: var(--checkbox-btn-size);
-    
-    font-size: 0;
-    color: var(--accent-color-light);
-
-    transform: translateY(-50%);
-    opacity: 0;
-}
-
-@media (max-width: 767px) {
-    .categories__item-checkbox:checked ~ .categories__del-btn {
-        visibility: visible;
-        opacity: 1;
-        transition: var(--transition-all);
-    }
 }
