@@ -3,6 +3,7 @@ window.addEventListener('DOMContentLoaded', function () {
     let burger = document.querySelector('.burger');
     let body = document.querySelector('body');
     let vh = window.innerHeight * 0.01;
+    let pageContent = document.querySelector('main');
     
     document.documentElement.style.setProperty('--vh', `${vh}px`);
 
@@ -20,7 +21,7 @@ window.addEventListener('DOMContentLoaded', function () {
         });
     });
 
-    document.querySelectorAll('.menu__close-btn').forEach(function(el) {
+    menu.children.forEach(function(el) {
 
         el.addEventListener('click', function() { 
 
@@ -28,6 +29,12 @@ window.addEventListener('DOMContentLoaded', function () {
             burger.classList.remove('menu--open');
             body.classList.remove('body-hidden');
         });
+    });
+
+    pageContent.addEventListener('click', function() {
+        menu.classList.remove('menu--open'),
+            burger.classList.remove('menu--open');
+            body.classList.remove('body-hidden');
     });
 
     window.addEventListener('resize', function() {

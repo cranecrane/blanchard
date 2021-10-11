@@ -45,13 +45,13 @@
     background-position: center;
     filter: grayscale(1);
 
-    transition: var(--transition-all);
+    transition: filter .3s ease-in-out;
     cursor: pointer;
 }
 
 .partners-slider__slide:focus-visible {
     border-color: var(--accent-color-main);
-    transition: var(--accent-color-main);
+    transition: border-color .3s ease-in-out;
 }
 
 @media (min-width: 768px) {
@@ -73,50 +73,18 @@
     .partners-slider__slide:hover {
         border: 1px solid var(--silver);
         filter: grayscale(0);
-        transition: var(--transition-all);
+        transition: filter .3s ease-in-out;
     }
 }
 
 .partners-slider__slide:active {
     border-color: var(--accent-color-main);
     filter: grayscale(0);
-    transition: var(--transition-all);
+    transition: filter .3s ease-in-out;
 }
 
-.workhouse-center {
-    background-image: url(../../img/partners-1.png);
-}
-
-.freelands-foundation {
-    background-image: url(../../img/partners-2.png);
-}
-
-.ica-institute {
-    background-image: url(../../img/partners-3.png);
-}
-
-.wine-co-1849 {
-    background-image: url(../../img/partners-4.png);
-}
-
-.camden-center {
-    background-image: url(../../img/partners-5.png);
-}
-
-.watts-gallery {
-    background-image: url(../../img/partners-6.png);
-}
-
-.hiscox {
-    background-image: url(../../img/partners-7.png);
-}
-
-.stassen-cider {
-    background-image: url(../../img/partners-8.png);
-}
-
-.esad-ecole {
-    background-image: url(../../img/partners-9.png);
+.partners-slider__slide-img {
+    height: 100%;
 }
 
 .partners-slider__nav-btn-next,

@@ -31,24 +31,24 @@
 
 .search-btn:focus-visible .search-btn__icon{
     color: var(--accent-color-main);
-    transition: var(--transition-all);
+    transition: color .3s ease-in-out;
 }
 
 .search-btn__icon {
     color: var(--text-color-inverse);
-    transition: var(--transition-all);
+    transition: color .3s ease-in-out;
 }
 
 @media (min-width: 1280px) {
     .search-btn__icon:hover {
         color: var(--accent-color-light);
-        transition: var(--transition-all);
+        transition: color .3s ease-in-out;
     }
 }
 
 .search-btn__icon:active {
     color: var(--accent-color-dark);
-    transition: var(--transition-all);
+    transition: color .3s ease-in-out;
 }
 
 .search-btn__icon--open {

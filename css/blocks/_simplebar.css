@@ -15,7 +15,7 @@
     border-radius: 0;
 
     background-color: var(--white);
-    transition: var(--transition-all);
+    transition: opacity .3s ease-in-out;
 }
 
 .simplebar-track.simplebar-vertical .simplebar-scrollbar::before {
@@ -28,11 +28,11 @@
 @media (min-width: 1280px) {
     .simplebar-scrollbar.simplebar-hover::before {
         opacity: 1;
-        transition: var(--transition-all);
+        transition: opacity .3s ease-in-out;
     }
 }
  
 .simplebar-scrollbar.simplebar-visible::before {
     opacity: 1;
-    transition: var(--transition-all);
+    transition: opacity .3s ease-in-out;
 }
