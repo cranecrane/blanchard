@@ -7,7 +7,7 @@
     font-size: var(--font-size-medium);
     line-height: 2;
     cursor: pointer;
-    transition: var(--transition-all);
+    transition: background-color .3s ease-in-out;
 }
 
 .input::placeholder {
@@ -16,13 +16,13 @@
 
 .input:focus-visible {
     background-color: #eaeaea;
-    transition: var(--transition-all);
+    transition: background-color .3s ease-in-out;
 }
 
 @media (min-width: 1280px) {
     .input:hover {
         background-color: #eaeaea;
-        transition: var(--transition-all);
+        transition: background-color .3s ease-in-out;
     }
 }
 

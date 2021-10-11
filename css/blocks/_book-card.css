@@ -94,7 +94,7 @@
     --outline-offset: 3px;
 
     border-color: var(--accent-color-main);
-    transition: var(--transition-all);
+    transition: border-color .3s ease-in-out;
 }
 
 @media (min-width: 768px) {

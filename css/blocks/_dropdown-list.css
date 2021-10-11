@@ -3,7 +3,6 @@
     --list-item-size: 40px;
 
     line-height: 1;
-    transition: var(--transition-all);
 
     position: relative;
     cursor: pointer;
@@ -23,19 +22,21 @@
     font-size: var(--font-size-big);
     line-height: 1;
     color: var(--text-color-inverse);
-    transition: var(--transition-all);
+    transition-property: background-color, box-shadow, color;
+    transition-duration: .3s;
+    transition-timing-function: ease-in-out;
 }
 
 @media (min-width: 1280px) {
     .dropdown-list__btn:hover  {
         color: var(--accent-color-main);
-        transition: var(--transition-all);
+        transition: color .3s ease-in-out;
     }
 }
 
 .dropdown-list__btn:active  {
     color: var(--accent-color-dark);
-    transition: var(--transition-all);
+    transition: color .3s ease-in-out;
 }
 
 .dropdown-list__btn:focus-visible {
@@ -45,7 +46,9 @@
     -6px -6px 0 var(--accent-color-dark),
     -6px 6px 0 var(--accent-color-dark),
     6px -6px 0 var(--accent-color-dark);
-    transition: var(--transition-all);
+    transition-property: background-color, box-shadow;
+    transition-duration: .3s;
+    transition-timing-function: ease-in-out;
 }
 
 .dropdown-list__header-text {
@@ -54,10 +57,12 @@
 
 .dropdown-list__header-arrow {
     transform: translateY(-1px);
+    transition: transform .3s ease-in-out;
 }
 
 .open .dropdown-list__header-arrow {
     transform: rotate(180deg) translateY(-2px);
+    transition: transform .3s ease-in-out;
 }
 
 .dropdown-list__content {
@@ -88,7 +93,9 @@
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-    transition: var(--transition-all);
+    transition-property: border, background-color;
+    transition-duration: .3s;
+    transition-timing-function: ease-in-out;
 }
 
 .dropdown-list__item:not(:last-child) {
@@ -98,14 +105,14 @@
 @media (min-width: 1280px) {
     .dropdown-list__item:hover {
         border-color: var(--accent-color-main);
-        transition: var(--transition-all);
+        transition: border-color .3s ease-in-out;
     }
 }
 
 .dropdown-list__item:focus-visible {
     outline: none;
     border: 2px solid var(--accent-color-main);
-    transition: var(--transition-all);
+    transition: border .3s ease-in-out;
 }
 
 .dropdown-list__item:active {
@@ -113,7 +120,9 @@
 
     background-color: rgba(194, 131, 243, .4);
     background-blend-mode: screen;
-    transition: var(--transition-all);
+    transition-property: border, background-color;
+    transition-duration: .3s;
+    transition-timing-function: ease-in-out;
 }
 
 .tintoretto {

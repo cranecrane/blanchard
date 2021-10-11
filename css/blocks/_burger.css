@@ -32,7 +32,7 @@
 
     background-color: var(--white);
     transform-origin: left center;
-    transition: var(--transition-all);
+    transition: background-color .3s ease-in-out;
 }
 
 @media (min-width: 768px) {
@@ -69,17 +69,17 @@
 
 .burger:focus-visible .burger__line {
     background-color: var(--accent-color-main);
-    transition: var(--transition-all);
+    transition: background-color .3s ease-in-out;
 }
 
 @media (min-width: 1280px) {
     .burger:hover .burger__line {
         background-color: var(--accent-color-light);
-        transition: var(--transition-all);
+        transition: background-color .3s ease-in-out;
     }
 }
 
 .burger:active .burger__line {
     background-color: var(--accent-color-dark);
-    transition: var(--transition-all);
+    transition: background-color .3s ease-in-out;
 }

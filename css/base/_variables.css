@@ -46,9 +46,6 @@
 
     --border-radius: 6px;
 
-    /*** transitions ***/
-    --transition-all: all .3s ease-in-out;
-
     /*** z-index ***/
     --z-index-menu-open: 200;
     --z-index-search-btn-open: 90;

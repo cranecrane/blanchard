@@ -87,7 +87,7 @@
     background-position: center;
 
     opacity: 0;
-    transition: var(--transition-all);
+    transition: opacity .3s ease-in-out;
 }
 
 .gallery-slider__slide::before {
@@ -107,13 +107,13 @@
 .gallery-slider__slide:active::before,
 .gallery-slider__slide:active::after {
     opacity: 1;
-    transition: var(--transition-all);
+    transition: opacity .3s ease-in-out;
 }
 
 @media (min-width: 1280px) {
     .gallery-slider__slide:hover::after {
         opacity: 1;
-        transition: var(--transition-all);
+        transition: opacity .3s ease-in-out;
     }
 }
 
@@ -128,7 +128,7 @@
     border: 3px solid var(--accent-color-dark);
     background-color: transparent;
     opacity: 1;
-    transition: opacity .01s ease-in-out
+    transition: opacity .01s ease-in-out;
 }
 
 @media (min-width: 768px) {

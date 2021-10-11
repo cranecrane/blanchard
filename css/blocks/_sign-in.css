@@ -1,13 +1,19 @@
 .sign-in {
     position: relative;
-    transition: var(--transition-all);
+
+    transition-property: background-color, color;
+    transition-duration: .3s;
+    transition-timing-function: ease-in-out;
 }
 
 @media (min-width: 1024px) {
     .sign-in:hover {
         color: var(--accent-color-light);
         background-color: transparent;
-        transition: var(--transition-all);
+
+        transition-property: background-color, color, box-shadow;
+        transition-duration: .3s;
+        transition-timing-function: ease-in-out;
     }
 }
 
@@ -27,7 +33,10 @@
         -6px -6px 0 var(--accent-color-dark),
         -6px 6px 0 var(--accent-color-dark),
         6px -6px 0 var(--accent-color-dark);    
-        transition: var(--transition-all);
+        
+        transition-property: background-color, color, box-shadow;
+        transition-duration: .3s;
+        transition-timing-function: ease-in-out;
     }
 
     .sign-in:focus-visible::after {
@@ -36,6 +45,6 @@
 }
 
 .sign-in:active {
-    color: var(--accent-color-main);
-    transition: var(--transition-all);
+    color: var(--text-color-inverse);
+    transition: color .3s ease-in-out;
 }

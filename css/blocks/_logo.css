@@ -41,5 +41,4 @@
     right: var(--outline-offset);
     
     border: var(--border-outline);
-    transition: var(--transition-all);
 }
