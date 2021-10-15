@@ -43,28 +43,7 @@ document.addEventListener('DOMContentLoaded', function() {
                         document.querySelector(`[data-target="${artistPath}"]`).classList.add(activeCardClass);
                     }
                 } 
-            })
-        })
-    })
-
-    document.querySelectorAll('.artists__item-btn').forEach(function(btn) {
-        btn.addEventListener('click', function(event) {
-            const path = event.currentTarget.dataset.path;
-
-            document.querySelectorAll('.' + activeBtnClass).forEach(function(el) {
-                if (el.innerHTML != btn.innerHTML) {
-                    el.classList.remove(activeBtnClass);
-                }
-            })
-            btn.classList.add(activeBtnClass);
-
-            document.querySelectorAll('.' + activeCardClass).forEach(function(content) {
-                content.classList.remove(activeCardClass);
-            })
-            document.querySelectorAll(`[data-target="${path}"]`).forEach(function(content) {
-                content.classList.add(activeCardClass);
-            })
+            });
         })
     })
 })
-    
