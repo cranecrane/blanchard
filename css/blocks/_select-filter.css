@@ -17,6 +17,9 @@
     width: 100%;
     height: var(--select-filter-height);
     color: var(--text-color-inverse);
+    transition-property: background-color, transform;
+    transition-duration: .3s;
+    transition-timing-function: ease-in-out;
 }
 
 .choices[role = "listbox"]::after {
@@ -34,13 +37,14 @@
     background-repeat: no-repeat;
     background-position: center;
     transform: translateY(-50%);
-    transition: var(--transition-all);
+    transition: transform .3s ease-in-out;
 }
 
 .choices[role = "listbox"].is-open::after  {
     margin-top: 0;
     transform: translateY(-48%) rotate(-180deg);
-    transition: var(--transition-all);
+    
+    transition: transform .3s ease-in-out;
 }
 
 .choices__inner {
@@ -63,19 +67,19 @@
     line-height: 1;
 
     background-color: transparent;
-    transition: var(--transition-all);
+    transition: background-color .3s ease-in-out;
 }
 
 @media (min-width: 1280px) {
     .choices__inner:hover {
         background-color: rgba(255, 255, 255, .2);
-        transition: var(--transition-all);
+        transition: background-color .3s ease-in-out;
     }
 }
 
 .choices:focus-visible {
     background-color: rgba(255, 255, 255, .2);
-    transition: var(--transition-all);
+    transition: background-color .3s ease-in-out;
 }
 
 .is-open .choices__inner,
@@ -95,7 +99,9 @@
 }
 
 .choices__item {
-    transition: var(--transition-all);
+    transition-property: background-color, color;
+    transition-duration: .3s;
+    transition-timing-function: ease-in-out;
 }
 
 .choices__item--choice:not(:last-child) {
@@ -113,13 +119,19 @@
 .choices__list--dropdown .choices__item--selectable.is-highlighted {
     color: var(--text-color-inverse);
     background-color: rgba(255, 255, 255, .2);
-    transition: var(--transition-all);
+
+    transition-property: background-color, color;
+    transition-duration: .3s;
+    transition-timing-function: ease-in-out;
 }
 
 .choices__list--dropdown .choices__item--selectable:active {
     color: var(--text-color-inverse);
     background-color: rgba(255, 255, 255, .2);
-    transition: var(--transition-all);
+
+    transition-property: background-color, color;
+    transition-duration: .3s;
+    transition-timing-function: ease-in-out;
 }
 
 .choices__list--dropdown .choices__item--selectable::after {

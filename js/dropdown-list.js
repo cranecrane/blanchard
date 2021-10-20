@@ -30,6 +30,6 @@ window.addEventListener('DOMContentLoaded', function () {
 
         dropdownBtn.forEach(function(el) {
             el.classList.remove(openClass);
-        })
-    })
+        });
+    });
 })

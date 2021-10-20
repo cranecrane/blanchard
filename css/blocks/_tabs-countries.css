@@ -46,7 +46,7 @@
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
-    transition: var(--transition-all);
+    transition: box-shadow .3s ease-in-out;
 }
 
 .tabs-countries__btn::after {
@@ -61,7 +61,7 @@
 
     border: 2px solid var(--accent-color-dark);
     border-radius: 100%;
-    transition: var(--transition-all);
+    transition: opacity .3s ease-in-out;
 }
 
 @media (min-width: 768px) {
@@ -74,7 +74,7 @@
 @media (min-width: 1280px) {
     .tabs-countries__btn:hover:not(.tabs-countries__btn--active) {
         box-shadow: 0 0 20px rgba(157, 92, 208, 0.7);
-        transition: var(--transition-all);
+        transition: box-shadow .3s ease-in-out;
     }
 }
 
@@ -84,12 +84,12 @@
 
 .tabs-countries__btn:focus-visible:not(.tabs-countries__btn--active) {
     box-shadow: 0 0 20px rgba(157, 92, 208, 0.7);
-    transition: var(--transition-all);    
+    transition: box-shadow .3s ease-in-out;    
 }
 
 .tabs-countries__btn:active::after {
     opacity: 1;
-    transition: var(--transition-all);
+    transition: opacity .3s ease-in-out;
 }
 
 .tabs-countries__btn--active::after {
@@ -99,6 +99,7 @@
     right: var(--tab-outline-offset);
     
     opacity: 1;
+    transition: opacity .3s ease-in-out;
 }
 
 @media (min-width: 768px) {

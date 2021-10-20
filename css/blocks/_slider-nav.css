@@ -20,7 +20,9 @@
     height: var(--slider-nav-btn-size);
 
     color: var(--dove-gray);
-    transition: var(--transition-all);
+    transition-property: color, border-color, opacity;
+    transition-duration: .3s;
+    transition-timing-function: ease-in-out;
 }
 
 .slider-nav__btn-next::after,
@@ -31,7 +33,7 @@
 .slider-nav__btn-next.swiper-button-disabled, 
 .slider-nav__btn-prev.swiper-button-disabled {
     opacity: .5;
-    transition: var(--transition-all);
+    transition: opacity .3s ease-in-out;
 }
 
 @media (min-width: 1280px) {
@@ -40,14 +42,16 @@
         border-color: var(--accent-color-main);
 
         color: var(--accent-color-main);
-        transition: var(--transition-all);
+        transition-property: color, border-color;
+        transition-duration: .3s;
+        transition-timing-function: ease-in-out;
     }
 }
 
 .slider-nav__btn-next:focus-visible,
 .slider-nav__btn-prev:focus-visible {
     border: 2px solid var(--black);
-    transition: var(--transition-all);
+    transition: border .3s ease-in-out;
     outline: none;
 }
 
@@ -55,7 +59,9 @@
 .slider-nav__btn-prev:active {
     border: 2px solid var(--black);
     color: var(--accent-color-dark);
-    transition: var(--transition-all);
+    transition-property: color, border;
+    transition-duration: .3s;
+    transition-timing-function: ease-in-out;
 }
 
 .slider-nav__btn-icon {

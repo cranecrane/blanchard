@@ -43,15 +43,12 @@
     background-repeat: no-repeat;
     background-size: 100%;
     background-position: center;
-    filter: grayscale(1);
-
-    transition: var(--transition-all);
     cursor: pointer;
 }
 
 .partners-slider__slide:focus-visible {
     border-color: var(--accent-color-main);
-    transition: var(--accent-color-main);
+    transition: border-color .3s ease-in-out;
 }
 
 @media (min-width: 768px) {
@@ -70,53 +67,38 @@
     .partners-slider__slide {
         height: 150px;
     }
+
     .partners-slider__slide:hover {
         border: 1px solid var(--silver);
-        filter: grayscale(0);
-        transition: var(--transition-all);
     }
 }
 
 .partners-slider__slide:active {
     border-color: var(--accent-color-main);
-    filter: grayscale(0);
-    transition: var(--transition-all);
 }
 
-.workhouse-center {
-    background-image: url(../../img/partners-1.png);
+.partners-slider__slide-img {
+    height: 100%;
+    object-fit: contain;
+    filter:  contrast(1) opacity(.2) grayscale(1);
+    transition: filter .5s ease-in-out;
 }
 
-.freelands-foundation {
-    background-image: url(../../img/partners-2.png);
+.partners-slider__slide-img:focus-visible {
+    filter:  none;
+    transition: filter .5s ease-in-out;
 }
 
-.ica-institute {
-    background-image: url(../../img/partners-3.png);
+@media (min-width: 1280px) {
+    .partners-slider__slide-img:hover {
+        filter: none;
+        transition: filter .5s ease-in-out;
+    }
 }
 
-.wine-co-1849 {
-    background-image: url(../../img/partners-4.png);
-}
-
-.camden-center {
-    background-image: url(../../img/partners-5.png);
-}
-
-.watts-gallery {
-    background-image: url(../../img/partners-6.png);
-}
-
-.hiscox {
-    background-image: url(../../img/partners-7.png);
-}
-
-.stassen-cider {
-    background-image: url(../../img/partners-8.png);
-}
-
-.esad-ecole {
-    background-image: url(../../img/partners-9.png);
+.partners-slider__slide-img:active {
+    filter:  none;
+    transition: filter .5s ease-in-out;
 }
 
 .partners-slider__nav-btn-next,

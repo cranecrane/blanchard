@@ -37,17 +37,19 @@
     width: var(--icon-size);
     height: var(--icon-size);
 
-    transition: var(--transition-all);
+    transition-property: opacity, border-color;
+    transition-duration: .3s;
+    transition-timing-function: ease-in-out;
 }
 
 .messengers__link:focus-visible {
     opacity: .5;
-    transition: var(--transition-all);
+    transition: opacity .3s ease-in-out;
 }
 
 .messengers__link:active{
     border-color: var(--accent-color-main);
-    transition: var(--transition-all);
+    transition: border-color .3s ease-in-out;
 }
 
 @media (min-width: 768px) {
@@ -73,6 +75,6 @@
 
     .messengers__link:hover {
         opacity: .5;
-        transition: var(--transition-all);
+        transition: opacity .3s ease-in-out;
     }
 }

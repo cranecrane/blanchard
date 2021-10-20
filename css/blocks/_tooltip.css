@@ -7,7 +7,9 @@
     height: 16px;
 
     transform: translateY(-4px);
-    transition: var(--transition-all);
+    transition-property: color, background-color;
+    transition-duration: .3s;
+    transition-timing-function: ease-in-out;
     cursor: pointer;
 }
 
@@ -15,27 +17,37 @@
     outline: none;
     color: var(--text-color-inverse);
     background-color: var(--accent-color-light);
-    transition: var(--transition-all);
+    transition-property: color, background-color;
+    transition-duration: .3s;
+    transition-timing-function: ease-in-out;
 }
 
 .tooltip:hover {
     color: var(--text-color-inverse);
     background-color: var(--accent-color-main);
-    transition: var(--transition-all);
+    transition-property: color, background-color;
+    transition-duration: .3s;
+    transition-timing-function: ease-in-out;
 }
 
 @media (min-width: 1280px) {
     .tooltip:hover {
         color: var(--text-color-inverse);
         background-color: var(--accent-color-light);
-        transition: var(--transition-all);
+        
+        transition-property: color, background-color;
+        transition-duration: .3s;
+        transition-timing-function: ease-in-out;
     }
 }
 
 .tooltip:active {
     color: var(--text-color-inverse);
     background-color: var(--accent-color-main);
-    transition: var(--transition-all);
+
+    transition-property: color, background-color;
+    transition-duration: .3s;
+    transition-timing-function: ease-in-out;
 }
 
 .tooltip__icon {

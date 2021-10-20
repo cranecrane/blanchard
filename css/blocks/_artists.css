@@ -20,7 +20,8 @@
     padding-bottom: var(--artist-btn-padding-tb);
     width: 100%;
 
-    transition: var(--transition-all);
+    transition-property: border-color .3s ease-in-out;
+
 }
 
 @media (min-width: 768px) {
@@ -36,7 +37,7 @@
         z-index: var(--z-index-artists-btn);
 
         border-color: var(--accent-color-main);
-        transition: var(--transition-all);
+        transition: border-color .3s ease-in-out;
     }
 }
 
@@ -49,18 +50,20 @@
     z-index: var(--z-index-artists-btn);
 
     border-color: var(--accent-color-main);
-    transition: var(--transition-all);
+    transition: border-color .3s ease-in-out;
 }
 
 .ui-state-active .artists__btn {
     border-color: var(--accent-color-dark);
-    transition: var(--transition-all);
+    transition: border-color .3s ease-in-out;
 }
 
 .artists__btn-title {
     font-size: var(--font-size-big);
     font-weight: var(--font-weight-medium);
-    transition: var(--transition-all);
+    transition-property: background-color, color, box-shadow;
+    transition-duration: .3s;
+    transition-timing-function: ease-in-out;
 }
 
 .artists__btn:focus-visible .artists__btn-title {
@@ -72,7 +75,9 @@
     0 -6px 0 var(--accent-color-main),
     0 0 0 var(--accent-color-main),
     0 0 0 var(--accent-color-main);;
-    transition: var(--transition-all);
+    transition-property: background-color, color, box-shadow;
+    transition-duration: .3s;
+    transition-timing-function: ease-in-out;
 }
 
 @media(min-width: 768px) {
@@ -84,13 +89,18 @@
 @media (min-width: 1280px) {
     .artists__btn:hover .artists__btn-title {
         color: var(--accent-color-main);
-        transition: var(--transition-all);
+        transition: color .3s ease-in-out;
+    }
+
+    .artists__btn:focus-visible:hover .artists__btn-title {
+        color: var(--text-color-inverse);
+        transition: color .3s ease-in-out;
     }
 }
 
 .artists__btn:active .artists__btn-title {
     color: var(--accent-color-dark);
-    transition: var(--transition-all);
+    transition: color .3s ease-in-out;
 }
 
 .artists__btn-icon {
@@ -105,14 +115,18 @@
 
     color: var(--black);
     background-color: var(--gallery);
-    transition: var(--transition-all);
+    transition-property: background-color, border-color;
+    transition-duration: .3s;
+    transition-timing-function: ease-in-out;
 }
 
 .artists__btn:focus-visible .artists__btn-icon {
     outline: none;
     border-color: var(--accent-color-light);
     background-color: var(--accent-color-light);
-    transition: var(--transition-all);
+    transition-property: background-color, border-color;
+    transition-duration: .3s;
+    transition-timing-function: ease-in-out;
 }
 
 @media (min-width: 768px) {
@@ -129,21 +143,27 @@
     .artists__btn:hover .artists__btn-icon {
         border-color: var(--accent-color-light);
         background-color: var(--accent-color-light);
-        transition: var(--transition-all);
+        transition-property: background-color, border-color;
+        transition-duration: .3s;
+        transition-timing-function: ease-in-out;
     }
 }
 
 .artists__btn:active .artists__btn-icon {
     border-color: var(--accent-color-dark);
     background-color: var(--accent-color-light);
-    transition: var(--transition-all);
+    transition-property: background-color, border-color;
+    transition-duration: .3s;
+    transition-timing-function: ease-in-out;
 }
 
 .ui-state-active .artists__btn-icon {
     border-color: var(--accent-color-dark);
     background-color: var(--accent-color-light);
     transform: rotate(180deg);
-    transition: var(--transition-all);
+    transition-property: background-color, border-color;
+    transition-duration: .3s;
+    transition-timing-function: ease-in-out;
 }
 
 .artists__nav {
@@ -190,21 +210,26 @@
     font-size: var(--font-size-medium);
     line-height: 1;
 
-    transition: var(--transition-all);
     border-bottom: 1px solid transparent;
+    transition-property: border-color;
+    transition-duration: .3s;
+    transition-timing-function: ease-in-out;
 }
 
 @media (min-width: 1280px) {
     .artists__item-btn:hover {
         border-color: var(--accent-color-main);
-        color: var(--accent-color-main);
-        transition: var(--transition-all);
+        transition-property: border-color;
+        transition-duration: .3s;
+        transition-timing-function: ease-in-out;
     }
 }
 
 .artists__item-btn--active {
     color: var(--accent-color-dark);
-    transition: var(--transition-all);
+    transition-property: background-color, color, box-shadow;
+    transition-duration: .3s;
+    transition-timing-function: ease-in-out;
 }
 
 .artists__item-btn:focus-visible {
@@ -215,12 +240,15 @@
     box-shadow: 0px 6px 0 var(--accent-color-main), 
     0px -6px 0 var(--accent-color-main),
     0px 6px 0 var(--accent-color-main),
-    0px -6px 0 var(--accent-color-main);;
-    transition: var(--transition-all);
+    0px -6px 0 var(--accent-color-main);
+    transition-property: background-color, color, box-shadow;
 }
 
 .artists__item-btn:active {
     border-color: transparent;
     color: var(--accent-color-dark);
-    transition: var(--transition-all);
+    
+    transition-property: border-color, color;
+    transition-duration: .3s;
+    transition-timing-function: ease-in-out;
 }

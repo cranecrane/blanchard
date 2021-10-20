@@ -128,7 +128,7 @@
     padding-right: 10px;
     padding-left: var(--slide-padding-l);
     padding-bottom: 104px;
-    min-height: 100%;
+    min-height: 99.99%;
 }
 
 @media (min-width: 768px) {
@@ -222,20 +222,25 @@
 
 .events-slider__slide-link:focus-visible {
     border-color: var(--text-color-inverse);
+    transition-property: color, border-color, box-shadow, background-color;
 }
 
 @media (min-width: 1280px) {
     .events-slider__slide-link:hover {
         color: var(--accent-color-dark);
         border-color: var(--accent-color-dark);
-        transition: var(--transition-all);
+        transition-property: color, border-color;
+        transition-duration: .3s;
+        transition-timing-function: ease-in-out;
     }
 }
 
 .events-slider__slide-link:active {
-    color: var(--text-color-main);
-    border-color: var(--text-color-main);
-    transition: var(--transition-all);
+    color: var(--accent-color-light);
+    border-color: var(--accent-color-light);
+    transition-property: color, border-color;
+    transition-duration: .3s;
+    transition-timing-function: ease-in-out;
 }
 
 @media (min-width: 768px) {

@@ -42,12 +42,12 @@
     height: var(--icon-size);
 
     color: var(--silver);
-    transition: var(--transition-all);
+    transition: color .3s ease-in-out;
 }
 
 .social-list__link:focus-visible {
     color: var(--white);
-    transition: var(--transiton-all);
+    transition: color .3s ease-in-out;
 }
 
 @media (min-width: 768px) {
@@ -65,11 +65,11 @@
 
     .social-list__link:hover {
         color: var(--white);
-        transition: var(--transition-all);
+        transition: color .3s ease-in-out;
     }
 }
 
 .social-list__link:active {
     color: var(--accent-color-main);
-    transition: var(--transition-all);
+    transition: color .3s ease-in-out;
 }

@@ -16,7 +16,9 @@
     color: var(--accent-color-main);
 
     cursor: pointer;
-    transition: var(--transition-all);
+    transition-property: background-color, color, border-color;
+    transition-duration: .3s;
+    transition-timing-function: ease-in-out;
 }
 
 .btn::after {
@@ -33,7 +35,7 @@
     border: 2px solid var(--accent-color-light);
     border-radius: 100px;
     opacity: 0;
-    transition: var(--transition-all);
+    transition: opacity .3s ease-in-out;
 }
 
 @media (min-width: 768px) {
@@ -48,13 +50,17 @@
 
 .btn:focus-visible::after {
     opacity: 1;
+    transition: opacity .3s ease-in-out;
 }
 
 @media(min-width: 1280px) {
     .btn:hover {
         color: var(--text-color-inverse);
         background-color: var(--accent-color-main);
-        transition: var(--transition-all);
+        
+        transition-property: background-color, color;
+        transition-duration: .3s;
+        transition-timing-function: ease-in-out;
     }
 }
 
@@ -62,7 +68,9 @@
     color: var(--text-color-inverse);
     border-color: var(--active-btn-border-color);
     background-color: var(--accent-color-dark);
-    transition: var(--transition-all);
+    transition-property: background-color, color, border-color;
+    transition-duration: .3s;
+    transition-timing-function: ease-in-out;
 }
 
 .btn--fill {
@@ -73,18 +81,21 @@
     padding-right: var(--btn-fill-padding-lr);
 
     background-color: var(--accent-color-main);
-    transition: var(--transition-all);
+    transition-property: border;
+    transition-duration: .3s;
+    transition-timing-function: ease-in-out;
 }
 
 @media(min-width: 1280px) {
     .btn--fill:hover {
         border: 3px solid var(--active-btn-border-color);
-        transition: var(--transition-all);
+        transition: border .3s ease-in-out;
     }
 }
 
 .btn--fill:active {
     background-color: var(--accent-color-dark);
+    transition: background-color .3s ease-in-out;
 }
 
 .btn--inverse {
