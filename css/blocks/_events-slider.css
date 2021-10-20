@@ -128,7 +128,7 @@
     padding-right: 10px;
     padding-left: var(--slide-padding-l);
     padding-bottom: 104px;
-    min-height: 100%;
+    min-height: 99.99%;
 }
 
 @media (min-width: 768px) {
