@@ -14,21 +14,33 @@
     --hero-height-desktop: 700px;
 
     position: relative;
-    width: 100%;
     min-height: var(--hero-height);
-
-    overflow: hidden;
 }
 
-.hero::after {
-    content: "";
+@media (min-width: 768px) {
+    .hero {
+        min-height: var(--hero-height-tablet);
+    }
+} 
+
+@media (min-width: 1280px) {
+    .hero {
+        min-height: var(--hero-height-desktop);
+    }
+}
+
+.hero__slide {
+    min-height: var(--hero-height);
+}
+
+.hero__slide::before {
+    content: '';
     position: absolute;
     top: 0;
     right: 0;
-    bottom: 0;
     left: 0;
+    bottom: 0;
 
-    background-image: url('../../img/hero-1_320-767.jpg');
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
@@ -36,24 +48,52 @@
     animation: zoom alternate 30s linear infinite;
 }
 
+.hero__slide--1::before {
+    background-image: url('../../img/hero-1_320-767.jpg');
+}
+
+.hero__slide--2::before {
+    background-image: url('../../img/hero-2_320-767.jpg');
+}
+
+.hero__slide--3::before {
+    background-image: url('../../img/hero-3_320-767.jpg');
+}
+
 @media (min-width: 768px) {
-    .hero {
+    .hero__slide {
         min-height: var(--hero-height-tablet);
     }
 
-    .hero::after {
+    .hero__slide--1::before {
         background-image: url('../../img/hero-1_768-1279.jpg');
     }
+    
+    .hero__slide--2::before {
+        background-image: url('../../img/hero-2_768-1279.jpg');
+    }
+    
+    .hero__slide--3::before {
+        background-image: url('../../img/hero-3_768-1279.jpg');
+    } 
 }
 
 @media (min-width: 1280px) {
-    .hero {
+    .hero__slide {
         min-height: var(--hero-height-desktop);
     }
 
-    .hero::after {
+    .hero__slide--1::before {
         background-image: url('../../img/hero-1-desktop.jpg');
     }
+    
+    .hero__slide--2::before {
+        background-image: url('../../img/hero-2-desktop.jpg');
+    }
+    
+    .hero__slide--3::before {
+        background-image: url('../../img/hero-3-desktop.jpg');
+    } 
 }
 
 .hero__container {
@@ -61,15 +101,17 @@
     --hero-content-width-tablet: var(--max-width-container);
 
     position: absolute;
-    z-index: var(--z-index-hero-background);
+    z-index: var(--z-index-hero-content);
     top: 0;
+    bottom: 0;
     left: 0;
     right: 0;
-    bottom: 0;
 
+    box-sizing: border-box;
     padding-top: 34px;
     padding-bottom: 45px;
     max-width: var(--hero-content-width);
+    height: 100%;
 
     text-align: center;
     color: var(--text-color-inverse);
