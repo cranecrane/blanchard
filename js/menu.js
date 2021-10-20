@@ -32,9 +32,11 @@ window.addEventListener('DOMContentLoaded', function () {
     });
 
     pageContent.addEventListener('click', function() {
-        menu.classList.remove('menu--open'),
+        if (menu.classList.contains('menu--open')) {
+            menu.classList.remove('menu--open'),
             burger.classList.remove('menu--open');
             body.classList.remove('body-hidden');
+        }
     });
 
     window.addEventListener('resize', function() {

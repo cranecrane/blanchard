@@ -18,6 +18,7 @@
 @import "blocks/_tooltip.css";
 @import "blocks/_form.css";
 @import "blocks/_input.css";
+@import "blocks/_modal.css";
 
 @import "blocks/_search-form.css";
 @import "blocks/_menu.css";
@@ -27,6 +28,7 @@
 @import "blocks/_section.css";
 @import "blocks/_select-filter.css";
 @import "blocks/_gallery-slider.css";
+@import "blocks/_gallery-modals.css";
 @import "blocks/_tabs-countries.css";
 @import "blocks/_artists.css";
 @import "blocks/_artists-cards.css";
@@ -38,6 +40,7 @@
 @import "blocks/_address.css";
 @import "blocks/_map.css";
 @import "blocks/_back-call-form.css";
+@import "blocks/_form-modal.css";
 @import "blocks/_messengers.css";
 @import "blocks/_social-list.css";
 

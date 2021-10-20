@@ -41,11 +41,23 @@ window.addEventListener('DOMContentLoaded', function() {
                 xhr.onreadystatechange = function() {
                     if (xhr.readyState === 4) {
                         if (xhr.status === 200) {
-                            console.log('Отправлено');
+                            let body = document.querySelector('body');
+                            let modal = document.querySelector('.form-modal');
+                            let close = document.querySelectorAll('.form-modal__close-btn');
+                            
+                            modal.classList.add('modal--visible');
+                            body.classList.add('body-hidden');
+                            close.forEach((elem) => {
+                                elem.addEventListener('click', () => {
+                                    if (modal.classList.contains('modal--visible')) {
+                                        modal.classList.remove('modal--visible');
+                                        body.classList.remove('body-hidden');
+                                    }
+                                });
+                            });
                         }
                     }
                 }
-    
                 xhr.open('POST', 'mail.php', true);
                 xhr.send(formData);
     

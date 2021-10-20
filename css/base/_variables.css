@@ -47,6 +47,7 @@
     --border-radius: 6px;
 
     /*** z-index ***/
+    --z-index-modal: 500;
     --z-index-menu-open: 200;
     --z-index-search-btn-open: 90;
     --z-index-header-lower-block: 80;
