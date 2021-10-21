@@ -22,12 +22,12 @@
                     content.classList.add(activeCardClass);
                 });
     
-                if (window.innerWidth < 768) {
+                if (window.innerWidth < 896) {
                     let scroll = new SmoothScroll();
-                    scroll.animateScroll(targetElem.offsetTop);
+                    scroll.animateScroll(targetElem.offsetTop - 50);
                     scroll.destroy();
                 }
             });
         });
-    })
+    });
 })();

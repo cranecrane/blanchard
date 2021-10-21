@@ -43,17 +43,27 @@ window.addEventListener('DOMContentLoaded', function() {
                         if (xhr.status === 200) {
                             let body = document.querySelector('body');
                             let modal = document.querySelector('.form-modal');
-                            let close = document.querySelectorAll('.form-modal__close-btn');
+                            let close = document.querySelector('.form-modal__close-btn');
                             
                             modal.classList.add('modal--visible');
                             body.classList.add('body-hidden');
-                            close.forEach((elem) => {
-                                elem.addEventListener('click', () => {
-                                    if (modal.classList.contains('modal--visible')) {
-                                        modal.classList.remove('modal--visible');
-                                        body.classList.remove('body-hidden');
-                                    }
-                                });
+                            close.addEventListener('click', () => {
+                                if (modal.classList.contains('modal--visible')) {
+                                    modal.classList.remove('modal--visible');
+                                    body.classList.remove('body-hidden');
+                                console.log('form');
+
+                                }
+                            });
+                            modal.addEventListener('click', (event) => {
+                                let target = event.target;
+                                console.log('form');
+                                
+                                if (target.children[0] === document.querySelector('.form-modal__container')) {
+                                    modal.classList.remove('modal--visible');
+                                    body.classList.remove('body-hidden');
+                                    console.log('form');
+                                }
                             });
                         }
                     }
