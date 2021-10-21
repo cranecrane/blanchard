@@ -29,6 +29,7 @@
     --input-width-desktop: 400px;
     
     width: var(--input-width);
+    max-width: 100%;
 }
 
 .back-call-form__input:not(:last-child) {

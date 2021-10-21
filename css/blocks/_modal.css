@@ -48,6 +48,14 @@
     margin-bottom: auto;
     padding-top: var(--vertical-padding);
     padding-bottom: var(--vertical-padding);
+    
+    transform: translateY(-100%);
+    transition: transform 0.5s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+.modal--visible .modal__container {
+    transform: translateY(0);
+    transition: transform 0.5s cubic-bezier(0.25, 1, 0.5, 1);
 }
 
 .modal__item {

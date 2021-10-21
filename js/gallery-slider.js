@@ -47,21 +47,33 @@ document.addEventListener('DOMContentLoaded', function() {
 			modal.classList.add('modal--visible');
 			target.classList.add('gallery-modals__item--visible');
 			body.classList.add('body-hidden');
-
-			console.log(path);
-			console.log(e);
 		});
-
 		close.addEventListener('click', () => {
-			let target = document.querySelectorAll('.modal__item');
+			let targetBlock = document.querySelectorAll('.modal__item');
 
-			target.forEach((elem) => {
+			targetBlock.forEach((elem) => {
 				if (elem.classList.contains('gallery-modals__item--visible')) {
 					elem.classList.remove('gallery-modals__item--visible');
 				}
 			});
 			modal.classList.remove('modal--visible');
 			body.classList.remove('body-hidden');
+		});
+		modal.addEventListener('click', (event) => {
+			let target = event.target;
+
+			if (target.children[0] === document.querySelector('.gallery-modals__close-btn')
+				|| target.children[0] === document.querySelector('.gallery-modals__container')) {
+				let targetBlock = document.querySelectorAll('.modal__item');
+
+				targetBlock.forEach((elem) => {
+					if (elem.classList.contains('gallery-modals__item--visible')) {
+						elem.classList.remove('gallery-modals__item--visible');
+					}
+				});
+				modal.classList.remove('modal--visible');
+				body.classList.remove('body-hidden');
+			}
 		});
 	});
 });

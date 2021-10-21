@@ -16,6 +16,7 @@ window.addEventListener('DOMContentLoaded', function() {
                 pagination: {
                 el: '.events-slider__pagination',
                 type: 'bullets',
+                clickable: true,
                 },
             });
             eventsSlider.dataset.mobile = 'true';
