@@ -20,7 +20,7 @@
     padding-bottom: var(--artist-btn-padding-tb);
     width: 100%;
 
-    transition-property: border-color .3s ease-in-out;
+    transition: border-color .3s ease-in-out;
 
 }
 

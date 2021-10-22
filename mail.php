@@ -8,7 +8,7 @@ foreach ( $_POST["admin_email"] as $key => $value ) {
 
 $admin_email = ["zhuravleva.carina@gmail.com"];
 
-$form_subject = trim($_POST["Заявка на звонок"]);
+$form_subject = "Заявка на звонок";
 
 $mail = new PHPMailer;
 $mail->CharSet = 'UTF-8';

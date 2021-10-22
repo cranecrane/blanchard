@@ -59,7 +59,6 @@
         padding-left: max(var(--padding-lr-container-tablet-sm), calc((100% - var(--max-width-inner-container)) / 2));
         width: var(--info-width-tablet-sm);
         background-color: var(--white);
-
     }
 }
 

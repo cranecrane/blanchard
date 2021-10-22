@@ -34,11 +34,21 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     });
 
-	let body = document.querySelector('body');
 	let btn = document.querySelectorAll('.gallery-modal-btn');
 	let modal = document.querySelector('.gallery-modals');
 	let close = document.querySelector('.gallery-modals__close-btn');
 	
+	let disableScroll = function() {
+		let paddingOffset = window.innerWidth - document.body.offsetWidth + 'px';
+		document.body.classList.add('disable-scroll');
+		document.body.style.paddingRight = paddingOffset;
+	}
+
+	let enableScroll = function() {
+		document.body.classList.remove('disable-scroll');
+		document.body.removeAttribute('style');
+	}
+
 	btn.forEach((elem) => {
 		elem.addEventListener('click', (e) => {
 			let path = e.currentTarget.getAttribute('data-path');
@@ -46,7 +56,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
 			modal.classList.add('modal--visible');
 			target.classList.add('gallery-modals__item--visible');
-			body.classList.add('body-hidden');
+			disableScroll();
 		});
 		close.addEventListener('click', () => {
 			let targetBlock = document.querySelectorAll('.modal__item');
@@ -57,7 +67,7 @@ document.addEventListener('DOMContentLoaded', function() {
 				}
 			});
 			modal.classList.remove('modal--visible');
-			body.classList.remove('body-hidden');
+			enableScroll();
 		});
 		modal.addEventListener('click', (event) => {
 			let target = event.target;
@@ -72,7 +82,7 @@ document.addEventListener('DOMContentLoaded', function() {
 					}
 				});
 				modal.classList.remove('modal--visible');
-				body.classList.remove('body-hidden');
+				enableScroll();
 			}
 		});
 	});

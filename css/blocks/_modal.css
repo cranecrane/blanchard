@@ -16,6 +16,7 @@
     padding-right: var(--padding-lr-container);
     background-color: rgba(0, 0, 0, .6);
 
+    cursor: pointer;
     overflow-y: auto;
     opacity: 0;
     visibility: hidden;
@@ -60,6 +61,7 @@
 
 .modal__item {
     background-color: var(--white);
+    cursor: default;
 }
 
 .modal__close-btn {
