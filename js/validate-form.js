@@ -41,28 +41,35 @@ window.addEventListener('DOMContentLoaded', function() {
                 xhr.onreadystatechange = function() {
                     if (xhr.readyState === 4) {
                         if (xhr.status === 200) {
-                            let body = document.querySelector('body');
                             let modal = document.querySelector('.form-modal');
                             let close = document.querySelector('.form-modal__close-btn');
+
+                            let disableScroll = function() {
+                                let paddingOffset = window.innerWidth - document.body.offsetWidth + 'px';
+                                document.body.classList.add('disable-scroll');
+                                document.body.style.paddingRight = paddingOffset;
+                            }
+                        
+                            let enableScroll = function() {
+                                document.body.classList.remove('disable-scroll');
+                                document.body.removeAttribute('style');
+                            }
                             
                             modal.classList.add('modal--visible');
-                            body.classList.add('body-hidden');
+                            disableScroll();
                             close.addEventListener('click', () => {
                                 if (modal.classList.contains('modal--visible')) {
                                     modal.classList.remove('modal--visible');
-                                    body.classList.remove('body-hidden');
-                                console.log('form');
+                                    enableScroll();
 
                                 }
                             });
                             modal.addEventListener('click', (event) => {
                                 let target = event.target;
-                                console.log('form');
                                 
                                 if (target.children[0] === document.querySelector('.form-modal__container')) {
                                     modal.classList.remove('modal--visible');
-                                    body.classList.remove('body-hidden');
-                                    console.log('form');
+                                    enableScroll();
                                 }
                             });
                         }

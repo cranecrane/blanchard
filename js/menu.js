@@ -13,7 +13,7 @@ window.addEventListener('DOMContentLoaded', function () {
 
             menu.classList.add('menu--open'),
             burger.classList.add('menu--open');
-            body.classList.add('body-hidden');
+            body.classList.add('disable-scroll');
 
             if (window.innerHeight < window.innerWidth) {
                 menu.classList.add('menu--overflow');
@@ -27,7 +27,7 @@ window.addEventListener('DOMContentLoaded', function () {
 
             menu.classList.remove('menu--open'),
             burger.classList.remove('menu--open');
-            body.classList.remove('body-hidden');
+            body.classList.remove('disable-scroll');
         });
     });
 
@@ -35,7 +35,7 @@ window.addEventListener('DOMContentLoaded', function () {
         if (menu.classList.contains('menu--open')) {
             menu.classList.remove('menu--open'),
             burger.classList.remove('menu--open');
-            body.classList.remove('body-hidden');
+            body.classList.remove('disable-scroll');
         }
     });
 
@@ -52,7 +52,7 @@ window.addEventListener('DOMContentLoaded', function () {
         if (window.innerWidth >= 1280) {
             menu.classList.remove('menu--open');
             burger.classList.remove('menu--open');
-            body.classList.remove('body-hidden');
+            body.classList.remove('disable-scroll');
         }
     });
 })
