@@ -1,9 +1,7 @@
-window.addEventListener('DOMContentLoaded', function() {
-    let btn = document.querySelector('.categories__btn');
-
-    function  filterCategories() {
-        let screenWidth = window.innerWidth;
-        
+(() => {
+    window.addEventListener('DOMContentLoaded', function() {
+        const btn = document.querySelector('.categories__btn');
+    
         if (window.innerWidth < 768) {
             btn.removeAttribute('disabled');
 
@@ -12,15 +10,6 @@ window.addEventListener('DOMContentLoaded', function() {
             })
         } else {
             btn.setAttribute('disabled', '');
-        }
-
-        window.addEventListener('resize', function() {
-            let resizedWidth = window.innerWidth;
-
-            if (screenWidth != resizedWidth) {
-                filterCategories();
-            }
-        });
-    }
-    filterCategories();    
-})
+        }  
+    })
+})();

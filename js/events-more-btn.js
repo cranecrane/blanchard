@@ -1,54 +1,4 @@
-window.addEventListener('DOMContentLoaded', function() {
-    let openListBtn = document.querySelector('.events-slider__more-btn');
-    let cards = document.querySelectorAll('.events-slider__slide');
-
-    checkHideCount('events-slider__slide--hidden', cards);
-
-    openListBtn.addEventListener('click', function() {
-        toggleClass(cards, 'events-slider__slide--hidden', getIndex());
-        openListBtn.classList.toggle('open--events-list');
-        changeHTML(openListBtn, 'open--events-list', 'Показать меньше', 'Все события');
-    })
-
-    function changeHTML(elem, triggerClass, value1, value2) {
-        if (elem.classList.contains(triggerClass)) {
-            openListBtn.innerHTML = value1;
-        } else {
-            openListBtn.innerHTML = value2;
-        }
-
-        window.addEventListener('resize', function () {
-            openListBtn.classList.toggle(triggerClass);
-            changeHTML(elem, triggerClass, value1, value2);
-        })
-    }
-
-    function checkHideCount(hideClass, arr) {
-        removeClass(hideClass, arr);
-        toggleClass(arr, hideClass, getIndex());
-
-        window.addEventListener('resize', function() {
-            checkHideCount(hideClass, arr);
-        })
-    }
-
-    function toggleClass(arr, toggleClass, from) {
-        if (from == -1) {
-            return 0;
-        } else {
-            while (from < arr.length) {
-                arr[from].classList.toggle(toggleClass);
-                from++;
-            }
-        }
-    }
-
-    function removeClass(removeClass, arr) {
-        for (let elem of arr) {
-            elem.classList.remove(removeClass);
-        }
-    }
-
+(() => {
     function getIndex() {
         if (window.innerWidth >= 768 && window.innerWidth < 896) {
             return 2;
@@ -58,4 +8,47 @@ window.addEventListener('DOMContentLoaded', function() {
             return -1;
         }
     }
-})
+
+    window.addEventListener('DOMContentLoaded', function() {
+        const openListBtn = document.querySelector('.events-slider__more-btn');
+        const container = document.querySelector('.events__list');
+    
+        function checkHidden() {
+            container.children.forEach(e => {
+                e.classList.remove('events-slider__slide--hidden');
+            });
+            if (getIndex() !== -1) {
+                for (let i = getIndex(); i < container.children.length; i++) {
+                    container.children[i].classList.add('events-slider__slide--hidden');
+                }
+            }
+        }
+        checkHidden();
+        window.addEventListener('resize', () => {
+            checkHidden();
+            container.classList.remove('open');
+            openListBtn.textContent = 'Все события';
+        });
+        
+        openListBtn.addEventListener('click', function () {
+
+            if (container.classList.contains('open')) {
+                container.classList.remove('open');
+                for (let i = getIndex(); i < container.children.length; i++) {
+                    container.children[i].classList.add('events-slider__slide--hidden');
+                }
+                this.textContent = 'Все события';
+
+                let scroll = new SmoothScroll();
+                scroll.animateScroll(container.closest('section').offsetTop - 50);
+                scroll.destroy();
+            } else {
+                container.classList.add('open');
+                container.children.forEach( card => {
+                    card.classList.remove('events-slider__slide--hidden');
+                });
+                this.textContent = 'Показать меньше';
+            }
+        });    
+    })
+})();
