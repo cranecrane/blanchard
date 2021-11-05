@@ -128,6 +128,7 @@
 
         padding-top: 9px;
         padding-bottom: 8px;
+        width: max-content;
     }
 
     .categories__item-checkbox:checked + .categories__item-label {

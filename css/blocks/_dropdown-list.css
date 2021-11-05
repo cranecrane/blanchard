@@ -72,7 +72,7 @@
 
     padding: var(--dropdown-list-content-padding);
     width: var(--content-size);
-    height: var(--content-size);
+    max-height: var(--content-size);
     
     font-size: var(--font-size-small);
     font-weight: var(--font-weight-medium);
