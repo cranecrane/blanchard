@@ -1,0 +1,7 @@
+.artists-cards__item {
+    display: none;
+}
+
+.artists-cards__item--active {
+    display: block;
+}

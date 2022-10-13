@@ -1,0 +1,44 @@
+.disable-scroll {
+	overflow: hidden;
+}
+
+.visually-hidden {
+	position: absolute;
+	clip: rect(0 0 0 0);
+	width: 1px;
+	height: 1px;
+	margin: -1px;
+}
+
+.container {
+	width: 100%;
+	max-width: var(--max-width-container);
+	padding: 0 var(--padding-lr-container);
+	margin: 0 auto;
+}
+
+@media (min-width: 768px) {
+	.container {
+		padding-left: var(--padding-lr-container-tablet-sm);
+		padding-right: var(--padding-lr-container-tablet-sm);
+	}
+}
+
+.site-container {
+	overflow: hidden;
+}
+
+.btn-reset {
+	border: none;
+	background-color: transparent;
+	cursor: pointer;
+	padding: 0;
+}
+
+::-moz-placeholder, :-moz-placeholder {
+    opacity: 1;
+}
+
+.simplebar-content-wrapper {
+	overflow: auto;
+}

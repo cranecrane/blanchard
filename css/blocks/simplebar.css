@@ -1,0 +1,38 @@
+.simplebar-track {
+    background-color: var(--black);
+}
+
+.simplebar-track.simplebar-vertical {
+    top: var(--dropdown-list-content-padding);
+    right: 19px;
+    bottom: var(--dropdown-list-content-padding);
+
+    width: 2px;
+    background-color: var(--black);
+}
+
+.simplebar-scrollbar::before {
+    border-radius: 0;
+
+    background-color: var(--white);
+    transition: opacity .3s ease-in-out;
+}
+
+.simplebar-track.simplebar-vertical .simplebar-scrollbar::before {
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+
+@media (min-width: 1280px) {
+    .simplebar-scrollbar.simplebar-hover::before {
+        opacity: 1;
+        transition: opacity .3s ease-in-out;
+    }
+}
+ 
+.simplebar-scrollbar.simplebar-visible::before {
+    opacity: 1;
+    transition: opacity .3s ease-in-out;
+}

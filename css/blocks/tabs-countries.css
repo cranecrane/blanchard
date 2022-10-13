@@ -1,0 +1,132 @@
+.tabs-countries {
+    --tab-size: 32px;
+    --tab-size-tablet: 46px;
+    --tab-outline-offset: -6px;
+    --tab-outline-offset-tablet: -10px;
+}
+
+@media (min-width: 896px) {
+    .tabs-countries {
+        transform: translateY(10px);
+    } 
+}
+
+@media (min-width: 1280px) {
+    .tabs-countries {
+        transform: none;
+    } 
+}
+
+.tabs-countries__item {
+    display: inline-block;
+}
+
+.tabs-countries__item:not(:last-child) {
+    margin-right: 28.3px;
+}
+
+@media (min-width: 768px) {
+    .tabs-countries__item:not(:last-child) {
+        margin-right: 50px;
+    } 
+}
+
+@media (min-width: 896px) {
+    .tabs-countries__item:not(:last-child) {
+        margin-right: 46px;
+    } 
+}
+
+.tabs-countries__btn {
+    position: relative;
+    border-radius: 100%;
+    width: var(--tab-size);
+    height: var(--tab-size);
+
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    transition: box-shadow .3s ease-in-out;
+}
+
+.tabs-countries__btn::after {
+    content: '';
+
+    opacity: 0;
+    position: absolute;
+    top: -1px;
+    left: -1px;
+    bottom: -1px;
+    right: -1px;
+
+    border: 2px solid var(--accent-color-dark);
+    border-radius: 100%;
+    transition: opacity .3s ease-in-out;
+}
+
+@media (min-width: 768px) {
+    .tabs-countries__btn {
+        width: var(--tab-size-tablet);
+        height: var(--tab-size-tablet);
+    }
+}
+
+@media (min-width: 1280px) {
+    .tabs-countries__btn:hover:not(.tabs-countries__btn--active) {
+        box-shadow: 0 0 20px rgba(157, 92, 208, 0.7);
+        transition: box-shadow .3s ease-in-out;
+    }
+}
+
+.tabs-countries__btn:focus-visible {
+    outline: none;
+}
+
+.tabs-countries__btn:focus-visible:not(.tabs-countries__btn--active) {
+    box-shadow: 0 0 20px rgba(157, 92, 208, 0.7);
+    transition: box-shadow .3s ease-in-out;    
+}
+
+.tabs-countries__btn:active::after {
+    opacity: 1;
+    transition: opacity .3s ease-in-out;
+}
+
+.tabs-countries__btn--active::after {
+    top: var(--tab-outline-offset);
+    left: var(--tab-outline-offset);
+    bottom: var(--tab-outline-offset);
+    right: var(--tab-outline-offset);
+    
+    opacity: 1;
+    transition: opacity .3s ease-in-out;
+}
+
+@media (min-width: 768px) {
+    .tabs-countries__btn--active::after {
+        top: var(--tab-outline-offset-tablet);
+        left: var(--tab-outline-offset-tablet);
+        bottom: var(--tab-outline-offset-tablet);
+        right: var(--tab-outline-offset-tablet);
+    }
+}
+
+.tabs-countries__btn--france {
+    background-image: url('../../icons/france.jpg');
+}
+
+.tabs-countries__btn--german {
+    background-image: url('../../icons/german.jpg');
+}
+
+.tabs-countries__btn--italy {
+    background-image: url('../../icons/italy.jpg');
+}
+
+.tabs-countries__btn--russia {
+    background-image: url('../../icons/russia.jpg');
+}
+
+.tabs-countries__btn--belgie {
+    background-image: url('../../icons/belgie.jpg');
+}

@@ -1,0 +1,108 @@
+.books {
+    --filter-margin-r-tablet-lg: 18px;
+    --price-filter-width: 277px;
+
+    padding-bottom: 50px;
+
+    background-image: url('../../img/bg-books-767.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+@media (min-width: 768px) {
+    .books {
+        padding-top: 93px;
+        padding-bottom: 76px;
+        background-image: url('../../img/bg-books-895.jpg');
+    }
+}
+
+@media (min-width: 896px) {
+    .books {
+        padding-top: 90px;
+        padding-bottom: 80px;
+        background-image: url('../../img/bg-books-1920.jpg');
+    }
+}
+
+@media (min-width: 1280px) {
+    .books {
+        padding-bottom: 77px;
+    }
+}
+
+@media (min-width: 896px) {
+    .books__container {
+        display: flex;
+        justify-content: space-between;
+    }
+}
+
+.books__filter-content {
+    margin-bottom: 50px;
+}
+
+@media (min-width: 768px) {
+    .books__filter-content {
+        margin-bottom: 26px;
+    }
+}
+
+@media (min-width: 896px) {
+    .books__filter-content {
+        margin-right: var(--filter-margin-r-tablet-lg);
+        margin-bottom: 0;
+    }
+}
+
+.books__title {
+    margin-bottom: 17px;
+}
+
+@media (min-width: 768px) {
+    .books__title {
+        margin-bottom: 22px;
+    }
+}
+
+.books__categories {
+    margin-bottom: 26px;
+}
+
+@media (min-width: 768px) {
+    .books__categories {
+        margin-bottom: 32px;
+    }
+}
+
+@media (min-width: 896px) {
+    .books__categories {
+        margin-bottom: 35px;
+    }
+}
+
+.books__slider {
+    --books-slider-width-tablet-lg: 629px;
+    --books-slider-width-desktop: 1150px;
+}
+
+@media (min-width: 768px) {
+    .books__slider {
+        padding-top: 25px;
+    }
+}
+
+@media (min-width: 896px) {
+    .books__slider {
+        padding-top: 24px;
+        width: calc(100% - var(--filter-margin-r-tablet-lg) - var(--price-filter-width));
+        max-width: var(--books-slider-width-tablet-lg);
+    }
+}
+
+@media (min-width: 1280px) {
+    .books__slider {
+        max-width: var(--books-slider-width-desktop);
+    }
+}

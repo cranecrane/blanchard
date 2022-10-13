@@ -1,0 +1,29 @@
+.about {
+    --descr-max-width: 1082px;
+}
+
+.about__title {
+    margin-bottom: 17px;
+}
+
+@media (min-width: 768px) {
+    .about__title {
+        margin-bottom: 25px;
+    }
+}
+
+@media (min-width: 1280px) {
+    .about__title {
+        margin-bottom: 23px;
+    }
+}
+
+.about__descr {  
+    max-width: var(--descr-max-width);
+}
+
+@media (max-width: 767px) {
+    .about__descr {
+        font-size: var(--font-size-small);
+    }
+}

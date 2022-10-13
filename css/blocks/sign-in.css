@@ -1,0 +1,50 @@
+.sign-in {
+    position: relative;
+
+    transition-property: background-color, color;
+    transition-duration: .3s;
+    transition-timing-function: ease-in-out;
+}
+
+@media (min-width: 1024px) {
+    .sign-in:hover {
+        color: var(--accent-color-light);
+        background-color: transparent;
+
+        transition-property: background-color, color, box-shadow;
+        transition-duration: .3s;
+        transition-timing-function: ease-in-out;
+    }
+}
+
+@media (min-width: 1280px) {
+    .sign-in {
+        border: none;
+        border-radius: 0;
+
+        font-size: var(--font-size-big);
+        font-weight: var(--font-weight-normal);
+    }
+
+    .sign-in:focus-visible {
+        outline: none;
+        background-color: var(--accent-color-dark);
+        box-shadow: 6px 6px 0 var(--accent-color-dark), 
+        -6px -6px 0 var(--accent-color-dark),
+        -6px 6px 0 var(--accent-color-dark),
+        6px -6px 0 var(--accent-color-dark);    
+        
+        transition-property: background-color, color, box-shadow;
+        transition-duration: .3s;
+        transition-timing-function: ease-in-out;
+    }
+
+    .sign-in:focus-visible::after {
+        display: none;
+    }
+}
+
+.sign-in:active {
+    color: var(--text-color-inverse);
+    transition: color .3s ease-in-out;
+}

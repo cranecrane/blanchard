@@ -1,0 +1,178 @@
+.search-form {
+    --search-btn-size: 16px;
+    --search-btn-size-tablet: 29px;
+    --search-btn-size-desktop: 22px;
+
+    display: none;
+    align-items: center;
+    justify-content: center;
+}
+
+.search-form--open .search-form {
+    display: flex;
+    padding-top: 28px;
+    padding-bottom: 19px;
+}
+
+@media (min-width: 768px) {
+    .search-form--open .search-form {
+        justify-content: start;
+
+        padding: 36px 52px 30px var(--padding-lr-container-tablet-sm);
+        width: 100%;
+    }
+}
+
+@media (min-width: 896px) {
+    .search-form--open .search-form {
+        padding: 1px 0 4px 2px;
+        margin-top: 35px;
+        margin-bottom: auto;
+
+        background-color: #18171b;
+    }
+}
+
+@media (min-width: 1280px) {
+    .search-form {
+        display: flex;
+    }
+}
+
+.search-form__submit-btn {
+    margin-right: 3px;
+    height: var(--search-btn-size);
+
+    color: var(--text-color-inverse);
+    transition: color .3s ease-in-out;
+    transform: translateY(6px);
+}
+
+.search-form__submit-btn:focus-visible {
+    position: relative;
+    outline: none;
+}
+
+.search-form__submit-btn:focus-visible::after {
+    --outline-offset: -5px;
+
+    content: '';
+
+    position: absolute;
+    top: var(--outline-offset);
+    left: var(--outline-offset);
+    bottom: var(--outline-offset);
+    right: var(--outline-offset);
+    
+    border: var(--border-outline);
+}
+
+@media (min-width: 768px) {
+    .search-form__submit-btn {   
+        margin-right: 0;
+        height: var(--search-btn-size-tablet);
+        transform: translateY(0px);
+    }
+}
+
+@media (min-width: 896px) {
+    .search-form__submit-btn:hover {
+        color: var(--accent-color-light);
+        transition: color .3s ease-in-out;
+    }
+}
+
+@media (min-width: 1280px) {
+    .search-form__submit-btn {
+        height: var(--search-btn-size-desktop);
+        transform: translateY(3px);
+    }
+}
+
+.search-form:active .search-form__submit-btn {
+    color: var(--accent-color-dark);
+    transition: color .3s ease-in-out;
+}
+
+.search-form__submit-icon {
+    width: var(--search-btn-size);
+    height: var(--search-btn-size);
+}
+
+@media(min-width: 768px) {
+    .search-form__submit-icon {
+        width: var(--search-btn-size-tablet);
+        height: var(--search-btn-size-tablet);
+    }
+}
+
+@media(min-width: 1280px) {
+    .search-form__submit-icon {
+        width: var(--search-btn-size-desktop);
+        height: var(--search-btn-size-desktop);
+    }
+}
+
+.search-form__area {
+    --search-area-width: 180px;
+    --search-area-width-desktop: 218px;
+
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    border-bottom: 1px solid #c4c4c4;
+    border-radius: 0;
+    padding-left: 0;
+    padding-right: 0;
+    padding-bottom: 2px;
+    width: var(--search-area-width);
+
+    font-size: var(--font-size-big);
+    line-height: 1;
+    color: var(--accent-color-light);
+
+    background-color: transparent;
+    transition: border-color .3s ease-in-out;
+	caret-color: var(--accent-color-light);
+}
+
+.search-form__area[type="search"]::placeholder {
+    font-size: var(--font-size-big);
+    color: rgba(255, 255, 255, .85);
+}
+
+.search-form__area:focus-visible {
+    border-color: var(--accent-color-light);
+    transition: border-color .3s ease-in-out;
+}
+ 
+@media (min-width: 768px) {
+    .search-form__area {
+        margin-left: 10.55px;
+        border-color: rgba(255, 255, 255, .85);
+    }
+
+    .search-form--open .search-form__area { 
+        margin-right: 0;
+        width: 100%;
+    }
+}
+
+@media (min-width: 1280px) {
+    .search-form:hover .search-form__area {
+        border-color: var(--accent-color-light);
+        transition: border-color .3s ease-in-out;
+    }
+} 
+
+@media (min-width: 1280px) {
+    .search-form__area {
+        width: var(--search-area-width-desktop);
+        transform: translateX(-2px);
+    }
+}
+
+.search-form:active .search-form__area {
+    border-color: var(--accent-color-light);
+    transition: border-color .3s ease-in-out;
+}
