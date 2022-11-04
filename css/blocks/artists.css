@@ -20,6 +20,7 @@
     padding-bottom: var(--artist-btn-padding-tb);
     width: 100%;
 
+    color: var(--text-color-main);
     transition: border-color .3s ease-in-out;
 
 }
@@ -211,6 +212,8 @@
     line-height: 1;
 
     border-bottom: 1px solid transparent;
+    color: var(--text-color-main);
+    
     transition-property: border-color;
     transition-duration: .3s;
     transition-timing-function: ease-in-out;
